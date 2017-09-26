@@ -1,33 +1,32 @@
-//Maya ASCII 2017 scene
+//Maya ASCII 2017ff05 scene
 //Name: Bloked_Robot.ma
-//Last modified: Mon, Sep 25, 2017 05:10:28 PM
+//Last modified: Tue, Sep 26, 2017 05:11:25 PM
 //Codeset: 1252
-requires maya "2017";
+requires maya "2017ff05";
 requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2017";
 fileInfo "version" "2017";
-fileInfo "cutIdentifier" "201606150345-997974";
-fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
+fileInfo "cutIdentifier" "201706020738-1017329";
+fileInfo "osv" "Microsoft Windows 8 Enterprise Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "090C7E78-4397-0606-4FBB-839687E4E6EA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.4058641558581066 1.9259219197906363 3.0720663461376518 ;
-	setAttr ".r" -type "double3" -8.1383527443307031 740.99999999981662 -2.1292720150214226e-016 ;
+	setAttr ".t" -type "double3" 2.3966827206456722 0.45427440579883382 0.6367480487166588 ;
+	setAttr ".r" -type "double3" -0.93835276320629846 810.19999999960487 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "0C57EC23-4185-0134-AFBF-299A1BAC986F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 3.4058595491690933;
+	setAttr ".coi" 1.9213126486457175;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".tp" -type "double3" 5.0315641244433129 -1.8301085453110089 -0.90084258458944255 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
-	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
 	rename -uid "57186DCE-44F8-987F-5DE5-F6A17721A10F";
 	setAttr ".v" no;
@@ -44,25 +43,24 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".man" -type "string" "top_mask";
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "front";
 	rename -uid "734B2DD2-4B07-506A-0534-45B806407DB0";
-	setAttr ".t" -type "double3" 0.20761379276717323 1.4825099905973789 1000.1 ;
+	setAttr ".t" -type "double3" 0.13526131286997137 1.3588747102593772 1000.1161308453256 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "56569F10-498D-75E2-C95F-A59735C79EF2";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
-	setAttr ".coi" 1000.1;
-	setAttr ".ow" 1.2851071630051309;
+	setAttr ".coi" 997.85895686927722;
+	setAttr ".ow" 16.128242044735206;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
+	setAttr ".tp" -type "double3" 5.0315641244433129 -1.8301085453110089 2.2571739760484681 ;
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -s -n "side";
 	rename -uid "AB678F13-4DF0-6BF5-766F-C8B1EB6B583E";
-	setAttr ".t" -type "double3" 1000.1 1.3660729036513291 0.056486591828109389 ;
+	setAttr ".t" -type "double3" 1000.1 0.2425960871491096 0.14261241441149713 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "480E1B18-490F-95A3-89A4-BBBDCC42CDBF";
@@ -70,13 +68,12 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".rnd" no;
 	setAttr ".ff" 0;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 1.4927269432362984;
+	setAttr ".ow" 0.62660244183271119;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "imagePlane1";
 	rename -uid "ABCE9C4B-4958-7CB2-20FC-7DBB5021EEBC";
 	setAttr ".t" -type "double3" 2.498189717595948 -3.8820502784823852 -3.0296275109046058 ;
@@ -84,7 +81,7 @@ createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
 	rename -uid "1A908B34-4899-4431-8880-F49A639F463D";
 	setAttr -k off ".v";
 	setAttr ".fc" 204;
-	setAttr ".imn" -type "string" "C:/Users/emy/Desktop/DGM 2017/DGM1660_Fall2017/JPG/3D Robot Model/Robot Concept.jpg";
+	setAttr ".imn" -type "string" "C:/Users/10835634/Documents/GitHub/Repos/DGM1660_Fall2017/JPG/3D Robot Model/Robot Concept.jpg";
 	setAttr ".cov" -type "short2" 1022 1650 ;
 	setAttr ".ag" 0.65189873455445979;
 	setAttr ".dlc" no;
@@ -100,7 +97,7 @@ createNode imagePlane -n "imagePlaneShape2" -p "imagePlane2";
 	rename -uid "9035E22C-49FE-6362-C04D-8C9BB791A8E5";
 	setAttr -k off ".v";
 	setAttr ".fc" 204;
-	setAttr ".imn" -type "string" "C:/Users/emy/Desktop/DGM 2017/DGM1660_Fall2017/JPG/3D Robot Model/Robot Concept.jpg";
+	setAttr ".imn" -type "string" "C:/Users/10835634/Documents/GitHub/Repos/DGM1660_Fall2017/JPG/3D Robot Model/Robot Concept.jpg";
 	setAttr ".cov" -type "short2" 1022 1650 ;
 	setAttr ".ag" 0.60126582272586571;
 	setAttr ".dlc" no;
@@ -127,7 +124,6 @@ createNode mesh -n "pSphereShape1" -p "transform13";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere3";
 	rename -uid "0A543AB0-4315-1117-B474-038EDF430A78";
 	setAttr ".t" -type "double3" 1.5765106021357291 1.8207381547750385 0 ;
@@ -1269,7 +1265,6 @@ createNode mesh -n "pSphereShape3" -p "transform11";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere4";
 	rename -uid "FF86F4DD-4EF7-ABA0-7A80-C18C0304614F";
 	setAttr ".t" -type "double3" 1.5686727329642265 1.8207381547750385 0 ;
@@ -2411,7 +2406,6 @@ createNode mesh -n "pSphereShape4" -p "transform10";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere6";
 	rename -uid "31840B06-4D92-0305-DA11-319786ED1A39";
 	setAttr ".t" -type "double3" 1.4981319104206987 0.77830155496513886 0 ;
@@ -3553,7 +3547,6 @@ createNode mesh -n "pSphereShape6" -p "transform15";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder1";
 	rename -uid "BACE405E-479F-3422-E0EA-408A3141206C";
 	setAttr ".t" -type "double3" 1.5752981464774622 2.1475761529918236 0.0040038011291634312 ;
@@ -3573,7 +3566,6 @@ createNode mesh -n "pCylinderShape1" -p "transform16";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder2";
 	rename -uid "A275182D-4BDB-C949-5264-9A841F1E01C8";
 	setAttr ".t" -type "double3" 1.5238574522428325 1.2148697215829656 0.0040038011291634312 ;
@@ -3756,7 +3748,6 @@ createNode mesh -n "polySurfaceShape1" -p "pCylinder2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform17" -p "pCylinder2";
 	rename -uid "44009762-4C5C-C178-40FD-828665BC345D";
 	setAttr ".v" no;
@@ -3782,7 +3773,6 @@ createNode mesh -n "pCylinderShape2" -p "transform17";
 		-0.26585865 0.10911144 -0.1950282 -0.31962523 0.0052589513 -0.1950282 -0.33607382 
 		-0.098593526 -0.1950282 -0.31962523 -0.19228017 -0.1950282 -0.27188942 -0.26663047 
 		-0.1950282 -0.19753927 -0.3143661 -0.1950282 -0.10385258 -0.33081463 -0.1950282 -8.005199e-008;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube1";
 	rename -uid "3A303C86-4C67-A7DC-3B7B-CE9FB6FE8354";
 	setAttr ".t" -type "double3" 1.4997966530098994 0.33330710549113152 -2.329135239077873 ;
@@ -3811,7 +3801,6 @@ createNode mesh -n "pCubeShape1" -p "transform14";
 		-0.098810747 0.40992498 39.4464 -0.098810747 0.40992498 39.846397 -0.098810747 0.40992498 
 		39.846397 0 0 -5.9604645e-008 0 0 -5.9604645e-008 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5.9604645e-008 
 		0 0 -5.9604645e-008;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube2";
 	rename -uid "EBD3BF8B-456C-4C3D-ABE9-92BF0AF655FC";
 	setAttr ".t" -type "double3" -0.78361137658778057 0.81403939348373777 0.028943363542215383 ;
@@ -3874,7 +3863,6 @@ createNode mesh -n "pCubeShape2" -p "transform12";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube3";
 	rename -uid "AA8C03B1-4F1E-BC8F-5F55-829A47C9EF26";
 	setAttr ".t" -type "double3" 3.7601020911052885 0.21030419834211345 0.088281574447949818 ;
@@ -3937,7 +3925,6 @@ createNode mesh -n "pCubeShape3" -p "transform18";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube4";
 	rename -uid "0F766F2E-4951-D6DC-FC04-6F994FA0E967";
 	setAttr ".t" -type "double3" 0.49566649870197388 0.21030419834211345 0.088281574447949818 ;
@@ -3999,7 +3986,6 @@ createNode mesh -n "pCubeShape4" -p "transform9";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder3";
 	rename -uid "DFB88BF8-4C94-FCB6-A400-CC88BE652D38";
 	setAttr ".t" -type "double3" -1.7405781401604821 1.2148697215829656 0.0040038011291634312 ;
@@ -4181,7 +4167,6 @@ createNode mesh -n "polySurfaceShape1" -p "pCylinder3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform8" -p "pCylinder3";
 	rename -uid "601CC186-45A2-FADA-5473-31B53E41AE59";
 	setAttr ".v" no;
@@ -4510,7 +4495,6 @@ createNode mesh -n "pCylinderShape3" -p "transform8";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder4";
 	rename -uid "1BD20AFD-425C-D381-973C-9C9CD4C03ECA";
 	setAttr ".t" -type "double3" -1.6891374459258524 2.1475761529918236 0.0040038011291634312 ;
@@ -4711,7 +4695,6 @@ createNode mesh -n "pCylinderShape4" -p "transform7";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere7";
 	rename -uid "81AC025D-4ECA-D1C1-4E99-B0AB2545A5D0";
 	setAttr ".t" -type "double3" -1.7663036819826159 0.77830155496513886 0 ;
@@ -5966,7 +5949,6 @@ createNode mesh -n "pSphereShape7" -p "transform6";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube5";
 	rename -uid "8A39AD40-4089-59B4-00F0-B2B5636894F2";
 	setAttr ".t" -type "double3" -1.7646389393934152 0.33330710549113152 -2.329135239077873 ;
@@ -6031,7 +6013,6 @@ createNode mesh -n "pCubeShape5" -p "transform5";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere8";
 	rename -uid "16AD89AE-4AF6-0613-54CC-D29C1011D9A3";
 	setAttr ".t" -type "double3" -1.6487356444100705 2.9650670538144777 0 ;
@@ -7286,7 +7267,6 @@ createNode mesh -n "pSphereShape8" -p "transform4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube6";
 	rename -uid "8F09A788-4F4A-2EE1-FECA-048F4F5AAE8C";
 	setAttr ".t" -type "double3" -4.0480469689910956 0.81403939348373777 0.028943363542215383 ;
@@ -7351,7 +7331,6 @@ createNode mesh -n "pCubeShape6" -p "transform3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere9";
 	rename -uid "9E5D8F06-4438-6552-DB50-17B6DEDA05C6";
 	setAttr ".t" -type "double3" -1.6879249902675855 1.8207381547750385 0 ;
@@ -8607,7 +8586,6 @@ createNode mesh -n "pSphereShape9" -p "transform2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere10";
 	rename -uid "BFFC302A-4A35-70A7-3B95-FD8E19C9D0D6";
 	setAttr ".t" -type "double3" -1.6957628594390881 1.8207381547750385 0 ;
@@ -9862,7 +9840,6 @@ createNode mesh -n "pSphereShape10" -p "transform1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube7";
 	rename -uid "329C0828-4F65-5D59-CA59-5DBFE292331D";
 	setAttr ".t" -type "double3" 0.043399625063560876 -0.037774542439680481 -1.8268555908137731 ;
@@ -9884,7 +9861,6 @@ createNode mesh -n "pCube7Shape" -p "transform46";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube8";
 	rename -uid "9E451DE6-4650-CED3-3593-D5A4D90C3D98";
 	setAttr ".t" -type "double3" 0 -0.037774542439680481 -1.8268555908137731 ;
@@ -9907,7 +9883,6 @@ createNode mesh -n "pCube8Shape" -p "transform45";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere11";
 	rename -uid "4748AE15-4EB4-0A08-9AF1-1F99811F3A1C";
 	setAttr ".t" -type "double3" 0 3.0089102666714971 -1.8268555908137731 ;
@@ -9928,7 +9903,6 @@ createNode mesh -n "pSphereShape11" -p "transform44";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere12";
 	rename -uid "D199E942-46F5-A92A-7B2C-39B841CD3212";
 	setAttr ".t" -type "double3" -0.48582833053200131 1.4254884265430379 -0.0098280650767249567 ;
@@ -9949,7 +9923,6 @@ createNode mesh -n "pSphereShape12" -p "transform43";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder5";
 	rename -uid "107FB534-49FB-ABF1-D252-799E37276B35";
 	setAttr ".t" -type "double3" -0.49502472838337708 1.1748276748291766 0.028689313864996957 ;
@@ -9970,7 +9943,6 @@ createNode mesh -n "pCylinderShape5" -p "transform42";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere13";
 	rename -uid "A5723DF2-4B4B-EA13-9179-45A7B82F1E14";
 	setAttr ".t" -type "double3" -0.49260949119478736 0.9101202161713029 0.048036369619055663 ;
@@ -11106,7 +11078,6 @@ createNode mesh -n "polySurfaceShape10" -p "pSphere13";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform41" -p "pSphere13";
 	rename -uid "A3D18A8C-4EE5-6F0D-016F-CEBCC6AD5138";
 	setAttr ".v" no;
@@ -11122,7 +11093,6 @@ createNode mesh -n "pSphereShape13" -p "transform41";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere14";
 	rename -uid "92194BC1-4D51-6747-AA99-828A215CB302";
 	setAttr ".t" -type "double3" 0.13087788669733313 0.27452750785827462 0.17869577051317376 ;
@@ -11144,7 +11114,6 @@ createNode mesh -n "pSphereShape14" -p "transform40";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder6";
 	rename -uid "21231B37-4DE7-7172-61D0-BE9A1E3CBF10";
 	setAttr ".t" -type "double3" -0.49694297094889733 0.55798390039037804 0.077819394313156653 ;
@@ -11166,7 +11135,6 @@ createNode mesh -n "pCylinderShape6" -p "transform39";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube9";
 	rename -uid "72EBEEE0-4514-0F52-0348-C2A2920381D8";
 	setAttr ".t" -type "double3" -0.50109894729191129 0.073045417057569173 0.56202552454295218 ;
@@ -11188,7 +11156,6 @@ createNode mesh -n "pCubeShape7" -p "transform38";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube10";
 	rename -uid "E0431B6E-4B3F-46A9-982A-D9BC0FABE241";
 	setAttr ".t" -type "double3" -0.077232143580565293 0.073045417057569173 0.096072739238111715 ;
@@ -11235,7 +11202,6 @@ createNode mesh -n "polySurfaceShape11" -p "pCube10";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform37" -p "pCube10";
 	rename -uid "1737E51F-46ED-596C-3D0D-2CB5780F2875";
 	setAttr ".v" no;
@@ -11252,7 +11218,6 @@ createNode mesh -n "pCubeShape10" -p "transform37";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube11";
 	rename -uid "252E6184-48B9-BCF1-8219-CC893E0389C7";
 	setAttr ".t" -type "double3" -0.89761950560252546 0.070325422558465855 0.10568001316192294 ;
@@ -11299,7 +11264,6 @@ createNode mesh -n "polySurfaceShape12" -p "pCube11";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform36" -p "pCube11";
 	rename -uid "F0912C91-4B7C-A0B1-E519-48B3B9CEFF88";
 	setAttr ".v" no;
@@ -11316,7 +11280,6 @@ createNode mesh -n "pCubeShape11" -p "transform36";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere15";
 	rename -uid "DF776B00-4A30-8D76-2680-44B3D29019FE";
 	setAttr ".t" -type "double3" 0.47161197982384767 1.4345208823011117 -0.0098280650767245126 ;
@@ -12454,7 +12417,6 @@ createNode mesh -n "polySurfaceShape9" -p "pSphere15";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform35" -p "pSphere15";
 	rename -uid "DE25F5EF-42A1-E3C0-C1F5-2D9616466F7A";
 	setAttr ".v" no;
@@ -12471,7 +12433,6 @@ createNode mesh -n "pSphereShape15" -p "transform35";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder7";
 	rename -uid "33A5EE7F-4C32-6841-9DA3-789F28F24381";
 	setAttr ".t" -type "double3" 0.48951294924669397 1.1838601305872505 0.028689313864996957 ;
@@ -12654,7 +12615,6 @@ createNode mesh -n "polySurfaceShape8" -p "pCylinder7";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform34" -p "pCylinder7";
 	rename -uid "92C56F6E-4490-8A6F-A783-718176798AA3";
 	setAttr ".v" no;
@@ -12670,7 +12630,6 @@ createNode mesh -n "pCylinderShape7" -p "transform34";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere16";
 	rename -uid "EE461368-4806-55AB-3B33-34B54BFEDCE3";
 	setAttr ".t" -type "double3" 0.52805800946757997 0.9101202161713029 0.048036369619055663 ;
@@ -13806,7 +13765,6 @@ createNode mesh -n "polySurfaceShape7" -p "pSphere16";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform33" -p "pSphere16";
 	rename -uid "6E744259-45C2-02EC-0987-32A1444DB48B";
 	setAttr ".v" no;
@@ -13822,7 +13780,6 @@ createNode mesh -n "pSphereShape16" -p "transform33";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere17";
 	rename -uid "B7A9F155-49C2-306F-4109-7CA1717A8301";
 	setAttr ".t" -type "double3" 1.1515453873597006 0.27452750785827462 0.17869577051317376 ;
@@ -15028,7 +14985,6 @@ createNode mesh -n "polySurfaceShape6" -p "pSphere17";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform32" -p "pSphere17";
 	rename -uid "7F841ADD-41AE-17E8-26D6-4D914BDE1BE9";
 	setAttr ".v" no;
@@ -15045,7 +15001,6 @@ createNode mesh -n "pSphereShape17" -p "transform32";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube12";
 	rename -uid "CC401AB0-4C35-40C8-E7C9-9E91FDC5C678";
 	setAttr ".t" -type "double3" 0.51956855337045604 0.073045417057569173 0.56202552454295218 ;
@@ -15092,7 +15047,6 @@ createNode mesh -n "polySurfaceShape5" -p "pCube12";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform31" -p "pCube12";
 	rename -uid "D6CDD929-4914-C7E6-BC76-76BD63B8AA56";
 	setAttr ".v" no;
@@ -15109,7 +15063,6 @@ createNode mesh -n "pCubeShape12" -p "transform31";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder8";
 	rename -uid "EFF857BB-4729-154D-8326-9D86A618C56A";
 	setAttr ".t" -type "double3" 0.52372452971347006 0.55798390039037804 0.077819394313156653 ;
@@ -15419,7 +15372,6 @@ createNode mesh -n "polySurfaceShape4" -p "pCylinder8";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform30" -p "pCylinder8";
 	rename -uid "73A6078F-4B0D-6B32-6B3F-D5BEA11CA62F";
 	setAttr ".v" no;
@@ -15436,7 +15388,6 @@ createNode mesh -n "pCylinderShape8" -p "transform30";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube13";
 	rename -uid "B346AB3F-4B3A-936F-167A-8ABD01293661";
 	setAttr ".t" -type "double3" 0.94343535708180204 0.073045417057569173 0.096072739238111715 ;
@@ -15483,7 +15434,6 @@ createNode mesh -n "polySurfaceShape3" -p "pCube13";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform29" -p "pCube13";
 	rename -uid "3615CB96-45B1-333A-8249-76BFAF315F26";
 	setAttr ".v" no;
@@ -15500,7 +15450,6 @@ createNode mesh -n "pCubeShape13" -p "transform29";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube14";
 	rename -uid "85CE44D3-4F19-5B52-370F-7E8A89BB1F5F";
 	setAttr ".t" -type "double3" 0.12304799505984187 0.070325422558465855 0.10568001316192294 ;
@@ -15547,7 +15496,6 @@ createNode mesh -n "polySurfaceShape2" -p "pCube14";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform28" -p "pCube14";
 	rename -uid "A20721D7-4D85-ED5D-03B9-0AB8E4774CE8";
 	setAttr ".v" no;
@@ -15564,7 +15512,6 @@ createNode mesh -n "pCubeShape14" -p "transform28";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder9";
 	rename -uid "BB70FD0E-4C42-3973-F736-4D8EF2E0E61C";
 	setAttr ".t" -type "double3" 0 1.6054203563817937 0.034398227768536294 ;
@@ -15586,7 +15533,6 @@ createNode mesh -n "pCylinderShape9" -p "transform27";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder10";
 	rename -uid "16DADE01-4DE8-3749-4490-B1B3E8D68E56";
 	setAttr ".t" -type "double3" -0.27870208146180186 1.4762976649044206 -0.0096083075235331439 ;
@@ -15607,7 +15553,6 @@ createNode mesh -n "pCylinderShape10" -p "transform26";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder11";
 	rename -uid "0B516EFC-45EA-14D6-D1E0-D79209E45581";
 	setAttr ".t" -type "double3" 0.29246514721300187 1.4866199642178206 -0.0096083075235331439 ;
@@ -15790,7 +15735,6 @@ createNode mesh -n "polySurfaceShape13" -p "pCylinder11";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform25" -p "pCylinder11";
 	rename -uid "C70B7B8D-4D30-825A-1C78-1FAE432DCA43";
 	setAttr ".v" no;
@@ -15806,7 +15750,6 @@ createNode mesh -n "pCylinderShape11" -p "transform25";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder12";
 	rename -uid "943E5EA1-49EC-C617-F399-38B55EF10C3A";
 	setAttr ".t" -type "double3" 0 1.6854097186374368 0.073053937877473829 ;
@@ -15828,7 +15771,6 @@ createNode mesh -n "pCylinderShape12" -p "transform24";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pSphere18";
 	rename -uid "5B2D5637-4E02-C7E3-2954-8E9B6431776B";
 	setAttr ".t" -type "double3" 0 2.0969041762378575 0.16759432807185176 ;
@@ -15848,7 +15790,6 @@ createNode mesh -n "pSphereShape18" -p "transform23";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder13";
 	rename -uid "3CD0C2CA-4CE0-3280-DAA5-9B94CCD39773";
 	setAttr ".t" -type "double3" 2.7897034991794047 2.2822754101326286 0.071393740305873532 ;
@@ -15869,7 +15810,6 @@ createNode mesh -n "pCylinderShape13" -p "transform22";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube15";
 	rename -uid "E8D0CD25-4D92-72BD-E951-04A78B6AC18A";
 	setAttr ".t" -type "double3" -0.066610681948690131 3.6493318212822423 0.11898956717645592 ;
@@ -15890,7 +15830,6 @@ createNode mesh -n "pCubeShape15" -p "transform21";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube16";
 	rename -uid "432C1F25-4ABF-534F-4687-259B501D0BE0";
 	setAttr ".t" -type "double3" 5.4968837491831302 1.6602110256735547 0.05923028118918805 ;
@@ -15913,7 +15852,6 @@ createNode mesh -n "pCubeShape16" -p "transform20";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube15_reference";
 	rename -uid "2DE0DB11-47A1-2C34-DA00-DEB160C82AD3";
 	setAttr ".tmp" yes;
@@ -16040,7 +15978,6 @@ createNode mesh -n "pCubeShape15_reference" -p "transform19";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder14";
 	rename -uid "5DEBAB59-42B8-4454-448F-44B8952183E2";
 	setAttr ".t" -type "double3" 4.1307302367767358 4.1638783139098408 2.1060521975655209 ;
@@ -16078,7 +16015,6 @@ createNode mesh -n "pCylinderShape14" -p "transform92";
 		-0.21445279 -13.708697 -6.4868526 -0.19739161 -13.709036 -6.4883718 -0.184701 -13.708901 
 		-6.4889455 -0.17762496 -13.708312 -6.4885159 -0.17685342 -13.70732 -6.4871283 -0.18246463 
 		-13.706024 -6.4849148 -0.19390747 -13.70455 -6.4820943 -0.2100623 -13.703044;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube17";
 	rename -uid "7AE2BC2D-44FA-3848-2998-DA8463FB89DB";
 	setAttr ".t" -type "double3" 1.6668343510938008 2.9287963774413828 -1.0699080422439589 ;
@@ -16271,7 +16207,6 @@ createNode mesh -n "pCubeShape17" -p "transform93";
 		-0.85568804 -1.0459329 0.65162361 -0.79240555 -1.0418012 0.64932489 -0.85383743 -1.0735139 
 		0.59424728 -0.79291624 -1.0697917 0.5909301 -0.72666156 -1.0317053 0.71441662 -0.72931635 
 		-1.048236 0.65162361 -0.73217124 -1.075732 0.59424728;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube18";
 	rename -uid "EC2D2C5C-4211-A995-EE65-DF9A0AE25942";
 	setAttr ".t" -type "double3" 1.6646324746530596 2.9252328751842498 2.1632645389785154 ;
@@ -17731,7 +17666,6 @@ createNode mesh -n "pCubeShape18" -p "transform88";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube19";
 	rename -uid "9AED9068-43DB-64AF-22EC-509B4526D248";
 	setAttr ".t" -type "double3" 1.4814027523033921 0.7453669015753267 2.1060521975655209 ;
@@ -17752,7 +17686,6 @@ createNode mesh -n "pCubeShape19" -p "transform89";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder15";
 	rename -uid "18A19050-43E1-A5C9-E3AC-8ABC5134616F";
 	setAttr ".t" -type "double3" 3.8888629257376062 1.1308851997320311 2.6906416264450805 ;
@@ -17819,7 +17752,6 @@ createNode mesh -n "pCylinderShape15" -p "transform90";
 		-10.783136 -3.2454612 -0.1131708 -10.831619 -3.3601682 -0.10935334 -10.846564 -3.4742308 
 		-0.10800803 -10.826498 -3.5764861 -0.10926674 -10.773391 -3.6569245 -0.11300621 -10.692445 
 		-3.7076721 -0.11886025 -10.591573 -3.7237546 -0.12625614 -10.48066;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube20";
 	rename -uid "F8C5B291-4316-E58F-CF17-639C8517B2E8";
 	setAttr ".t" -type "double3" 1.6646324746530596 2.9252328751842498 2.1632645389785154 ;
@@ -19270,7 +19202,6 @@ createNode mesh -n "pCubeShape20" -p "transform105";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder16";
 	rename -uid "0730913E-4D3D-3247-2D2D-2991291DE8BF";
 	setAttr ".t" -type "double3" 4.3575362399675655 0.034676421965349591 -0.89402394654036765 ;
@@ -19308,7 +19239,6 @@ createNode mesh -n "pCylinderShape16" -p "transform106";
 		0.48608315 8.2771959 -30.181801 0.48608798 8.2586479 -30.298908 0.48608315 8.2771959 
 		-30.404552 0.48606908 8.3310251 -30.488394 0.48604727 8.4148655 -30.542221 0.48601973 
 		8.5205107 -30.560772 0.48598933 8.63762;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube21";
 	rename -uid "08891FC0-47CF-5CAC-D6F5-25BDEE0D1910";
 	setAttr ".t" -type "double3" 1.6668343510938008 2.9252328751842498 -1.1272057844711134 ;
@@ -20750,7 +20680,6 @@ createNode mesh -n "pCubeShape21" -p "transform107";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder17";
 	rename -uid "F5D2AB0F-41E7-19F3-E153-5681917533CC";
 	setAttr ".t" -type "double3" 3.1913786183453894 0.47372491134774453 -1.1327635358634454 ;
@@ -20840,7 +20769,6 @@ createNode mesh -n "pCylinderShape17" -p "transform111";
 		-8.3266727e-017 5.35779 3.5527137e-015 -8.3266727e-017 5.4085622 3.5527137e-015 -8.3266727e-017 
 		5.4085622 3.5527137e-015 -8.3266727e-017 5.4085622 5.3290705e-015 -1.110223e-016 
 		5.4696622 5.3290705e-015 -1.110223e-016 5.4696622 5.3290705e-015 -1.110223e-016 5.4696622;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube22";
 	rename -uid "6B5A501C-43A8-7771-2776-F1B6958553F2";
 	setAttr ".t" -type "double3" 0.54017509519269069 0.23791013085968427 -1.0138865807035553 ;
@@ -20991,7 +20919,6 @@ createNode mesh -n "pCubeShape22" -p "transform112";
 		1.3322676e-015 0 1.8724933 1.3322676e-015 0 1.8724933 1.3322676e-015 0 1.8724933 
 		1.3322676e-015 0 1.8724933 1.3322676e-015 0 1.8724933 1.3322676e-015 0 1.8724933 
 		1.3322676e-015 0 1.8724933;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder18";
 	rename -uid "D703A395-46CB-170D-7A1D-EBA1A616C165";
 	setAttr ".t" -type "double3" 0.23366783976720029 1.5170558390109714 -1.1327635358634454 ;
@@ -21029,7 +20956,6 @@ createNode mesh -n "pCylinderShape18" -p "transform113";
 		1.1561549 -1.7026026 20.114866 1.1561549 -1.7026026 20.114866 1.1561549 -1.7026026 
 		20.114866 1.1561549 -1.7026026 20.114866 1.1561549 -1.7026026 20.114866 1.1561549 
 		-1.7026026 20.114866 1.1561549 -1.7026026 20.114866;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube23";
 	rename -uid "02267AC8-4C1A-C1B9-50E0-8C92E11731E6";
 	setAttr ".t" -type "double3" -0.037217678292368106 1.4553981836949472 0.003491933104067535 ;
@@ -21076,7 +21002,6 @@ createNode mesh -n "pCubeShape23" -p "transform103";
 		-0.14530322 0.0067153252 -0.089619853 0.0032669518 0.01007931 -0.030369269 0.00095680216 
 		0.032252543 0.057682157 -0.056133211 -0.024162533 -0.041261867 0.015088796 0.011006795 
 		0.056789584 -0.03448673;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "imagePlane3";
 	rename -uid "0D1528FF-4BCD-D442-189A-3981F09DF9F0";
 	setAttr ".t" -type "double3" 7.6684466855381945 0 -4.89234574309154 ;
@@ -21099,7 +21024,6 @@ createNode mesh -n "polySurfaceShape15" -p "transform82";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface3" -p "imagePlane3";
 	rename -uid "0AE14759-466B-C5DE-97D3-80944A4B98BC";
 createNode transform -n "transform83" -p "polySurface3";
@@ -21117,7 +21041,6 @@ createNode mesh -n "polySurfaceShape16" -p "transform83";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface4" -p "imagePlane3";
 	rename -uid "46369212-4BA5-2FB5-4555-DCBA661510ED";
 createNode transform -n "transform84" -p "polySurface4";
@@ -21135,7 +21058,6 @@ createNode mesh -n "polySurfaceShape17" -p "transform84";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface5" -p "imagePlane3";
 	rename -uid "F86FFE3B-413C-6CA7-DFBD-87AE25CADC55";
 createNode transform -n "transform77" -p "polySurface5";
@@ -21153,7 +21075,6 @@ createNode mesh -n "polySurfaceShape18" -p "transform77";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface6" -p "imagePlane3";
 	rename -uid "E5CCBCD4-4532-AD3D-BE02-A79C80DF221F";
 createNode transform -n "transform76" -p "polySurface6";
@@ -21171,7 +21092,6 @@ createNode mesh -n "polySurfaceShape19" -p "transform76";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface7" -p "imagePlane3";
 	rename -uid "1F452478-46F0-502B-E56A-01A937288259";
 createNode transform -n "transform75" -p "polySurface7";
@@ -21189,7 +21109,6 @@ createNode mesh -n "polySurfaceShape20" -p "transform75";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface8" -p "imagePlane3";
 	rename -uid "C049A798-4F85-9D5A-D1B3-998149D868F8";
 createNode transform -n "transform86" -p "polySurface8";
@@ -21207,7 +21126,6 @@ createNode mesh -n "polySurfaceShape21" -p "transform86";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface9" -p "imagePlane3";
 	rename -uid "D1430BF4-42C8-557F-CD9D-63BFBB74C98C";
 createNode transform -n "transform87" -p "|imagePlane3|polySurface9";
@@ -21225,7 +21143,6 @@ createNode mesh -n "polySurfaceShape22" -p "transform87";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface10" -p "imagePlane3";
 	rename -uid "67FCA40D-4EBF-523B-5764-91904EB83CDD";
 createNode transform -n "transform85" -p "polySurface10";
@@ -21243,7 +21160,6 @@ createNode mesh -n "polySurfaceShape23" -p "transform85";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface11" -p "imagePlane3";
 	rename -uid "4C42A550-4590-948D-DEA7-80A6C4263AC7";
 createNode transform -n "transform78" -p "polySurface11";
@@ -21261,7 +21177,6 @@ createNode mesh -n "polySurfaceShape24" -p "transform78";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface12" -p "imagePlane3";
 	rename -uid "FD93C67B-46A0-97C9-F328-FA9C2E0449C0";
 createNode transform -n "transform80" -p "polySurface12";
@@ -21279,7 +21194,6 @@ createNode mesh -n "polySurfaceShape25" -p "transform80";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface13" -p "imagePlane3";
 	rename -uid "C1777BCC-4D13-9357-BCAC-CFA7C27C3137";
 createNode transform -n "transform81" -p "polySurface13";
@@ -21297,7 +21211,6 @@ createNode mesh -n "polySurfaceShape26" -p "transform81";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface14" -p "imagePlane3";
 	rename -uid "B312CDE9-4F5A-98DF-0218-5FBD0752CA5D";
 createNode transform -n "transform79" -p "polySurface14";
@@ -21315,7 +21228,6 @@ createNode mesh -n "polySurfaceShape27" -p "transform79";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface15" -p "imagePlane3";
 	rename -uid "FD44DB52-4D30-E086-75F0-87A80861F0EF";
 createNode transform -n "transform61" -p "polySurface15";
@@ -21333,7 +21245,6 @@ createNode mesh -n "polySurfaceShape28" -p "transform61";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface16" -p "imagePlane3";
 	rename -uid "CD82A48C-445B-3A5B-C6FA-9AB090430A38";
 createNode transform -n "transform62" -p "polySurface16";
@@ -21351,7 +21262,6 @@ createNode mesh -n "polySurfaceShape29" -p "transform62";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface17" -p "imagePlane3";
 	rename -uid "719C76EB-4A6D-9AE0-1F7E-9DB3175DB780";
 createNode transform -n "transform63" -p "polySurface17";
@@ -21369,7 +21279,6 @@ createNode mesh -n "polySurfaceShape30" -p "transform63";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface18" -p "imagePlane3";
 	rename -uid "49746B73-4094-3367-1C14-9988D4A926B6";
 createNode transform -n "transform64" -p "polySurface18";
@@ -21387,7 +21296,6 @@ createNode mesh -n "polySurfaceShape31" -p "transform64";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface19" -p "imagePlane3";
 	rename -uid "686AA37A-4BB8-5320-86A6-26BCA6014BEF";
 createNode transform -n "transform65" -p "polySurface19";
@@ -21405,7 +21313,6 @@ createNode mesh -n "polySurfaceShape32" -p "transform65";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface20" -p "imagePlane3";
 	rename -uid "D992C20D-49B3-3C4F-FBBB-A2B6CE7E363E";
 createNode transform -n "transform66" -p "polySurface20";
@@ -21423,7 +21330,6 @@ createNode mesh -n "polySurfaceShape33" -p "transform66";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface21" -p "imagePlane3";
 	rename -uid "43ABD57B-4281-405C-BF0B-8E8A6292A89B";
 createNode transform -n "transform67" -p "polySurface21";
@@ -21441,7 +21347,6 @@ createNode mesh -n "polySurfaceShape34" -p "transform67";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface22" -p "imagePlane3";
 	rename -uid "8DDE2E55-4D73-6D5A-C23E-A6BEBB4036C5";
 createNode transform -n "transform68" -p "polySurface22";
@@ -21459,7 +21364,6 @@ createNode mesh -n "polySurfaceShape35" -p "transform68";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface23" -p "imagePlane3";
 	rename -uid "FE7E8BCC-433C-C569-BA9D-40B187AB0E6E";
 createNode transform -n "transform69" -p "polySurface23";
@@ -21477,7 +21381,6 @@ createNode mesh -n "polySurfaceShape36" -p "transform69";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface24" -p "imagePlane3";
 	rename -uid "07A6C6A3-4BEE-8676-37ED-9BA00C9C7A8F";
 createNode transform -n "transform70" -p "polySurface24";
@@ -21495,7 +21398,6 @@ createNode mesh -n "polySurfaceShape37" -p "transform70";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface25" -p "imagePlane3";
 	rename -uid "9B44D167-444D-6975-C5D1-B782DF95749E";
 createNode transform -n "transform71" -p "polySurface25";
@@ -21513,7 +21415,6 @@ createNode mesh -n "polySurfaceShape38" -p "transform71";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface26" -p "imagePlane3";
 	rename -uid "142B3B11-4EA8-728D-D6B7-4DA1C6AE103C";
 createNode transform -n "transform72" -p "polySurface26";
@@ -21531,7 +21432,6 @@ createNode mesh -n "polySurfaceShape39" -p "transform72";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface27" -p "imagePlane3";
 	rename -uid "C21C256B-4748-8D5C-2788-F2A956189C3A";
 createNode transform -n "transform49" -p "polySurface27";
@@ -21549,7 +21449,6 @@ createNode mesh -n "polySurfaceShape40" -p "transform49";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface28" -p "imagePlane3";
 	rename -uid "F078393C-4DEE-266D-99B4-9487F6A4310B";
 createNode transform -n "transform50" -p "polySurface28";
@@ -21567,7 +21466,6 @@ createNode mesh -n "polySurfaceShape41" -p "transform50";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface29" -p "imagePlane3";
 	rename -uid "5FB43D72-49A3-CDD0-3CE6-A69AB0F3697D";
 createNode transform -n "transform51" -p "polySurface29";
@@ -21585,7 +21483,6 @@ createNode mesh -n "polySurfaceShape42" -p "transform51";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface30" -p "imagePlane3";
 	rename -uid "B3FB8157-4503-58D0-25A5-2E9FB1383351";
 createNode transform -n "transform52" -p "polySurface30";
@@ -21603,7 +21500,6 @@ createNode mesh -n "polySurfaceShape43" -p "transform52";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface31" -p "imagePlane3";
 	rename -uid "D07570CE-4CE9-A63F-19DA-3C8A2ADFF6CB";
 createNode transform -n "transform53" -p "polySurface31";
@@ -21621,7 +21517,6 @@ createNode mesh -n "polySurfaceShape44" -p "transform53";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface32" -p "imagePlane3";
 	rename -uid "78AE967B-480B-AF35-20C3-5F9B455A5C23";
 createNode transform -n "transform54" -p "polySurface32";
@@ -21639,7 +21534,6 @@ createNode mesh -n "polySurfaceShape45" -p "transform54";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface33" -p "imagePlane3";
 	rename -uid "B4EE6487-4562-3AD7-65D9-99A16CA104BD";
 createNode transform -n "transform55" -p "polySurface33";
@@ -21657,7 +21551,6 @@ createNode mesh -n "polySurfaceShape46" -p "transform55";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface34" -p "imagePlane3";
 	rename -uid "C0197787-4ABD-46E0-E572-25A2B6991C26";
 createNode transform -n "transform56" -p "polySurface34";
@@ -21675,7 +21568,6 @@ createNode mesh -n "polySurfaceShape47" -p "transform56";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface35" -p "imagePlane3";
 	rename -uid "705E668B-47E1-C880-17D2-7E8EFC4C8F7F";
 createNode transform -n "transform57" -p "polySurface35";
@@ -21693,7 +21585,6 @@ createNode mesh -n "polySurfaceShape48" -p "transform57";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface36" -p "imagePlane3";
 	rename -uid "A6547B13-4A5C-7390-AD02-1B9458B9C50D";
 createNode transform -n "transform58" -p "polySurface36";
@@ -21711,7 +21602,6 @@ createNode mesh -n "polySurfaceShape49" -p "transform58";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface37" -p "imagePlane3";
 	rename -uid "4740B09E-4293-3C2B-E260-C291D3AF3E3D";
 createNode transform -n "transform59" -p "polySurface37";
@@ -21729,7 +21619,6 @@ createNode mesh -n "polySurfaceShape50" -p "transform59";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface38" -p "imagePlane3";
 	rename -uid "1784E50D-4DFE-18B0-9BB3-238F1DC7E6E5";
 createNode transform -n "transform60" -p "polySurface38";
@@ -21747,7 +21636,6 @@ createNode mesh -n "polySurfaceShape51" -p "transform60";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface39" -p "imagePlane3";
 	rename -uid "7FC4547B-4B84-1A8F-3443-5294A9D4508F";
 createNode transform -n "transform73" -p "polySurface39";
@@ -21765,7 +21653,6 @@ createNode mesh -n "polySurfaceShape52" -p "transform73";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface40" -p "imagePlane3";
 	rename -uid "5231DA1C-4B88-360C-F38C-73935C8955A2";
 createNode mesh -n "polySurfaceShape53" -p "polySurface40";
@@ -21779,7 +21666,6 @@ createNode mesh -n "polySurfaceShape53" -p "polySurface40";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface41" -p "imagePlane3";
 	rename -uid "5C8EE19F-4963-965F-4F3B-3B919FD0D8DB";
 createNode transform -n "transform74" -p "polySurface41";
@@ -21797,7 +21683,6 @@ createNode mesh -n "polySurfaceShape54" -p "transform74";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform48" -p "imagePlane3";
 	rename -uid "FCEBFFAA-409A-178A-15C2-BCAE9E065689";
 	setAttr ".v" no;
@@ -21813,7 +21698,6 @@ createNode mesh -n "imagePlane3Shape" -p "transform48";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface42" -p "imagePlane3";
 	rename -uid "286B6D84-4C89-5FC1-BD97-5B80ADC9253E";
 	setAttr ".t" -type "double3" -7.5766897796316597 0.038045981279861585 5.0871355730490002 ;
@@ -21869,7 +21753,6 @@ createNode mesh -n "polySurfaceShape42" -p "transform108";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface43" -p "imagePlane3";
 	rename -uid "2F18C900-4520-4F05-0251-57AA7B3D0EF7";
 	setAttr ".t" -type "double3" -6.1093455753988941 0.038045981279861585 3.7329668873921245 ;
@@ -21926,7 +21809,6 @@ createNode mesh -n "polySurfaceShape43" -p "transform94";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface44" -p "imagePlane3";
 	rename -uid "A75D7D87-456E-6350-1DB1-7C9D92760A7B";
 	setAttr ".t" -type "double3" -6.1599597752270379 0.038045981279861585 6.5481012541956831 ;
@@ -21983,7 +21865,6 @@ createNode mesh -n "polySurfaceShape44" -p "transform95";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface45" -p "imagePlane3";
 	rename -uid "6D77F83F-4195-8550-800D-4CB56F138DE0";
 	setAttr ".t" -type "double3" -7.6488417815787324 0 4.9429686103547228 ;
@@ -22028,7 +21909,6 @@ createNode mesh -n "polySurfaceShape45" -p "transform96";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface46" -p "imagePlane3";
 	rename -uid "D2AD8029-4858-5858-03AF-49B2DBB8BCE3";
 	setAttr ".t" -type "double3" -7.0153291609224784 0 4.4864168349963842 ;
@@ -22074,7 +21954,6 @@ createNode mesh -n "polySurfaceShape46" -p "transform97";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface47" -p "imagePlane3";
 	rename -uid "3569E79A-44E3-C4E9-54DD-5787F9E0AC53";
 	setAttr ".t" -type "double3" -7.2449338306581703 0 5.5288767220645907 ;
@@ -22120,7 +21999,6 @@ createNode mesh -n "polySurfaceShape47" -p "transform98";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder19";
 	rename -uid "06098FEC-41FE-3F3C-383E-93AD07CF64EB";
 	setAttr ".t" -type "double3" 0 1.953068005079746 0.12274364762052881 ;
@@ -22141,7 +22019,6 @@ createNode mesh -n "pCylinderShape19" -p "transform104";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube24";
 	rename -uid "4E7D5D39-43C9-B8D3-8C98-D3B6A5528B8D";
 	setAttr ".t" -type "double3" -0.022818432947868977 2.2836980461110583 0.18608178749858828 ;
@@ -22163,7 +22040,6 @@ createNode mesh -n "pCubeShape24" -p "transform109";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube25";
 	rename -uid "0C0A16BA-41CF-C4A8-1876-45BC02B4B407";
 	setAttr ".t" -type "double3" 0 2.9349706052220097 0.073901399255599687 ;
@@ -22323,7 +22199,6 @@ createNode mesh -n "polySurfaceShape14" -p "transform110";
 	setAttr ".pt[250]" -type "float3" 0.032297414 0 0.13864924 ;
 	setAttr ".pt[251]" -type "float3" 0.011055881 -2.289835e-016 0.1436488 ;
 	setAttr ".pt[252]" -type "float3" -0.0071394201 2.3283064e-010 0.14974381 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "transform47" -p "pCube25";
 	rename -uid "997454F3-4EF8-8279-9E02-B4B1E5B2C7C8";
 	setAttr ".v" no;
@@ -22340,7 +22215,6 @@ createNode mesh -n "pCubeShape25" -p "transform47";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "bottom";
 	rename -uid "09E2A4DA-4411-BD6A-FC12-7486C37A060A";
 	setAttr ".v" no;
@@ -22357,7 +22231,6 @@ createNode camera -n "bottomShape" -p "bottom";
 	setAttr ".man" -type "string" "bottom1_mask";
 	setAttr ".hc" -type "string" "viewSet -bo %camera";
 	setAttr ".o" yes;
-	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "pCube26";
 	rename -uid "C8C68247-48DD-111B-AE85-AF9542472FC3";
 	setAttr ".t" -type "double3" -0.11803881509179204 2.5042792510937053 0.37228086242974484 ;
@@ -22380,7 +22253,6 @@ createNode mesh -n "pCubeShape26" -p "transform101";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".pt[5]" -type "float3"  0 0.19738315 0.16239867;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube27";
 	rename -uid "16CD9B25-4714-63C2-9BA5-CA9BD9E770FA";
 	setAttr ".t" -type "double3" 0.079240105823714435 2.6437597449461099 0.14418126381760665 ;
@@ -22409,7 +22281,6 @@ createNode mesh -n "pCubeShape27" -p "transform91";
 	setAttr ".pt[10]" -type "float3" 0.059035301 0 0 ;
 	setAttr ".pt[15]" -type "float3" 0.059035301 0 0 ;
 	setAttr ".pt[16]" -type "float3" 0 0.38998219 0.47140065 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube28";
 	rename -uid "0B86DB37-4BC7-A3CD-2D5E-2180A1C240D1";
 	setAttr ".t" -type "double3" -0.08178898095274878 3.4715104000575798 0.061704747970579898 ;
@@ -22437,7 +22308,6 @@ createNode mesh -n "pCubeShape28" -p "transform100";
 	setAttr ".pt[7]" -type "float3" 0 0.39495099 0 ;
 	setAttr ".pt[13]" -type "float3" 0 -0.008498067 0 ;
 	setAttr ".pt[14]" -type "float3" 0 -0.0026256181 0.011744903 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pPipe1";
 	rename -uid "75DD85DF-4D9B-8A13-A03E-88896CD02817";
 	setAttr ".t" -type "double3" 0.7848249607173341 3.2364911210014542 0.61970779228939765 ;
@@ -22459,7 +22329,6 @@ createNode mesh -n "pPipeShape1" -p "transform99";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pPipe2";
 	rename -uid "06D41F2F-444C-B7B5-C8DA-549A2AA7B00C";
 	setAttr ".t" -type "double3" 0.7848249607173341 2.6145543596782836 0.61970779228939765 ;
@@ -22703,7 +22572,6 @@ createNode mesh -n "pPipeShape2" -p "transform102";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface9";
 	rename -uid "8DEF101C-4FBD-4336-4038-76882615BD5F";
 	setAttr ".rp" -type "double3" 7.6490950839375476 1.9653244204819202 -4.8401327299193904 ;
@@ -22719,10 +22587,9 @@ createNode mesh -n "polySurface9Shape" -p "|polySurface9";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder20";
 	rename -uid "798481FB-4F48-E276-4D09-DB876146AA9A";
-	setAttr ".t" -type "double3" 7.764568595053591 0 5.3965039100303649 ;
+	setAttr ".t" -type "double3" 10.957247853021837 0 11.904777447635087 ;
 	setAttr ".rp" -type "double3" 1.0921878949049231 1.9672175929848084 0.0086977206422753639 ;
 	setAttr ".sp" -type "double3" 1.0921878949049231 1.9672175929848084 0.0086977206422753639 ;
 createNode mesh -n "pCylinder20Shape" -p "pCylinder20";
@@ -22731,13 +22598,3306 @@ createNode mesh -n "pCylinder20Shape" -p "pCylinder20";
 	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.54864662885665894 0.25 ;
+	setAttr ".pv" -type "double2" 0.50000005960464478 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
+	setAttr -s 7591 ".pt";
+	setAttr ".pt[0:165]" -type "float3"  -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[166:331]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[332:497]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[498:663]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[664:829]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[830:995]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[996:1161]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[1162:1327]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[1328:1493]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[1494:1659]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[1660:1825]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[1826:1991]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[1992:2157]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[2158:2323]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[2324:2489]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[2490:2655]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[2656:2821]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[2822:2987]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[2988:3153]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[3154:3319]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[3320:3485]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[3486:3651]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[3652:3817]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[3818:3983]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[3984:4149]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[4150:4315]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[4316:4481]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[4482:4647]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[4648:4813]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[4814:4979]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[4980:5145]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[5146:5311]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[5312:5477]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[5478:5643]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[5644:5809]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[5810:5975]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[5976:6141]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[6142:6307]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[6308:6473]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[6474:6639]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[6640:6805]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[6806:6971]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[6972:7137]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[7138:7303]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[7304:7469]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887;
+	setAttr ".pt[7470:7590]" -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 
+		-1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 
+		-5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 -2.2570887 -1.9200548 -5.9604645e-008 
+		-2.2570887;
 createNode transform -n "pCube29";
 	rename -uid "813E9B32-4E45-4D7F-1EBC-698E5208A1A7";
 	setAttr ".t" -type "double3" 1.7063894901620476 3.0653182162131318 -1.7726957072917169 ;
@@ -22752,39 +25912,29 @@ createNode mesh -n "pCubeShape29" -p "pCube29";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCylinder21";
 	rename -uid "AD522666-43C8-6CD9-CDFB-7497C0B3664F";
-	setAttr ".t" -type "double3" 0 1.9915597638279383 0.090181143752206927 ;
+	setAttr ".t" -type "double3" 0 2.1723460234147338 0.090181143752206927 ;
 	setAttr ".r" -type "double3" 8.0753853194280083 0 0 ;
 	setAttr ".s" -type "double3" 0.37502823325115187 0.40955559345258774 0.37502823325115187 ;
+	setAttr ".rp" -type "double3" 0.2076038912231826 -0.037069003210621031 -0.085701655271564203 ;
+	setAttr ".rpt" -type "double3" 0 0.012406589536236835 -0.0043574923319336214 ;
+	setAttr ".sp" -type "double3" 0.55356869914418638 -0.090510308742523193 -0.22852054238319397 ;
+	setAttr ".spt" -type "double3" -0.34596480792100376 0.053441305531902163 0.14281888711162977 ;
 createNode mesh -n "pCylinderShape20" -p "pCylinder21";
 	rename -uid "669DB2AF-472B-FC2E-0481-039BD1782A88";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.62430119514465332 0.25851695239543915 ;
+	setAttr ".pv" -type "double2" 0.49999988079071045 0.37753701210021973 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 18 ".pt";
-	setAttr ".pt[34]" -type "float3" -0.010785991 -0.0013123851 0.0072915377 ;
-	setAttr ".pt[35]" -type "float3" -0.0073894402 -0.0024962868 0.013869339 ;
-	setAttr ".pt[36]" -type "float3" -0.0020991904 -0.0034358399 0.019089498 ;
-	setAttr ".pt[37]" -type "float3" 0.0045669195 -0.0040390817 0.02244105 ;
-	setAttr ".pt[38]" -type "float3" 0.01195636 -0.0042469213 0.02359592 ;
-	setAttr ".pt[39]" -type "float3" 0.011956363 0.0042469217 -0.023595922 ;
-	setAttr ".pt[40]" -type "float3" 0.0045669232 0.0040390813 -0.022441035 ;
-	setAttr ".pt[41]" -type "float3" -0.002099182 0.0034358278 -0.019089498 ;
-	setAttr ".pt[42]" -type "float3" -0.0073894216 0.0024962868 -0.013869335 ;
-	setAttr ".pt[43]" -type "float3" -0.010785959 0.001312373 -0.0072915405 ;
-	setAttr ".pt[44]" -type "float3" -0.01195636 0 -4.9895856e-009 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube30";
 	rename -uid "0345121A-4D29-63C1-EC98-D4ADBB7518F0";
-	setAttr ".t" -type "double3" 0 2.3303378868804487 0.070419360111312002 ;
+	setAttr ".t" -type "double3" 0 2.5111241464672442 0.070419360111312002 ;
 	setAttr ".r" -type "double3" -0.84640981381971803 0 0 ;
 	setAttr ".s" -type "double3" 1.0453836968006396 1.0453836968006396 1.0453836968006396 ;
 createNode mesh -n "pCubeShape30" -p "pCube30";
@@ -22798,55 +25948,1623 @@ createNode mesh -n "pCubeShape30" -p "pCube30";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube31";
 	rename -uid "9093D27D-40EA-CCA3-ACDD-A9A1F652D47C";
-	setAttr ".t" -type "double3" 0 1.4007195459547612 0.058038885229673987 ;
+	setAttr ".t" -type "double3" 0 1.5815058055415567 0.058038885229673987 ;
+	setAttr ".rp" -type "double3" 0.19057035446166992 0.16716921329498291 -0.018024235963821411 ;
+	setAttr ".sp" -type "double3" 0.19057035446166992 0.16716921329498291 -0.018024235963821411 ;
 createNode mesh -n "pCubeShape31" -p "pCube31";
 	rename -uid "E4946742-4D4A-DDA7-F026-B0941C3D59EE";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.75 0.375 ;
+	setAttr ".pv" -type "double2" 0.78029137849807739 0.125 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 15 ".pt";
-	setAttr ".pt[0]" -type "float3" -0.045091484 0.010020329 0 ;
-	setAttr ".pt[3]" -type "float3" -0.044374608 0 0 ;
-	setAttr ".pt[4]" -type "float3" -0.021113107 0.020408377 0 ;
-	setAttr ".pt[6]" -type "float3" 0.018023614 -0.00029904721 0 ;
-	setAttr ".pt[7]" -type "float3" 0 0.016131975 -0.015231907 ;
-	setAttr ".pt[8]" -type "float3" -0.042586401 -0.0050101615 -0.019039884 ;
-	setAttr ".pt[10]" -type "float3" 0 0.0031901181 1.5527887e-005 ;
-	setAttr ".pt[12]" -type "float3" 0 0 -0.022847861 ;
-	setAttr ".pt[14]" -type "float3" 0 0.040816758 0.017492894 ;
-	setAttr ".pt[15]" -type "float3" 0 0.027555905 0 ;
-	setAttr ".pt[16]" -type "float3" -0.11281051 -0.011661929 0 ;
-	setAttr ".pt[18]" -type "float3" -0.021113109 0 2.9802322e-008 ;
-	setAttr ".pt[19]" -type "float3" -0.0078536645 -2.3283064e-010 0 ;
-	setAttr ".pt[23]" -type "float3" -0.010020329 0 0 ;
-	setAttr ".pt[24]" -type "float3" 0.027859055 0 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
+	setAttr -s 28 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 0.020031579 -0.013354384 ;
+	setAttr ".pt[1]" -type "float3" -0.0032907957 0.0064137178 -0.013484666 ;
+	setAttr ".pt[3]" -type "float3" 0 0.0033385961 0.0083464906 ;
+	setAttr ".pt[5]" -type "float3" 0 0.010015788 -0.0016692987 ;
+	setAttr ".pt[7]" -type "float3" 0 0.010015788 -0.0050078942 ;
+	setAttr ".pt[8]" -type "float3" 0 -0.010923241 0.0033297706 ;
+	setAttr ".pt[12]" -type "float3" 0 -0.047338478 -0.047624424 ;
+	setAttr ".pt[15]" -type "float3" 0 0.0049092402 -0.014707372 ;
+	setAttr ".pt[18]" -type "float3" 0.010482214 0.0066439211 -0.0082473988 ;
+	setAttr ".pt[27]" -type "float3" 0 0.010015788 0 ;
+	setAttr ".pt[29]" -type "float3" 0.010781175 0 0.0077182776 ;
+	setAttr ".pt[30]" -type "float3" 0.013011881 0 0.0018140092 ;
+	setAttr ".pt[32]" -type "float3" -0.0014173621 0 0.009937387 ;
+	setAttr ".pt[34]" -type "float3" 0 -0.0027256163 -0.012103532 ;
+	setAttr ".pt[46]" -type "float3" 0 0 -0.013242399 ;
+	setAttr ".pt[47]" -type "float3" 0 0 -0.013242399 ;
+	setAttr ".pt[48]" -type "float3" 0 0 -0.013242399 ;
+	setAttr ".pt[49]" -type "float3" 0 0 -0.0066182502 ;
+	setAttr ".pt[50]" -type "float3" 0.02469545 0.013295973 0.001669298 ;
+	setAttr ".pt[54]" -type "float3" 0.023136055 0.016692981 0.0060649607 ;
+	setAttr ".pt[55]" -type "float3" 0 -0.033639994 -0.0077883955 ;
+	setAttr ".pt[56]" -type "float3" 0 0 0.015959095 ;
+	setAttr ".pt[57]" -type "float3" 0 0 0.013647764 ;
+	setAttr ".pt[58]" -type "float3" 0 0 0.0090933945 ;
+createNode transform -n "pCylinder22";
+	rename -uid "BA2DD060-4086-AC62-6038-8BB819BECB2C";
+	setAttr ".t" -type "double3" 0.25708227721184418 1.6089803333305881 0.044138263332505007 ;
+	setAttr ".r" -type "double3" -15.707398723843834 -2.1197430739291807 82.507236831597169 ;
+	setAttr ".s" -type "double3" 0.071953750059707736 0.15643181225222164 0.071953750059707736 ;
+createNode mesh -n "pCylinderShape21" -p "pCylinder22";
+	rename -uid "3B47D9E3-4E2D-A8A8-AEBA-5D9A7C0CAB81";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999998509883881 0.15624996274709702 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube32";
+	rename -uid "B50E2DFF-41F5-39EC-3F4E-FD8DD49712FC";
+	setAttr ".t" -type "double3" 0.30735345278464177 0.81790886000891005 -0.0055298784401126011 ;
+	setAttr ".r" -type "double3" -0.39737984612261257 -12.763788439496462 0.81189603029259194 ;
+	setAttr ".s" -type "double3" 0.63988730358481316 0.63988730358481316 0.63988730358481316 ;
+	setAttr ".rp" -type "double3" 0.24592176915153413 0.69346877683462327 0.047533532883521273 ;
+	setAttr ".rpt" -type "double3" -0.10400706017009548 0.03705799666043233 0.043043814222562739 ;
+	setAttr ".sp" -type "double3" 0.23173803091049194 0.77857136726379395 0.074284225702285767 ;
+	setAttr ".spt" -type "double3" 0.014183738241042188 -0.085102590429170621 -0.02675069281876449 ;
+createNode mesh -n "pCubeShape32" -p "pCube32";
+	rename -uid "2B2B1F38-45B1-E975-1746-F8AA483DBAAC";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 96 ".pt[354:449]" -type "float3"  0.0067875669 0.016701315 
+		-0.017192267 0.0024617908 0.017524302 -0.01759628 0.0020912369 0.013851315 -0.020488651 
+		0.0065096058 0.01308123 -0.020034544 0.001630852 0.0095715579 -0.022563938 0.0062295632 
+		0.0088557014 -0.022072533 0.0011044326 0.0048869788 -0.023817725 0.0058847899 0.004232903 
+		-0.023302931 0.00053581106 -1.1976416e-008 -0.024245655 0.0054123206 -0.00057794084 
+		-0.023722526 -0.0019500505 0.017734868 -0.017385358 -0.0024003584 0.014135151 -0.020231446 
+		-0.0030249381 0.0099503957 -0.022277046 -0.0037143943 0.0053683529 -0.023515064 -0.0043590534 
+		0.00057789701 -0.023938466 -0.0048495787 -0.0042329258 -0.023540152 -5.1152438e-005 
+		-0.0048870021 -0.023843266 -0.0052483948 -0.0088557033 -0.022326188 -0.00063243922 
+		-0.0095715392 -0.02261395 -0.0056181829 -0.013081298 -0.020302556 -0.0011840696 -0.013851399 
+		-0.02056103 -0.0060214614 -0.016701335 -0.017475335 -0.0016820219 -0.017524326 -0.017687848 
+		0.0047496259 -0.0053684185 -0.023328021 0.0040060985 -0.0099503556 -0.022121672 0.0032917766 
+		-0.014135257 -0.020105662 0.002716159 -0.017734909 -0.01728224 -0.002102301 -0.020387799 
+		-0.013997763 0.0023891213 -0.020560887 -0.013653637 -0.0024399266 -0.022438131 -0.0096944543 
+		0.0022293213 -0.02259847 -0.00942156 -0.002689956 -0.023671437 -0.0049816128 0.0021557608 
+		-0.023832927 -0.0047877305 -0.0028474368 -0.024083747 -6.2916472e-005 0.002086991 
+		-0.024249339 4.6129026e-005 -0.0065208408 -0.019506967 -0.013850544 -0.0070251832 
+		-0.021503758 -0.0096260775 -0.0074434364 -0.022697471 -0.0049998676 -0.0076843882 
+		-0.02309346 -0.00016981378 -0.0076570525 -0.022697471 0.0046661706 -0.0029074089 
+		-0.023671413 0.0048579238 -0.0074435724 -0.021503758 0.0093063451 -0.0028658132 -0.022438109 
+		0.0095772212 -0.0071263579 -0.019506939 0.013548962 -0.0027186228 -0.020387799 0.013891229 
+		-0.0067875837 -0.016701335 0.017192271 -0.0024617829 -0.017524304 0.017596286 0.0019421442 
+		-0.023832899 0.0048783086 0.001810926 -0.022598449 0.0095108654 0.0017835972 -0.020560887 
+		0.013745863 0.0019500293 -0.01773493 0.017385371 -0.002091245 -0.013851423 0.020488657 
+		0.0024003531 -0.014135257 0.020231457 -0.0016308445 -0.0095715169 0.02256394 0.0030249159 
+		-0.0099503966 0.022277046 -0.0011044277 -0.0048870235 0.023817727 0.0037144264 -0.0053684185 
+		0.023515081 -0.00053580868 -3.3593089e-008 0.024245655 0.0043590353 -0.00057791983 
+		0.02393847 -0.0065096137 -0.013081298 0.020034553 -0.0062295683 -0.0088556809 0.022072533 
+		-0.0058847745 -0.0042329258 0.023302935 -0.0054123341 0.00057789701 0.023722537 -0.0047496068 
+		0.0053683529 0.023328023 5.1149316e-005 0.0048870007 0.02384327 -0.0040061204 0.0099503957 
+		0.022121672 0.00063245214 0.0095715579 0.022613952 -0.003291775 0.014135151 0.020105664 
+		0.0011840693 0.013851315 0.020561032 -0.0027161806 0.017734868 0.017282246 0.0016820298 
+		0.017524302 0.017687859 0.0048495946 0.0042328821 0.02354016 0.0052483813 0.0088557014 
+		0.02232619 0.0056181829 0.01308123 0.020302573 0.0060214321 0.016701315 0.017475342 
+		0.0021022982 0.020387772 0.013997768 0.0065208543 0.019506937 0.013850549 0.002439939 
+		0.022438165 0.009694471 0.0070251524 0.021503711 0.0096260961 0.0026899672 0.02367142 
+		0.0049816277 0.0074434578 0.022697326 0.004999883 0.0028474338 0.024083696 6.2932348e-005 
+		0.0076843663 0.023093492 0.00016982705 -0.0023891164 0.020560883 0.013653652 -0.0022293432 
+		0.02259839 0.0094215758 -0.0021557449 0.023832785 0.0047877473 -0.0020870047 0.024249339 
+		-4.6113153e-005 -0.0019421286 0.023832791 -0.0048782905 0.0029074161 0.023671445 
+		-0.0048579108 -0.0018109473 0.02259839 -0.0095108477 0.0028658286 0.022438165 -0.0095772054 
+		-0.0017836109 0.020560883 -0.013745856 0.0027186275 0.020387756 -0.013891224 0.0076570679 
+		0.022697341 -0.0046661557 0.0074435445 0.021503687 -0.0093063302 0.0071263686 0.019506965 
+		-0.013548947;
+createNode transform -n "pCylinder23";
+	rename -uid "3B5BD9E3-4467-91FF-EDA2-03B169DC3B7D";
+	setAttr ".t" -type "double3" 0.39364636302819112 0.80879951778798742 0.10345336721354342 ;
+	setAttr ".r" -type "double3" -2.6953507766759799 -0.30689171749208616 -6.4909218225847995 ;
+	setAttr ".s" -type "double3" 0.089332166106494332 0.34026826188190629 0.089332166106494332 ;
+	setAttr ".rp" -type "double3" 0.016223379350675939 0.43396941432092451 0.031785330070647246 ;
+	setAttr ".rpt" -type "double3" 0.049008520929271798 -0.0036008191157240435 -0.020356014331222857 ;
+	setAttr ".sp" -type "double3" 0.18160736560821533 1.2753743529319763 0.35581058263778687 ;
+	setAttr ".spt" -type "double3" -0.16538398625753939 -0.84140493861105181 -0.3240252525671396 ;
+createNode mesh -n "pCylinderShape22" -p "pCylinder23";
+	rename -uid "ADAC5053-4D54-5471-2E52-1C8D93D357A2";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.61874976754188538 0.3125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube33";
+	rename -uid "455C8805-49FD-3ED3-E244-C6960539E888";
+	setAttr ".t" -type "double3" 0.37511326935362943 0.20237192720321373 0.10351278631795377 ;
+	setAttr ".r" -type "double3" -2.214477107701907 -1.2571749211470964 7.5879257458740108 ;
+	setAttr ".s" -type "double3" 0.63988730358481316 0.63988730358481316 0.63988730358481316 ;
+	setAttr ".rp" -type "double3" 0.24592176915153385 0.69346877683462305 0.047533532883521315 ;
+	setAttr ".rpt" -type "double3" -0.17304473483131916 0.06119024904697104 -0.026862553755068058 ;
+	setAttr ".sp" -type "double3" 0.23173803091049194 0.77857136726379395 0.074284225702285767 ;
+	setAttr ".spt" -type "double3" 0.01418373824104191 -0.085102590429170843 -0.026750692818764452 ;
+createNode mesh -n "pCubeShape33" -p "pCube33";
+	rename -uid "96628B5F-40A0-1C21-D4A0-C5B1A4568A1B";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 507 ".uvst[0].uvsp";
+	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.375 0 0.375 1 0.625 0 0.625
+		 1 0.375 0.25 0.625 0.25 0.375 0.5 0.125 0.25 0.625 0.5 0.875 0.25 0.375 0.75 0.125
+		 0 0.625 0.75 0.875 0 0.5 0.125 0.5 0.375 0.5 0.625 0.5 0.875 0.75 0.125 0.25 0.125
+		 0.5 0 0.5 1 0.625 0.125 0.5 0.25 0.375 0.125 0.625 0.375 0.75 0.25 0.5 0.5 0.375
+		 0.375 0.25 0.25 0.625 0.625 0.875 0.125 0.5 0.75 0.375 0.625 0.125 0.125 0.625 0.875
+		 0.75 0 0.375 0.875 0.25 0 0.4375 0.0625 0.5625 0.0625 0.5625 0.1875 0.4375 0.1875
+		 0.4375 0.3125 0.5625 0.3125 0.5625 0.4375 0.4375 0.4375 0.4375 0.5625 0.5625 0.5625
+		 0.5625 0.6875 0.4375 0.6875 0.4375 0.8125 0.5625 0.8125 0.5625 0.9375 0.4375 0.9375
+		 0.6875 0.0625 0.8125 0.0625 0.8125 0.1875 0.6875 0.1875 0.1875 0.0625 0.3125 0.0625
+		 0.3125 0.1875 0.1875 0.1875 0.5 0.0625 0.5625 0.125 0.5 0.1875 0.4375 0.125 0.5 0.3125
+		 0.5625 0.375 0.5 0.4375 0.4375 0.375 0.5 0.5625 0.5625 0.625 0.5 0.6875 0.4375 0.625
+		 0.5 0.8125 0.5625 0.875 0.5 0.9375 0.4375 0.875 0.75 0.0625 0.8125 0.125 0.75 0.1875
+		 0.6875 0.125 0.25 0.0625 0.3125 0.125 0.25 0.1875 0.1875 0.125 0.4375 0 0.4375 1
+		 0.5625 0 0.5625 1 0.625 0.0625 0.625 0.1875 0.5625 0.25 0.4375 0.25 0.375 0.1875
+		 0.375 0.0625 0.625 0.3125 0.6875 0.25 0.625 0.4375 0.8125 0.25 0.5625 0.5 0.4375
+		 0.5 0.375 0.4375 0.1875 0.25 0.375 0.3125 0.3125 0.25 0.625 0.5625 0.875 0.1875 0.625
+		 0.6875 0.875 0.0625 0.5625 0.75 0.4375 0.75 0.375 0.6875 0.125 0.0625 0.375 0.5625
+		 0.125 0.1875 0.625 0.8125 0.8125 0 0.625 0.9375 0.6875 0 0.375 0.9375 0.3125 0 0.375
+		 0.8125 0.1875 0 0.40625 0.03125 0.46875 0.03125 0.46875 0.09375 0.40625 0.09375 0.53125
+		 0.03125 0.59375 0.03125 0.59375 0.09375 0.53125 0.09375 0.53125 0.15625 0.59375 0.15625
+		 0.59375 0.21875 0.53125 0.21875 0.40625 0.15625 0.46875 0.15625 0.46875 0.21875 0.40625
+		 0.21875 0.40625 0.28125 0.46875 0.28125 0.46875 0.34375 0.40625 0.34375 0.53125 0.28125
+		 0.59375 0.28125 0.59375 0.34375 0.53125 0.34375 0.53125 0.40625 0.59375 0.40625 0.59375
+		 0.46875 0.53125 0.46875 0.40625 0.40625 0.46875 0.40625 0.46875 0.46875 0.40625 0.46875
+		 0.40625 0.53125 0.46875 0.53125 0.46875 0.59375 0.40625 0.59375 0.53125 0.53125 0.59375
+		 0.53125 0.59375 0.59375 0.53125 0.59375 0.53125 0.65625 0.59375 0.65625 0.59375 0.71875
+		 0.53125 0.71875 0.40625 0.65625 0.46875 0.65625 0.46875 0.71875 0.40625 0.71875 0.40625
+		 0.78125 0.46875 0.78125 0.46875 0.84375 0.40625 0.84375 0.53125 0.78125 0.59375 0.78125
+		 0.59375 0.84375 0.53125 0.84375 0.53125 0.90625 0.59375 0.90625 0.59375 0.96875 0.53125
+		 0.96875 0.40625 0.90625 0.46875 0.90625 0.46875 0.96875 0.40625 0.96875 0.65625 0.03125
+		 0.71875 0.03125 0.71875 0.09375 0.65625 0.09375 0.78125 0.03125 0.84375 0.03125 0.84375
+		 0.09375 0.78125 0.09375 0.78125 0.15625 0.84375 0.15625 0.84375 0.21875 0.78125 0.21875
+		 0.65625 0.15625 0.71875 0.15625 0.71875 0.21875 0.65625 0.21875 0.15625 0.03125 0.21875
+		 0.03125 0.21875 0.09375 0.15625 0.09375 0.28125 0.03125 0.34375 0.03125 0.34375 0.09375
+		 0.28125 0.09375 0.28125 0.15625 0.34375 0.15625 0.34375 0.21875 0.28125 0.21875 0.15625
+		 0.15625 0.21875 0.15625 0.21875 0.21875 0.15625 0.21875 0.4375 0.03125 0.46875 0.0625
+		 0.4375 0.09375 0.40625 0.0625 0.5625 0.03125 0.59375 0.0625 0.5625 0.09375 0.53125
+		 0.0625 0.5625 0.15625 0.59375 0.1875 0.5625 0.21875 0.53125 0.1875 0.4375 0.15625
+		 0.46875 0.1875 0.4375 0.21875 0.40625 0.1875 0.4375 0.28125 0.46875 0.3125 0.4375
+		 0.34375 0.40625 0.3125 0.5625 0.28125 0.59375 0.3125 0.5625 0.34375 0.53125 0.3125
+		 0.5625 0.40625 0.59375 0.4375 0.5625 0.46875 0.53125 0.4375 0.4375 0.40625;
+	setAttr ".uvst[0].uvsp[250:499]" 0.46875 0.4375 0.4375 0.46875 0.40625 0.4375
+		 0.4375 0.53125 0.46875 0.5625 0.4375 0.59375 0.40625 0.5625 0.5625 0.53125 0.59375
+		 0.5625 0.5625 0.59375 0.53125 0.5625 0.5625 0.65625 0.59375 0.6875 0.5625 0.71875
+		 0.53125 0.6875 0.4375 0.65625 0.46875 0.6875 0.4375 0.71875 0.40625 0.6875 0.4375
+		 0.78125 0.46875 0.8125 0.4375 0.84375 0.40625 0.8125 0.5625 0.78125 0.59375 0.8125
+		 0.5625 0.84375 0.53125 0.8125 0.5625 0.90625 0.59375 0.9375 0.5625 0.96875 0.53125
+		 0.9375 0.4375 0.90625 0.46875 0.9375 0.4375 0.96875 0.40625 0.9375 0.6875 0.03125
+		 0.71875 0.0625 0.6875 0.09375 0.65625 0.0625 0.8125 0.03125 0.84375 0.0625 0.8125
+		 0.09375 0.78125 0.0625 0.8125 0.15625 0.84375 0.1875 0.8125 0.21875 0.78125 0.1875
+		 0.6875 0.15625 0.71875 0.1875 0.6875 0.21875 0.65625 0.1875 0.1875 0.03125 0.21875
+		 0.0625 0.1875 0.09375 0.15625 0.0625 0.3125 0.03125 0.34375 0.0625 0.3125 0.09375
+		 0.28125 0.0625 0.3125 0.15625 0.34375 0.1875 0.3125 0.21875 0.28125 0.1875 0.1875
+		 0.15625 0.21875 0.1875 0.1875 0.21875 0.15625 0.1875 0.5 0.09375 0.5 0.03125 0.53125
+		 0.125 0.59375 0.125 0.5 0.15625 0.5 0.21875 0.46875 0.125 0.40625 0.125 0.5 0.34375
+		 0.5 0.28125 0.53125 0.375 0.59375 0.375 0.5 0.40625 0.5 0.46875 0.46875 0.375 0.40625
+		 0.375 0.5 0.59375 0.5 0.53125 0.53125 0.625 0.59375 0.625 0.5 0.65625 0.5 0.71875
+		 0.46875 0.625 0.40625 0.625 0.5 0.84375 0.5 0.78125 0.53125 0.875 0.59375 0.875 0.5
+		 0.90625 0.5 0.96875 0.46875 0.875 0.40625 0.875 0.75 0.09375 0.75 0.03125 0.78125
+		 0.125 0.84375 0.125 0.75 0.15625 0.75 0.21875 0.71875 0.125 0.65625 0.125 0.25 0.09375
+		 0.25 0.03125 0.28125 0.125 0.34375 0.125 0.25 0.15625 0.25 0.21875 0.21875 0.125
+		 0.15625 0.125 0.46875 0 0.46875 1 0.40625 0 0.40625 1 0.53125 0 0.53125 1 0.59375
+		 0 0.59375 1 0.625 0.09375 0.625 0.03125 0.625 0.15625 0.625 0.21875 0.53125 0.25
+		 0.59375 0.25 0.46875 0.25 0.40625 0.25 0.375 0.15625 0.375 0.21875 0.375 0.09375
+		 0.375 0.03125 0.625 0.34375 0.71875 0.25 0.625 0.28125 0.65625 0.25 0.625 0.40625
+		 0.78125 0.25 0.625 0.46875 0.84375 0.25 0.53125 0.5 0.59375 0.5 0.46875 0.5 0.40625
+		 0.5 0.375 0.40625 0.21875 0.25 0.375 0.46875 0.15625 0.25 0.375 0.34375 0.28125 0.25
+		 0.375 0.28125 0.34375 0.25 0.625 0.59375 0.875 0.15625 0.625 0.53125 0.875 0.21875
+		 0.625 0.65625 0.875 0.09375 0.625 0.71875 0.875 0.03125 0.53125 0.75 0.59375 0.75
+		 0.46875 0.75 0.40625 0.75 0.375 0.65625 0.125 0.09375 0.375 0.71875 0.125 0.03125
+		 0.375 0.59375 0.125 0.15625 0.375 0.53125 0.125 0.21875 0.625 0.84375 0.78125 0 0.625
+		 0.78125 0.84375 0 0.625 0.90625 0.71875 0 0.625 0.96875 0.65625 0 0.375 0.90625 0.28125
+		 0 0.375 0.96875 0.34375 0 0.375 0.84375 0.21875 0 0.375 0.78125 0.15625 0 0.46875
+		 0.03125 0.46875 0 0.46875 0.0625 0.46875 0.09375 0.46875 0.125 0.53125 0 0.53125
+		 0.03125 0.53125 0.0625 0.53125 0.09375 0.53125 0.125 0.53125 0.15625 0.53125 0.1875
+		 0.53125 0.21875 0.53125 0.25 0.46875 0.15625 0.46875 0.1875 0.46875 0.21875 0.46875
+		 0.25 0.46875 0.28125 0.46875 0.3125 0.46875 0.34375 0.46875 0.375 0.53125 0.28125
+		 0.53125 0.3125 0.53125 0.34375 0.53125 0.375 0.53125 0.40625 0.53125 0.4375 0.53125
+		 0.46875 0.53125 0.5 0.46875 0.40625 0.46875 0.4375 0.46875 0.46875 0.46875 0.5 0.46875
+		 0.53125 0.46875 0.5625 0.46875 0.59375 0.46875 0.625 0.53125 0.53125 0.53125 0.5625
+		 0.53125 0.59375 0.53125 0.625 0.53125 0.65625 0.53125 0.6875 0.53125 0.71875 0.53125
+		 0.75 0.46875 0.65625 0.46875 0.6875 0.46875 0.71875 0.46875 0.75 0.46875 0.78125
+		 0.46875 0.8125 0.46875 0.84375 0.46875 0.875 0.53125 0.78125 0.53125 0.8125 0.53125
+		 0.84375 0.53125 0.875 0.53125 0.90625;
+	setAttr ".uvst[0].uvsp[500:506]" 0.53125 0.9375 0.53125 0.96875 0.53125 1 0.46875
+		 0.90625 0.46875 0.9375 0.46875 0.96875 0.46875 1;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 96 ".pt[354:449]" -type "float3"  0.0067875669 0.016701315 
+		-0.017192267 0.0024617908 0.017524302 -0.01759628 0.0020912369 0.013851315 -0.020488651 
+		0.0065096058 0.01308123 -0.020034544 0.001630852 0.0095715579 -0.022563938 0.0062295632 
+		0.0088557014 -0.022072533 0.0011044326 0.0048869788 -0.023817725 0.0058847899 0.004232903 
+		-0.023302931 0.00053581106 -1.1976416e-008 -0.024245655 0.0054123206 -0.00057794084 
+		-0.023722526 -0.0019500505 0.017734868 -0.017385358 -0.0024003584 0.014135151 -0.020231446 
+		-0.0030249381 0.0099503957 -0.022277046 -0.0037143943 0.0053683529 -0.023515064 -0.0043590534 
+		0.00057789701 -0.023938466 -0.0048495787 -0.0042329258 -0.023540152 -5.1152438e-005 
+		-0.0048870021 -0.023843266 -0.0052483948 -0.0088557033 -0.022326188 -0.00063243922 
+		-0.0095715392 -0.02261395 -0.0056181829 -0.013081298 -0.020302556 -0.0011840696 -0.013851399 
+		-0.02056103 -0.0060214614 -0.016701335 -0.017475335 -0.0016820219 -0.017524326 -0.017687848 
+		0.0047496259 -0.0053684185 -0.023328021 0.0040060985 -0.0099503556 -0.022121672 0.0032917766 
+		-0.014135257 -0.020105662 0.002716159 -0.017734909 -0.01728224 -0.002102301 -0.020387799 
+		-0.013997763 0.0023891213 -0.020560887 -0.013653637 -0.0024399266 -0.022438131 -0.0096944543 
+		0.0022293213 -0.02259847 -0.00942156 -0.002689956 -0.023671437 -0.0049816128 0.0021557608 
+		-0.023832927 -0.0047877305 -0.0028474368 -0.024083747 -6.2916472e-005 0.002086991 
+		-0.024249339 4.6129026e-005 -0.0065208408 -0.019506967 -0.013850544 -0.0070251832 
+		-0.021503758 -0.0096260775 -0.0074434364 -0.022697471 -0.0049998676 -0.0076843882 
+		-0.02309346 -0.00016981378 -0.0076570525 -0.022697471 0.0046661706 -0.0029074089 
+		-0.023671413 0.0048579238 -0.0074435724 -0.021503758 0.0093063451 -0.0028658132 -0.022438109 
+		0.0095772212 -0.0071263579 -0.019506939 0.013548962 -0.0027186228 -0.020387799 0.013891229 
+		-0.0067875837 -0.016701335 0.017192271 -0.0024617829 -0.017524304 0.017596286 0.0019421442 
+		-0.023832899 0.0048783086 0.001810926 -0.022598449 0.0095108654 0.0017835972 -0.020560887 
+		0.013745863 0.0019500293 -0.01773493 0.017385371 -0.002091245 -0.013851423 0.020488657 
+		0.0024003531 -0.014135257 0.020231457 -0.0016308445 -0.0095715169 0.02256394 0.0030249159 
+		-0.0099503966 0.022277046 -0.0011044277 -0.0048870235 0.023817727 0.0037144264 -0.0053684185 
+		0.023515081 -0.00053580868 -3.3593089e-008 0.024245655 0.0043590353 -0.00057791983 
+		0.02393847 -0.0065096137 -0.013081298 0.020034553 -0.0062295683 -0.0088556809 0.022072533 
+		-0.0058847745 -0.0042329258 0.023302935 -0.0054123341 0.00057789701 0.023722537 -0.0047496068 
+		0.0053683529 0.023328023 5.1149316e-005 0.0048870007 0.02384327 -0.0040061204 0.0099503957 
+		0.022121672 0.00063245214 0.0095715579 0.022613952 -0.003291775 0.014135151 0.020105664 
+		0.0011840693 0.013851315 0.020561032 -0.0027161806 0.017734868 0.017282246 0.0016820298 
+		0.017524302 0.017687859 0.0048495946 0.0042328821 0.02354016 0.0052483813 0.0088557014 
+		0.02232619 0.0056181829 0.01308123 0.020302573 0.0060214321 0.016701315 0.017475342 
+		0.0021022982 0.020387772 0.013997768 0.0065208543 0.019506937 0.013850549 0.002439939 
+		0.022438165 0.009694471 0.0070251524 0.021503711 0.0096260961 0.0026899672 0.02367142 
+		0.0049816277 0.0074434578 0.022697326 0.004999883 0.0028474338 0.024083696 6.2932348e-005 
+		0.0076843663 0.023093492 0.00016982705 -0.0023891164 0.020560883 0.013653652 -0.0022293432 
+		0.02259839 0.0094215758 -0.0021557449 0.023832785 0.0047877473 -0.0020870047 0.024249339 
+		-4.6113153e-005 -0.0019421286 0.023832791 -0.0048782905 0.0029074161 0.023671445 
+		-0.0048579108 -0.0018109473 0.02259839 -0.0095108477 0.0028658286 0.022438165 -0.0095772054 
+		-0.0017836109 0.020560883 -0.013745856 0.0027186275 0.020387756 -0.013891224 0.0076570679 
+		0.022697341 -0.0046661557 0.0074435445 0.021503687 -0.0093063302 0.0071263686 0.019506965 
+		-0.013548947;
+	setAttr -s 450 ".vt";
+	setAttr ".vt[0:165]"  0.050035179 0.63806093 0.23077351 0.36866814 0.60037053 0.23781505
+		 0.087716669 0.95677292 0.23160625 0.4063496 0.91908228 0.23864782 0.094807357 0.95677269 -0.08924666
+		 0.41344023 0.91908205 -0.082205102 0.057125807 0.63806117 -0.090079382 0.37575871 0.60037076 -0.083037809
+		 0.058674216 0.99811184 0.070459597 0.43238068 0.75535452 -0.11902077 0.039830595 0.80178845 -0.12769589
+		 0.40480149 0.55903113 0.07810878 0.012251377 0.60546529 0.069433652 0.4236452 0.75535452 0.27626434
+		 0.031094998 0.80178869 0.26758927 0.45122445 0.95167744 0.07913468 0.5014804 0.7466644 0.080245309
+		 -0.038004503 0.81047904 0.068323053 0.11322778 0.68921649 0.30765626 0.31585962 0.6652478 0.31213427
+		 0.33982247 0.86792696 0.31266388 0.13719058 0.89189589 0.30818582 0.15586886 1.024857402 0.17467892
+		 0.35850078 1.00088822842 0.17915696 0.36300993 1.00088822842 -0.024886236 0.16037804 1.024857402 -0.029364228
+		 0.147616 0.89189565 -0.16356584 0.35024786 0.86792672 -0.15908781 0.32628495 0.6652478 -0.15961739
+		 0.12365314 0.68921649 -0.16409537 0.10497484 0.55625498 -0.030588571 0.30760676 0.53228593 -0.026110567
+		 0.30309749 0.53228581 0.17793262 0.10046574 0.55625498 0.17345458 0.45174539 0.64952362 0.18121764
+		 0.45625466 0.64952385 -0.022825554 0.48021746 0.85220301 -0.022296019 0.47570825 0.85220325 0.1817472
+		 -0.012232482 0.70494044 -0.033178821 -0.016741753 0.70494044 0.17086434 0.0072213113 0.90761936 0.17139396
+		 0.011730522 0.9076196 -0.032649264 0.33334792 0.76589072 0.32971534 0.11894348 0.79125226 0.32497719
+		 0.36866015 1.017262816 0.077310078 0.1542559 1.042624593 0.072571881 0.34453279 0.76589096 -0.17640865
+		 0.13012853 0.79125202 -0.18114683 0.30922025 0.51451778 0.075996496 0.094816029 0.5398792 0.071258299
+		 0.47037101 0.64161479 0.079557814 0.48543441 0.7488445 -0.028111473 0.49572659 0.85607326 0.080118157
+		 0.48066318 0.7488445 0.18778747 -0.032250151 0.70106876 0.06845022 -0.021957934 0.80829895 0.17667985
+		 -0.0068945885 0.9155277 0.069010563 -0.017186731 0.80829895 -0.039219055 0.11134425 0.60561836 0.25708747
+		 0.30039769 0.58325565 0.26126543 0.40055335 0.66224611 0.26347885 0.42291057 0.85134542 0.26397294
+		 0.34393847 0.95152605 0.26222765 0.15488511 0.97388852 0.25804973 0.054728955 0.8948971 0.25583634
+		 0.03237164 0.70579779 0.2553423 0.4354955 0.94093144 0.17401922 0.43970257 0.94093144 -0.016352072
+		 0.35213178 0.95152581 -0.10851906 0.16307843 0.97388875 -0.11269702 0.071520865 0.98448312 -0.024488635
+		 0.06731385 0.98448312 0.16588265 0.43110383 0.85134566 -0.10677382 0.40874666 0.66224611 -0.10726792
+		 0.30859095 0.58325565 -0.10948129 0.11953756 0.60561836 -0.11365925 0.040564865 0.70579779 -0.11540449
+		 0.06292212 0.89489734 -0.1149104 0.39616174 0.57266104 -0.017314278 0.3919546 0.57266104 0.17305699
+		 0.023772985 0.61621273 0.16492042 0.02798003 0.61621273 -0.025450837 0.073145568 0.65693581 0.26847795
+		 0.15881139 0.63202345 0.29872957 0.16581115 0.73115051 0.33534506 0.068427354 0.74667966 0.29673216
+		 0.25862896 0.62021649 0.30093548 0.34897685 0.62430823 0.27457365 0.37325758 0.71062171 0.3034687
+		 0.27335 0.71843016 0.33772156 0.28606737 0.82599247 0.33800262 0.38506192 0.81046379 0.30372956
+		 0.38159651 0.90020716 0.27529451 0.29467797 0.92512 0.30173209 0.080231696 0.8465215 0.29699308
+		 0.17852831 0.83871329 0.33562613 0.19486046 0.93692744 0.29952624 0.10576522 0.93283474 0.26919883
+		 0.11395991 0.99116814 0.21062601 0.20497283 1.0089131594 0.22724482 0.20758715 1.045569539 0.12792081
+		 0.10474765 1.021038651 0.12175896 0.30479038 0.99710619 0.22945073 0.38979113 0.95854056 0.21672165
+		 0.40957779 0.98498046 0.12849551 0.31512612 1.032849193 0.13029736 0.31751925 1.032849193 0.022009559
+		 0.41179907 0.98498046 0.027982242 0.39592928 0.95854032 -0.061031867 0.31157392 0.99710596 -0.077503562
+		 0.10696894 1.021038651 0.021245696 0.20998028 1.045569301 0.019632995 0.21175647 1.0089131594 -0.07970947
+		 0.12009805 0.99116838 -0.067127585 0.11449897 0.93283474 -0.1260052 0.20484701 0.93692744 -0.15236703
+		 0.19012555 0.83871329 -0.18915313 0.090218246 0.84652174 -0.15490022 0.30466461 0.92512 -0.15016112
+		 0.3903302 0.90020716 -0.11990951 0.39504838 0.81046379 -0.14816368 0.29766458 0.82599247 -0.18677655
+		 0.2849474 0.71843016 -0.18705761 0.38324404 0.71062171 -0.14842454 0.35771066 0.62430847 -0.12063037
+		 0.26861542 0.62021649 -0.15095776 0.078413844 0.74667966 -0.15516108 0.17740837 0.73115075 -0.18943414
+		 0.16879794 0.63202345 -0.15316367 0.081879288 0.65693605 -0.12672605 0.073684663 0.59860194 -0.068153277
+		 0.15868539 0.56003678 -0.080882281 0.14834952 0.52429521 0.018271007 0.053898036 0.57216203 0.02007287
+		 0.25850302 0.54822958 -0.078676447 0.34951586 0.56597412 -0.06205757 0.35872805 0.53610408 0.026809417
+		 0.25588858 0.51157475 0.020647548 0.25349545 0.51157463 0.12893534 0.35650688 0.53610408 0.12732267
+		 0.34337771 0.56597412 0.21569595 0.25171959 0.54822958 0.22827789 0.05167672 0.57216203 0.12058612
+		 0.14595649 0.52429497 0.12655881 0.15190184 0.56003654 0.22607195 0.067546546 0.5986017 0.20960027
+		 0.40859383 0.61741006 0.21713722 0.43698609 0.59957778 0.12910122 0.48475671 0.69396722 0.13404608
+		 0.44682717 0.70210874 0.23258966 0.4392072 0.59957802 0.02858793 0.41473198 0.61741006 -0.060616374
+		 0.45361072 0.7021085 -0.074364632 0.4871496 0.69396722 0.025758266 0.49986696 0.80153 0.026039295
+		 0.46541506 0.80195057 -0.074103773 0.44735163 0.89330876 -0.059895486 0.4752562 0.90448201 0.029384606
+		 0.45863163 0.80195057 0.23285055 0.4974739 0.80153024 0.13432711 0.47303504 0.90448177 0.12989783
+		 0.44121355 0.89330852 0.21785808 0.02226302 0.66383445 -0.069289662 -0.0095590949 0.65266192 0.018670492
+		 -0.033998564 0.75561321 0.014241241 0.0048442483 0.7551924 -0.084282085;
+	setAttr ".vt[166:331]" -0.011780381 0.65266216 0.11918377 0.016124815 0.66383445 0.20846391
+		 -0.0019392371 0.7551924 0.22267216 -0.036391646 0.75561321 0.12252905 -0.023674548 0.86317575 0.12281009
+		 0.0098651648 0.85503447 0.22293305 0.0487445 0.93973315 0.2091848 0.024268597 0.9575659 0.11998042
+		 0.01664865 0.85503447 -0.084021211 -0.021281391 0.86317575 0.014522277 0.026489884 0.95756567 0.01946716
+		 0.054882675 0.93973315 -0.068568788 0.11285076 0.64392745 0.28663093 0.16194868 0.6793617 0.32156095
+		 0.11479601 0.73917639 0.32051888 0.069467574 0.6989609 0.28567219 0.30658066 0.62101138 0.29091227
+		 0.36160159 0.66440499 0.29212812 0.3254267 0.71426117 0.32517365 0.26562607 0.66709793 0.32385212
+		 0.33768773 0.81796682 0.32544464 0.38451213 0.85818207 0.29263449 0.34112811 0.91321599 0.29167569
+		 0.29053527 0.87778103 0.3244026 0.12705714 0.84288204 0.32078984 0.18685797 0.89004433 0.32211146
+		 0.14739826 0.93613207 0.28739446 0.092377841 0.89273798 0.28617847 0.15685701 1.0034636259 0.21978632
+		 0.20676306 1.031740069 0.1798332 0.15447643 1.038065553 0.12480254 0.10875013 1.0092839003 0.16915387
+		 0.35058695 0.98054802 0.22406763 0.40088421 0.97472775 0.17560983 0.36510688 1.013150811 0.12945732
+		 0.31044048 1.019476056 0.18212438 0.367414 1.013150811 0.025056742 0.4051953 0.97472775 -0.019470155
+		 0.35708785 0.98054779 -0.070102558 0.31512767 1.019476056 -0.029973909 0.15678355 1.038065553 0.020401932
+		 0.21145031 1.031739831 -0.032265127 0.163358 1.0034638643 -0.074383877 0.11306128 1.0092839003 -0.025926128
+		 0.15689525 0.93613207 -0.14234382 0.19785008 0.89004481 -0.17528361 0.13804927 0.84288204 -0.17660519
+		 0.10187477 0.89273822 -0.14355969 0.35062516 0.91321576 -0.13806251 0.39400887 0.85818231 -0.13710374
+		 0.34867984 0.81796658 -0.1719504 0.30152726 0.8777808 -0.17299241 0.33641869 0.71426117 -0.17222136
+		 0.37109858 0.66440475 -0.13761005 0.31607765 0.62101138 -0.13882595 0.27661818 0.66709793 -0.17354292
+		 0.12578812 0.73917663 -0.17687616 0.17294079 0.6793617 -0.17583412 0.12234777 0.64392745 -0.1431073
+		 0.078964531 0.6989609 -0.14406598 0.11288899 0.57659543 -0.075499207 0.15303576 0.53766716 -0.033556048
+		 0.098368883 0.54399264 0.019111022 0.062592238 0.58241546 -0.027041465 0.30661887 0.55367911 -0.071217909
+		 0.35472637 0.54785907 -0.020585474 0.3089996 0.51907766 0.023765832 0.25671309 0.5254035 -0.031264827
+		 0.3066923 0.51907778 0.12816644 0.35041523 0.54785931 0.1744945 0.30011791 0.55367935 0.22295231
+		 0.25202584 0.5254035 0.18083346 0.096061796 0.54399264 0.12351163 0.14834857 0.53766739 0.17854232
+		 0.10638794 0.57659519 0.21867102 0.058281064 0.58241546 0.16803855 0.42569089 0.60722864 0.17615801
+		 0.46510619 0.64401567 0.13166726 0.47024018 0.6975044 0.18565589 0.43041462 0.65644252 0.22583175
+		 0.43000203 0.60722864 -0.018921945 0.43691546 0.65644228 -0.068338424 0.47492737 0.69750464 -0.026442453
+		 0.46741349 0.64401567 0.027266659 0.48718864 0.80120981 -0.026171498 0.45982587 0.85021961 -0.067832157
+		 0.46454942 0.89943302 -0.018158466 0.49232256 0.8546983 0.027817138 0.48250145 0.80120957 0.18592682
+		 0.49001545 0.8546983 0.13221774 0.46023852 0.89943326 0.17692152 0.45332491 0.85021961 0.22633806
+		 0.0032374561 0.65770996 -0.02835314 -0.026539326 0.70244443 0.016350642 -0.019025207 0.7559334 -0.037358467
+		 0.010150969 0.7069236 -0.077769667 -0.0010736883 0.65770996 0.16672686 0.0036500394 0.7069236 0.21640053
+		 -0.023712456 0.7559334 0.17473987 -0.028846532 0.7024442 0.12075122 -0.011451274 0.85963857 0.17501083
+		 0.026560456 0.90070069 0.21690688 0.033473849 0.94991481 0.1674903 -0.003937304 0.91312706 0.12130172
+		 -0.0067640841 0.85963857 -0.037087474 -0.0016300678 0.9131273 0.016901113 0.037785023 0.94991457 -0.027589682
+		 0.033061385 0.90070093 -0.077263363 0.28057206 0.77209723 0.34246486 0.38179457 0.76022041 0.30765074
+		 0.17110419 0.78504598 0.34004572 0.071518272 0.79692256 0.30079386 0.3178255 1.037285447 0.076186679
+		 0.41388023 0.98862278 0.078309424 0.20835757 1.050234675 0.073767491 0.10360405 1.025324941 0.071452506
+		 0.29237187 0.77209723 -0.19147724 0.39195752 0.76022065 -0.15222538 0.18290406 0.78504574 -0.19389641
+		 0.081681162 0.79692256 -0.15908232 0.25511849 0.50690806 0.074800871 0.35987186 0.53181791 0.077115841
+		 0.14565066 0.51985693 0.072381712 0.049595594 0.56852019 0.070258968 0.49038833 0.69246209 0.08000017
+		 0.44173837 0.5963856 0.078925036 0.49807936 0.74721062 0.025027491 0.46353716 0.75156105 -0.076888487
+		 0.50333434 0.80195916 0.080286257 0.4784314 0.90673673 0.079735942 0.49564326 0.74721062 0.13525897
+		 0.45663261 0.75156081 0.23554954 -0.039858282 0.75518382 0.06828209 -0.014955431 0.6504072 0.06883242
+		 -0.034603387 0.80993235 0.12354087 -6.1273575e-005 0.8055824 0.22545689 -0.026912421 0.86468112 0.068568192
+		 0.021737516 0.96075857 0.069643326 -0.032167345 0.80993259 0.013309404 0.0068433285 0.80558217 -0.086981118
+		 0.15569744 0.59146798 0.26688775 0.07424432 0.62276351 0.24362797 0.25358421 0.57988918 0.26905096
+		 0.34102297 0.59120643 0.24952364 0.41450393 0.70680344 0.27260721 0.38369071 0.62485802 0.25046659
+		 0.42608023 0.80471694 0.27286303 0.41523981 0.89170158 0.25116375 0.29919589 0.965675 0.27005896
+		 0.38159651 0.93437994 0.2504203 0.20130906 0.97725403 0.26789573 0.11481801 0.96593654 0.24452466
+		 0.040388882 0.85033977 0.26433948 0.07215029 0.93228519 0.24358171 0.028812587 0.75242627 0.26408365
+		 0.040601224 0.66544163 0.24288455 0.44630027 0.9486531 0.12833479 0.42060119 0.92986643 0.21284211
+		 0.44847858 0.94865286 0.029765077 0.42653793 0.92986667 -0.055795036 0.30777866 0.965675 -0.11831927
+		 0.38923144 0.93437994 -0.095059603 0.20989195 0.97725427 -0.12048252 0.12245286 0.96593678 -0.10095522
+		 0.062787145 0.99427569 0.021241553 0.083448261 0.97045004 -0.063377067;
+	setAttr ".vt[332:449]" 0.060608834 0.99427569 0.11981129 0.077511668 0.97045004 0.20526007
+		 0.43466324 0.80471671 -0.11551522 0.42287469 0.89170182 -0.094316125 0.42308676 0.70680344 -0.11577106
+		 0.39132553 0.62485802 -0.095013291 0.2621671 0.57988918 -0.11932725 0.34865779 0.59120667 -0.095956221
+		 0.16428035 0.59146798 -0.12149049 0.081879199 0.62276351 -0.10185187 0.037395388 0.75242627 -0.12429456
+		 0.048236072 0.66544139 -0.10259531 0.048971802 0.85033977 -0.12403873 0.079785138 0.93228519 -0.10189815
+		 0.40286684 0.56286728 0.028757088 0.38596416 0.58669317 -0.056691661 0.40068865 0.56286705 0.12732682
+		 0.38002753 0.58669317 0.21194544 0.014997035 0.60848987 0.1188033 0.036937922 0.62727654 0.20436341
+		 0.017175376 0.60848987 0.020233564 0.042874664 0.62727654 -0.064273715 0.15569744 0.59146798 0.26688775
+		 0.20415872 0.58224809 0.27141386 0.20831001 0.62339628 0.30381685 0.15881139 0.63202345 0.29872957
+		 0.21346766 0.67134202 0.32706609 0.16194868 0.6793617 0.32156095 0.21936509 0.72382295 0.34111226
+		 0.16581115 0.73115051 0.33534506 0.22573531 0.77857149 0.34590629 0.17110419 0.78504598 0.34004572
+		 0.25358421 0.57988918 0.26905096 0.25862896 0.62021649 0.30093548 0.26562607 0.66709793 0.32385212
+		 0.27335 0.71843016 0.33772156 0.28057206 0.77209723 0.34246486 0.28606737 0.82599247 0.33800262
+		 0.23231101 0.83332002 0.34139836 0.29053527 0.87778103 0.3244026 0.23882312 0.88580048 0.32762641
+		 0.29467797 0.92512 0.30173209 0.24500299 0.93374741 0.30462772 0.29919589 0.965675 0.27005896
+		 0.2505815 0.97489488 0.27243972 0.17852831 0.83871329 0.33562613 0.18685797 0.89004433 0.32211146
+		 0.19486046 0.93692744 0.29952624 0.20130906 0.97725403 0.26789573 0.25528985 1.0069741011 0.23109999
+		 0.20497283 1.0089131594 0.22724482 0.25907224 1.029943824 0.18289042 0.20676306 1.031740069 0.1798332
+		 0.2618733 1.043760419 0.13009286 0.20758715 1.045569539 0.12792081 0.26363754 1.04837954 0.074989118
+		 0.20835757 1.050234675 0.073767491 0.30479038 0.99710619 0.22945073 0.31044048 1.019476056 0.18212438
+		 0.31512612 1.032849193 0.13029736 0.3178255 1.037285447 0.076186679 0.31751925 1.032849193 0.022009559
+		 0.26430941 1.04376018 0.019861355 0.31512767 1.019476056 -0.029973909 0.26384342 1.029943585 -0.033008486
+		 0.31157392 0.99710596 -0.077503562 0.26219445 1.0069741011 -0.081338018 0.30777866 0.965675 -0.11831927
+		 0.2593171 0.97489464 -0.12284541 0.20998028 1.045569301 0.019632995 0.21145031 1.031739831 -0.032265127
+		 0.21175647 1.0089131594 -0.07970947 0.20989195 0.97725427 -0.12048252 0.25516599 0.93374765 -0.15524837
+		 0.20484701 0.93692744 -0.15236703 0.25000817 0.88580024 -0.17849758 0.19785008 0.89004481 -0.17528361
+		 0.24411076 0.83332026 -0.19254375 0.19012555 0.83871329 -0.18915313 0.23774058 0.77857172 -0.19733775
+		 0.18290406 0.78504574 -0.19389641 0.30466461 0.92512 -0.15016112 0.30152726 0.8777808 -0.17299241
+		 0.29766458 0.82599247 -0.18677655 0.29237187 0.77209723 -0.19147724 0.2849474 0.71843016 -0.18705761
+		 0.23116493 0.72382271 -0.19282988 0.27661818 0.66709793 -0.17354292 0.22465265 0.67134202 -0.17905793
+		 0.26861542 0.62021649 -0.15095776 0.21847293 0.62339628 -0.15605922 0.2621671 0.57988918 -0.11932725
+		 0.21289432 0.58224809 -0.12387129 0.17740837 0.73115075 -0.18943414 0.17294079 0.6793617 -0.17583412
+		 0.16879794 0.63202345 -0.15316367 0.16428035 0.59146798 -0.12149049 0.20818609 0.55016887 -0.082531556
+		 0.15868539 0.56003678 -0.080882281 0.20440352 0.52719855 -0.034322053 0.15303576 0.53766716 -0.033556048
+		 0.20160249 0.51338243 0.018475525 0.14834952 0.52429521 0.018271007 0.1998384 0.50876379 0.073579244
+		 0.14565066 0.51985693 0.072381712 0.25850302 0.54822958 -0.078676447 0.25671309 0.5254035 -0.031264827
+		 0.25588858 0.51157475 0.020647548 0.25511849 0.50690806 0.074800871 0.25349545 0.51157463 0.12893534
+		 0.19916642 0.5133822 0.12870702 0.25202584 0.5254035 0.18083346 0.19963232 0.52719855 0.18157688
+		 0.25171959 0.54822958 0.22827789 0.2012814 0.55016911 0.22990644 0.14595649 0.52429497 0.12655881
+		 0.14834857 0.53766739 0.17854232 0.15190184 0.56003654 0.22607195;
+	setAttr -s 896 ".ed";
+	setAttr ".ed[0:165]"  0 307 1 307 58 1 58 306 1 308 59 1 59 309 1 309 1 1
+		 2 317 1 317 63 1 63 316 1 314 62 1 62 315 1 315 3 1 4 329 1 329 69 1 69 328 1 326 68 1
+		 68 327 1 327 5 1 6 341 1 341 75 1 75 340 1 338 74 1 74 339 1 339 7 1 0 321 1 321 65 1
+		 65 320 1 320 14 1 14 318 1 318 64 1 64 319 1 319 2 1 1 311 1 311 60 1 60 310 1 310 13 1
+		 13 312 1 312 61 1 61 313 1 313 3 1 2 333 1 333 71 1 71 332 1 332 8 1 8 330 1 330 70 1
+		 70 331 1 331 4 1 3 323 1 323 66 1 66 322 1 322 15 1 15 324 1 324 67 1 67 325 1 325 5 1
+		 4 345 1 345 77 1 77 344 1 344 10 1 10 342 1 342 76 1 76 343 1 343 6 1 5 335 1 335 72 1
+		 72 334 1 334 9 1 9 336 1 336 73 1 73 337 1 337 7 1 6 353 1 353 81 1 81 352 1 352 12 1
+		 12 350 1 350 80 1 80 351 1 351 0 1 7 347 1 347 78 1 78 346 1 346 11 1 11 348 1 348 79 1
+		 79 349 1 349 1 1 307 82 1 82 321 1 58 178 1 178 82 1 178 18 1 18 181 1 181 82 1 181 65 1
+		 306 83 0 83 178 1 179 83 0 179 18 1 179 84 0 84 180 1 180 18 1 276 84 0 276 43 1
+		 43 180 1 181 85 1 85 320 1 180 85 1 43 277 1 277 85 1 277 14 1 308 86 0 59 182 1
+		 182 86 1 182 19 1 19 185 1 185 86 0 309 87 1 87 182 1 311 87 1 60 183 1 183 87 1
+		 183 19 1 183 88 1 88 184 1 184 19 1 310 88 1 13 275 1 275 88 1 275 42 1 42 184 1
+		 185 89 0 184 89 1 42 274 1 274 89 0 274 90 0 42 186 1 186 90 1 186 20 1 20 189 1
+		 189 90 0 275 91 1 91 186 1 312 91 1 61 187 1 187 91 1 187 20 1 187 92 1 92 188 1
+		 188 20 1 313 92 1 315 92 1 62 188 1 189 93 0 188 93 1 314 93 0 277 94 1 94 318 1
+		 43 190 1 190 94 1 190 21 1 21 193 1 193 94 1 193 64 1 276 95 0;
+	setAttr ".ed[166:331]" 95 190 1 191 95 0 191 21 1 191 96 0 96 192 1 192 21 1
+		 316 96 0 63 192 1 193 97 1 97 319 1 192 97 1 317 97 1 317 98 1 98 333 1 63 194 1
+		 194 98 1 194 22 1 22 197 1 197 98 1 197 71 1 316 99 0 99 194 1 195 99 0 195 22 1
+		 195 100 0 100 196 1 196 22 1 280 100 0 280 45 1 45 196 1 197 101 1 101 332 1 196 101 1
+		 45 281 1 281 101 1 281 8 1 314 102 0 62 198 1 198 102 1 198 23 1 23 201 1 201 102 0
+		 315 103 1 103 198 1 323 103 1 66 199 1 199 103 1 199 23 1 199 104 1 104 200 1 200 23 1
+		 322 104 1 15 279 1 279 104 1 279 44 1 44 200 1 201 105 0 200 105 1 44 278 1 278 105 0
+		 278 106 0 44 202 1 202 106 1 202 24 1 24 205 1 205 106 0 279 107 1 107 202 1 324 107 1
+		 67 203 1 203 107 1 203 24 1 203 108 1 108 204 1 204 24 1 325 108 1 327 108 1 68 204 1
+		 205 109 0 204 109 1 326 109 0 281 110 1 110 330 1 45 206 1 206 110 1 206 25 1 25 209 1
+		 209 110 1 209 70 1 280 111 0 111 206 1 207 111 0 207 25 1 207 112 0 112 208 1 208 25 1
+		 328 112 0 69 208 1 209 113 1 113 331 1 208 113 1 329 113 1 329 114 1 114 345 1 69 210 1
+		 210 114 1 210 26 1 26 213 1 213 114 1 213 77 1 328 115 0 115 210 1 211 115 0 211 26 1
+		 211 116 0 116 212 1 212 26 1 284 116 0 284 47 1 47 212 1 213 117 1 117 344 1 212 117 1
+		 47 285 1 285 117 1 285 10 1 326 118 0 68 214 1 214 118 1 214 27 1 27 217 1 217 118 0
+		 327 119 1 119 214 1 335 119 1 72 215 1 215 119 1 215 27 1 215 120 1 120 216 1 216 27 1
+		 334 120 1 9 283 1 283 120 1 283 46 1 46 216 1 217 121 0 216 121 1 46 282 1 282 121 0
+		 282 122 0 46 218 1 218 122 1 218 28 1 28 221 1 221 122 0 283 123 1 123 218 1 336 123 1
+		 73 219 1 219 123 1 219 28 1 219 124 1 124 220 1 220 28 1 337 124 1;
+	setAttr ".ed[332:497]" 339 124 1 74 220 1 221 125 0 220 125 1 338 125 0 285 126 1
+		 126 342 1 47 222 1 222 126 1 222 29 1 29 225 1 225 126 1 225 76 1 284 127 0 127 222 1
+		 223 127 0 223 29 1 223 128 0 128 224 1 224 29 1 340 128 0 75 224 1 225 129 1 129 343 1
+		 224 129 1 341 129 1 341 130 1 130 353 1 75 226 1 226 130 1 226 30 1 30 229 1 229 130 1
+		 229 81 1 340 131 0 131 226 1 227 131 0 227 30 1 227 132 0 132 228 1 228 30 1 288 132 0
+		 288 49 1 49 228 1 229 133 1 133 352 1 228 133 1 49 289 1 289 133 1 289 12 1 338 134 0
+		 74 230 1 230 134 1 230 31 1 31 233 1 233 134 0 339 135 1 135 230 1 347 135 1 78 231 1
+		 231 135 1 231 31 1 231 136 1 136 232 1 232 31 1 346 136 1 11 287 1 287 136 1 287 48 1
+		 48 232 1 233 137 0 232 137 1 48 286 1 286 137 0 286 138 0 48 234 1 234 138 1 234 32 1
+		 32 237 1 237 138 0 287 139 1 139 234 1 348 139 1 79 235 1 235 139 1 235 32 1 235 140 1
+		 140 236 1 236 32 1 349 140 1 309 140 1 59 236 1 237 141 0 236 141 1 308 141 0 289 142 1
+		 142 350 1 49 238 1 238 142 1 238 33 1 33 241 1 241 142 1 241 80 1 288 143 0 143 238 1
+		 239 143 0 239 33 1 239 144 0 144 240 1 240 33 1 306 144 0 58 240 1 241 145 1 145 351 1
+		 240 145 1 307 145 1 349 146 1 146 311 1 79 242 1 242 146 1 242 34 1 34 245 1 245 146 1
+		 245 60 1 348 147 1 147 242 1 11 291 1 291 147 1 291 50 1 50 243 1 243 147 1 243 34 1
+		 243 148 1 148 244 1 244 34 1 50 290 1 290 148 1 290 16 1 16 296 1 296 148 1 296 53 1
+		 53 244 1 245 149 1 149 310 1 244 149 1 53 297 1 297 149 1 297 13 1 346 150 1 150 291 1
+		 78 246 1 246 150 1 246 35 1 35 249 1 249 150 1 249 50 1 347 151 1 151 246 1 337 151 1
+		 73 247 1 247 151 1 247 35 1 247 152 1 152 248 1 248 35 1 336 152 1;
+	setAttr ".ed[498:663]" 9 293 1 293 152 1 293 51 1 51 248 1 249 153 1 153 290 1
+		 248 153 1 51 292 1 292 153 1 292 16 1 292 154 1 154 294 1 294 16 1 51 250 1 250 154 1
+		 250 36 1 36 253 1 253 154 1 253 52 1 52 294 1 293 155 1 155 250 1 334 155 1 72 251 1
+		 251 155 1 251 36 1 251 156 1 156 252 1 252 36 1 335 156 1 325 156 1 67 252 1 253 157 1
+		 157 295 1 295 52 1 252 157 1 324 157 1 15 295 1 297 158 1 158 312 1 53 254 1 254 158 1
+		 254 37 1 37 257 1 257 158 1 257 61 1 296 159 1 159 254 1 294 159 1 52 255 1 255 159 1
+		 255 37 1 255 160 1 160 256 1 256 37 1 295 160 1 322 160 1 66 256 1 257 161 1 161 313 1
+		 256 161 1 323 161 1 353 162 1 162 343 1 81 258 1 258 162 1 258 38 1 38 261 1 261 162 1
+		 261 76 1 352 163 1 163 258 1 12 299 1 299 163 1 299 54 1 54 259 1 259 163 1 259 38 1
+		 259 164 1 164 260 1 260 38 1 54 298 1 298 164 1 298 17 1 17 304 1 304 164 1 304 57 1
+		 57 260 1 261 165 1 165 342 1 260 165 1 57 305 1 305 165 1 305 10 1 350 166 1 166 299 1
+		 80 262 1 262 166 1 262 39 1 39 265 1 265 166 1 265 54 1 351 167 1 167 262 1 321 167 1
+		 65 263 1 263 167 1 263 39 1 263 168 1 168 264 1 264 39 1 320 168 1 14 301 1 301 168 1
+		 301 55 1 55 264 1 265 169 1 169 298 1 264 169 1 55 300 1 300 169 1 300 17 1 300 170 1
+		 170 302 1 302 17 1 55 266 1 266 170 1 266 40 1 40 269 1 269 170 1 269 56 1 56 302 1
+		 301 171 1 171 266 1 318 171 1 64 267 1 267 171 1 267 40 1 267 172 1 172 268 1 268 40 1
+		 319 172 1 333 172 1 71 268 1 269 173 1 173 303 1 303 56 1 268 173 1 332 173 1 8 303 1
+		 305 174 1 174 344 1 57 270 1 270 174 1 270 41 1 41 273 1 273 174 1 273 77 1 304 175 1
+		 175 270 1 302 175 1 56 271 1 271 175 1 271 41 1 271 176 1 176 272 1;
+	setAttr ".ed[664:829]" 272 41 1 303 176 1 330 176 1 70 272 1 273 177 1 177 345 1
+		 272 177 1 331 177 1 306 354 0 354 355 1 355 356 1 83 357 0 356 357 1 354 357 0 356 358 1
+		 179 359 0 358 359 1 359 357 0 358 360 1 84 361 0 360 361 1 359 361 0 360 362 1 276 363 0
+		 362 363 1 363 361 0 308 364 0 355 364 1 86 365 0 364 365 0 365 356 1 185 366 0 366 365 0
+		 366 358 1 89 367 0 366 367 0 367 360 1 274 368 0 368 367 0 368 362 1 90 369 0 368 369 0
+		 369 370 1 370 362 1 189 371 0 371 369 0 371 372 1 372 370 1 93 373 0 371 373 0 373 374 1
+		 374 372 1 314 375 0 375 373 0 376 375 1 376 374 1 95 377 0 370 377 1 363 377 0 191 378 0
+		 372 378 1 378 377 0 96 379 0 374 379 1 378 379 0 316 380 0 380 376 1 380 379 0 376 381 1
+		 99 382 0 381 382 1 380 382 0 381 383 1 195 384 0 383 384 1 384 382 0 383 385 1 100 386 0
+		 385 386 1 384 386 0 385 387 1 280 388 0 387 388 1 388 386 0 102 389 0 375 389 0 389 381 1
+		 201 390 0 390 389 0 390 383 1 105 391 0 390 391 0 391 385 1 278 392 0 392 391 0 392 387 1
+		 106 393 0 392 393 0 393 394 1 394 387 1 205 395 0 395 393 0 395 396 1 396 394 1 109 397 0
+		 395 397 0 397 398 1 398 396 1 326 399 0 399 397 0 400 399 1 400 398 1 111 401 0 394 401 1
+		 388 401 0 207 402 0 396 402 1 402 401 0 112 403 0 398 403 1 402 403 0 328 404 0 404 400 1
+		 404 403 0 400 405 1 115 406 0 405 406 1 404 406 0 405 407 1 211 408 0 407 408 1 408 406 0
+		 407 409 1 116 410 0 409 410 1 408 410 0 409 411 1 284 412 0 411 412 1 412 410 0 118 413 0
+		 399 413 0 413 405 1 217 414 0 414 413 0 414 407 1 121 415 0 414 415 0 415 409 1 282 416 0
+		 416 415 0 416 411 1 122 417 0 416 417 0 417 418 1 418 411 1 221 419 0 419 417 0 419 420 1
+		 420 418 1 125 421 0 419 421 0 421 422 1 422 420 1 338 423 0 423 421 0;
+	setAttr ".ed[830:895]" 424 423 1 424 422 1 127 425 0 418 425 1 412 425 0 223 426 0
+		 420 426 1 426 425 0 128 427 0 422 427 1 426 427 0 340 428 0 428 424 1 428 427 0 424 429 1
+		 131 430 0 429 430 1 428 430 0 429 431 1 227 432 0 431 432 1 432 430 0 431 433 1 132 434 0
+		 433 434 1 432 434 0 433 435 1 288 436 0 435 436 1 436 434 0 134 437 0 423 437 0 437 429 1
+		 233 438 0 438 437 0 438 431 1 137 439 0 438 439 0 439 433 1 286 440 0 440 439 0 440 435 1
+		 138 441 0 440 441 0 441 442 1 442 435 1 237 443 0 443 441 0 443 444 1 444 442 1 141 445 0
+		 443 445 0 445 446 1 446 444 1 364 445 0 355 446 1 143 447 0 442 447 1 436 447 0 239 448 0
+		 444 448 1 448 447 0 144 449 0 446 449 1 448 449 0 354 449 0;
+	setAttr -s 448 -ch 1792 ".fc[0:447]" -type "polyFaces" 
+		f 4 0 88 89 -25
+		mu 0 4 0 367 125 384
+		f 4 1 90 91 -89
+		mu 0 4 367 87 221 125
+		f 4 -92 92 93 94
+		mu 0 4 125 221 39 224
+		f 4 -90 -95 95 -26
+		mu 0 4 384 125 224 96
+		f 4 2 96 97 -91
+		mu 0 4 87 365 126 221
+		f 4 673 674 676 -678
+		mu 0 4 442 20 318 441
+		f 4 -677 678 680 681
+		mu 0 4 441 318 63 443
+		f 4 -98 -99 99 -93
+		mu 0 4 221 126 222 39
+		f 4 -100 100 101 102
+		mu 0 4 39 222 127 223
+		f 4 -681 682 684 -686
+		mu 0 4 443 63 317 444
+		f 4 -685 686 688 689
+		mu 0 4 444 317 14 445
+		f 4 -102 -104 104 105
+		mu 0 4 223 127 323 66
+		f 4 -96 106 107 -27
+		mu 0 4 96 224 128 383
+		f 4 -94 -103 108 -107
+		mu 0 4 224 39 223 128
+		f 4 -109 -106 109 110
+		mu 0 4 128 223 66 324
+		f 4 -108 -111 111 -28
+		mu 0 4 383 128 324 24
+		f 4 691 693 694 -675
+		mu 0 4 20 446 447 318
+		f 4 3 113 114 -113
+		mu 0 4 369 89 225 129
+		f 4 -115 115 116 117
+		mu 0 4 129 225 40 228
+		f 4 -695 -697 697 -679
+		mu 0 4 318 447 448 63
+		f 4 4 118 119 -114
+		mu 0 4 89 371 130 225
+		f 4 5 32 120 -119
+		mu 0 4 371 2 374 130
+		f 4 -121 33 121 122
+		mu 0 4 130 374 91 226
+		f 4 -120 -123 123 -116
+		mu 0 4 225 130 226 40
+		f 4 -124 124 125 126
+		mu 0 4 40 226 131 227
+		f 4 -122 34 127 -125
+		mu 0 4 226 91 373 131
+		f 4 -128 35 128 129
+		mu 0 4 131 373 22 320
+		f 4 -126 -130 130 131
+		mu 0 4 227 131 320 64
+		f 4 -698 699 700 -683
+		mu 0 4 63 448 449 317
+		f 4 -117 -127 133 -133
+		mu 0 4 228 40 227 132
+		f 4 -134 -132 134 135
+		mu 0 4 132 227 64 319
+		f 4 -701 -703 703 -687
+		mu 0 4 317 449 450 14
+		f 4 -704 705 706 707
+		mu 0 4 14 450 451 321
+		f 4 -135 137 138 -137
+		mu 0 4 319 64 229 133
+		f 4 -139 139 140 141
+		mu 0 4 133 229 41 232
+		f 4 -707 -710 710 711
+		mu 0 4 321 451 452 65
+		f 4 -131 142 143 -138
+		mu 0 4 64 320 134 229
+		f 4 -129 36 144 -143
+		mu 0 4 320 22 375 134
+		f 4 -145 37 145 146
+		mu 0 4 134 375 92 230
+		f 4 -144 -147 147 -140
+		mu 0 4 229 134 230 41
+		f 4 -148 148 149 150
+		mu 0 4 41 230 135 231
+		f 4 -146 38 151 -149
+		mu 0 4 230 92 376 135
+		f 4 -152 39 -12 152
+		mu 0 4 135 376 5 378
+		f 4 -150 -153 -11 153
+		mu 0 4 231 135 378 93
+		f 4 -711 713 714 715
+		mu 0 4 65 452 453 322
+		f 4 -141 -151 155 -155
+		mu 0 4 232 41 231 136
+		f 4 -156 -154 -10 156
+		mu 0 4 136 231 93 377
+		f 4 -715 -718 -719 719
+		mu 0 4 322 453 454 23
+		f 4 -112 157 158 -29
+		mu 0 4 24 324 137 381
+		f 4 -110 159 160 -158
+		mu 0 4 324 66 233 137
+		f 4 -161 161 162 163
+		mu 0 4 137 233 42 236
+		f 4 -159 -164 164 -30
+		mu 0 4 381 137 236 95
+		f 4 -105 165 166 -160
+		mu 0 4 66 323 138 233
+		f 4 -689 -708 721 -723
+		mu 0 4 445 14 321 455
+		f 4 -722 -712 724 725
+		mu 0 4 455 321 65 456
+		f 4 -167 -168 168 -162
+		mu 0 4 233 138 234 42
+		f 4 -169 169 170 171
+		mu 0 4 42 234 139 235
+		f 4 -725 -716 727 -729
+		mu 0 4 456 65 322 457
+		f 4 -728 -720 -731 731
+		mu 0 4 457 322 23 458
+		f 4 -171 -173 -9 173
+		mu 0 4 235 139 379 94
+		f 4 -165 174 175 -31
+		mu 0 4 95 236 140 382
+		f 4 -163 -172 176 -175
+		mu 0 4 236 42 235 140
+		f 4 -177 -174 -8 177
+		mu 0 4 140 235 94 380
+		f 4 -176 -178 -7 -32
+		mu 0 4 382 140 380 4
+		f 4 6 178 179 -41
+		mu 0 4 4 380 141 403
+		f 4 7 180 181 -179
+		mu 0 4 380 94 237 141
+		f 4 -182 182 183 184
+		mu 0 4 141 237 43 240
+		f 4 -180 -185 185 -42
+		mu 0 4 403 141 240 105
+		f 4 8 186 187 -181
+		mu 0 4 94 379 142 237
+		f 4 730 732 734 -736
+		mu 0 4 458 23 326 459
+		f 4 -735 736 738 739
+		mu 0 4 459 326 67 460
+		f 4 -188 -189 189 -183
+		mu 0 4 237 142 238 43
+		f 4 -190 190 191 192
+		mu 0 4 43 238 143 239
+		f 4 -739 740 742 -744
+		mu 0 4 460 67 325 461
+		f 4 -743 744 746 747
+		mu 0 4 461 325 15 462
+		f 4 -192 -194 194 195
+		mu 0 4 239 143 331 70
+		f 4 -186 196 197 -43
+		mu 0 4 105 240 144 401
+		f 4 -184 -193 198 -197
+		mu 0 4 240 43 239 144
+		f 4 -199 -196 199 200
+		mu 0 4 144 239 70 332
+		f 4 -198 -201 201 -44
+		mu 0 4 401 144 332 28
+		f 4 718 749 750 -733
+		mu 0 4 23 454 463 326
+		f 4 9 203 204 -203
+		mu 0 4 377 93 241 145
+		f 4 -205 205 206 207
+		mu 0 4 145 241 44 244
+		f 4 -751 -753 753 -737
+		mu 0 4 326 463 464 67
+		f 4 10 208 209 -204
+		mu 0 4 93 378 146 241
+		f 4 11 48 210 -209
+		mu 0 4 378 5 387 146
+		f 4 -211 49 211 212
+		mu 0 4 146 387 97 242
+		f 4 -210 -213 213 -206
+		mu 0 4 241 146 242 44
+		f 4 -214 214 215 216
+		mu 0 4 44 242 147 243
+		f 4 -212 50 217 -215
+		mu 0 4 242 97 385 147
+		f 4 -218 51 218 219
+		mu 0 4 147 385 25 328
+		f 4 -216 -220 220 221
+		mu 0 4 243 147 328 68
+		f 4 -754 755 756 -741
+		mu 0 4 67 464 465 325
+		f 4 -207 -217 223 -223
+		mu 0 4 244 44 243 148
+		f 4 -224 -222 224 225
+		mu 0 4 148 243 68 327
+		f 4 -757 -759 759 -745
+		mu 0 4 325 465 466 15
+		f 4 -760 761 762 763
+		mu 0 4 15 466 467 329
+		f 4 -225 227 228 -227
+		mu 0 4 327 68 245 149
+		f 4 -229 229 230 231
+		mu 0 4 149 245 45 248
+		f 4 -763 -766 766 767
+		mu 0 4 329 467 468 69
+		f 4 -221 232 233 -228
+		mu 0 4 68 328 150 245
+		f 4 -219 52 234 -233
+		mu 0 4 328 25 389 150
+		f 4 -235 53 235 236
+		mu 0 4 150 389 99 246
+		f 4 -234 -237 237 -230
+		mu 0 4 245 150 246 45
+		f 4 -238 238 239 240
+		mu 0 4 45 246 151 247
+		f 4 -236 54 241 -239
+		mu 0 4 246 99 391 151
+		f 4 -242 55 -18 242
+		mu 0 4 151 391 8 394
+		f 4 -240 -243 -17 243
+		mu 0 4 247 151 394 101
+		f 4 -767 769 770 771
+		mu 0 4 69 468 469 330
+		f 4 -231 -241 245 -245
+		mu 0 4 248 45 247 152
+		f 4 -246 -244 -16 246
+		mu 0 4 152 247 101 393
+		f 4 -771 -774 -775 775
+		mu 0 4 330 469 470 27
+		f 4 -202 247 248 -45
+		mu 0 4 28 332 153 397
+		f 4 -200 249 250 -248
+		mu 0 4 332 70 249 153
+		f 4 -251 251 252 253
+		mu 0 4 153 249 46 252
+		f 4 -249 -254 254 -46
+		mu 0 4 397 153 252 103
+		f 4 -195 255 256 -250
+		mu 0 4 70 331 154 249
+		f 4 -747 -764 777 -779
+		mu 0 4 462 15 329 471
+		f 4 -778 -768 780 781
+		mu 0 4 471 329 69 472
+		f 4 -257 -258 258 -252
+		mu 0 4 249 154 250 46
+		f 4 -259 259 260 261
+		mu 0 4 46 250 155 251
+		f 4 -781 -772 783 -785
+		mu 0 4 472 69 330 473
+		f 4 -784 -776 -787 787
+		mu 0 4 473 330 27 474
+		f 4 -261 -263 -15 263
+		mu 0 4 251 155 395 102
+		f 4 -255 264 265 -47
+		mu 0 4 103 252 156 399
+		f 4 -253 -262 266 -265
+		mu 0 4 252 46 251 156
+		f 4 -267 -264 -14 267
+		mu 0 4 156 251 102 396
+		f 4 -266 -268 -13 -48
+		mu 0 4 399 156 396 6
+		f 4 12 268 269 -57
+		mu 0 4 6 396 157 423
+		f 4 13 270 271 -269
+		mu 0 4 396 102 253 157
+		f 4 -272 272 273 274
+		mu 0 4 157 253 47 256
+		f 4 -270 -275 275 -58
+		mu 0 4 423 157 256 115
+		f 4 14 276 277 -271
+		mu 0 4 102 395 158 253
+		f 4 786 788 790 -792
+		mu 0 4 474 27 334 475
+		f 4 -791 792 794 795
+		mu 0 4 475 334 71 476
+		f 4 -278 -279 279 -273
+		mu 0 4 253 158 254 47
+		f 4 -280 280 281 282
+		mu 0 4 47 254 159 255
+		f 4 -795 796 798 -800
+		mu 0 4 476 71 333 477
+		f 4 -799 800 802 803
+		mu 0 4 477 333 16 478
+		f 4 -282 -284 284 285
+		mu 0 4 255 159 339 74
+		f 4 -276 286 287 -59
+		mu 0 4 115 256 160 421
+		f 4 -274 -283 288 -287
+		mu 0 4 256 47 255 160
+		f 4 -289 -286 289 290
+		mu 0 4 160 255 74 340
+		f 4 -288 -291 291 -60
+		mu 0 4 421 160 340 33
+		f 4 774 805 806 -789
+		mu 0 4 27 470 479 334
+		f 4 15 293 294 -293
+		mu 0 4 393 101 257 161
+		f 4 -295 295 296 297
+		mu 0 4 161 257 48 260
+		f 4 -807 -809 809 -793
+		mu 0 4 334 479 480 71
+		f 4 16 298 299 -294
+		mu 0 4 101 394 162 257
+		f 4 17 64 300 -299
+		mu 0 4 394 8 407 162
+		f 4 -301 65 301 302
+		mu 0 4 162 407 107 258
+		f 4 -300 -303 303 -296
+		mu 0 4 257 162 258 48
+		f 4 -304 304 305 306
+		mu 0 4 48 258 163 259
+		f 4 -302 66 307 -305
+		mu 0 4 258 107 405 163
+		f 4 -308 67 308 309
+		mu 0 4 163 405 30 336
+		f 4 -306 -310 310 311
+		mu 0 4 259 163 336 72
+		f 4 -810 811 812 -797
+		mu 0 4 71 480 481 333
+		f 4 -297 -307 313 -313
+		mu 0 4 260 48 259 164
+		f 4 -314 -312 314 315
+		mu 0 4 164 259 72 335
+		f 4 -813 -815 815 -801
+		mu 0 4 333 481 482 16
+		f 4 -816 817 818 819
+		mu 0 4 16 482 483 337
+		f 4 -315 317 318 -317
+		mu 0 4 335 72 261 165
+		f 4 -319 319 320 321
+		mu 0 4 165 261 49 264
+		f 4 -819 -822 822 823
+		mu 0 4 337 483 484 73
+		f 4 -311 322 323 -318
+		mu 0 4 72 336 166 261
+		f 4 -309 68 324 -323
+		mu 0 4 336 30 409 166
+		f 4 -325 69 325 326
+		mu 0 4 166 409 109 262
+		f 4 -324 -327 327 -320
+		mu 0 4 261 166 262 49
+		f 4 -328 328 329 330
+		mu 0 4 49 262 167 263
+		f 4 -326 70 331 -329
+		mu 0 4 262 109 411 167
+		f 4 -332 71 -24 332
+		mu 0 4 167 411 12 414
+		f 4 -330 -333 -23 333
+		mu 0 4 263 167 414 111
+		f 4 -823 825 826 827
+		mu 0 4 73 484 485 338
+		f 4 -321 -331 335 -335
+		mu 0 4 264 49 263 168
+		f 4 -336 -334 -22 336
+		mu 0 4 168 263 111 413
+		f 4 -827 -830 -831 831
+		mu 0 4 338 485 486 32
+		f 4 -292 337 338 -61
+		mu 0 4 33 340 169 417
+		f 4 -290 339 340 -338
+		mu 0 4 340 74 265 169
+		f 4 -341 341 342 343
+		mu 0 4 169 265 50 268
+		f 4 -339 -344 344 -62
+		mu 0 4 417 169 268 113
+		f 4 -285 345 346 -340
+		mu 0 4 74 339 170 265
+		f 4 -803 -820 833 -835
+		mu 0 4 478 16 337 487
+		f 4 -834 -824 836 837
+		mu 0 4 487 337 73 488
+		f 4 -347 -348 348 -342
+		mu 0 4 265 170 266 50
+		f 4 -349 349 350 351
+		mu 0 4 50 266 171 267
+		f 4 -837 -828 839 -841
+		mu 0 4 488 73 338 489
+		f 4 -840 -832 -843 843
+		mu 0 4 489 338 32 490
+		f 4 -351 -353 -21 353
+		mu 0 4 267 171 415 112
+		f 4 -345 354 355 -63
+		mu 0 4 113 268 172 419
+		f 4 -343 -352 356 -355
+		mu 0 4 268 50 267 172
+		f 4 -357 -354 -20 357
+		mu 0 4 172 267 112 416
+		f 4 -356 -358 -19 -64
+		mu 0 4 419 172 416 10
+		f 4 18 358 359 -73
+		mu 0 4 10 416 173 439
+		f 4 19 360 361 -359
+		mu 0 4 416 112 269 173
+		f 4 -362 362 363 364
+		mu 0 4 173 269 51 272
+		f 4 -360 -365 365 -74
+		mu 0 4 439 173 272 123
+		f 4 20 366 367 -361
+		mu 0 4 112 415 174 269
+		f 4 842 844 846 -848
+		mu 0 4 490 32 342 491
+		f 4 -847 848 850 851
+		mu 0 4 491 342 75 492
+		f 4 -368 -369 369 -363
+		mu 0 4 269 174 270 51
+		f 4 -370 370 371 372
+		mu 0 4 51 270 175 271
+		f 4 -851 852 854 -856
+		mu 0 4 492 75 341 493
+		f 4 -855 856 858 859
+		mu 0 4 493 341 17 494
+		f 4 -372 -374 374 375
+		mu 0 4 271 175 347 78
+		f 4 -366 376 377 -75
+		mu 0 4 123 272 176 437
+		f 4 -364 -373 378 -377
+		mu 0 4 272 51 271 176
+		f 4 -379 -376 379 380
+		mu 0 4 176 271 78 348
+		f 4 -378 -381 381 -76
+		mu 0 4 437 176 348 37
+		f 4 830 861 862 -845
+		mu 0 4 32 486 495 342
+		f 4 21 383 384 -383
+		mu 0 4 413 111 273 177
+		f 4 -385 385 386 387
+		mu 0 4 177 273 52 276
+		f 4 -863 -865 865 -849
+		mu 0 4 342 495 496 75
+		f 4 22 388 389 -384
+		mu 0 4 111 414 178 273
+		f 4 23 80 390 -389
+		mu 0 4 414 12 427 178
+		f 4 -391 81 391 392
+		mu 0 4 178 427 117 274
+		f 4 -390 -393 393 -386
+		mu 0 4 273 178 274 52
+		f 4 -394 394 395 396
+		mu 0 4 52 274 179 275
+		f 4 -392 82 397 -395
+		mu 0 4 274 117 425 179
+		f 4 -398 83 398 399
+		mu 0 4 179 425 35 344
+		f 4 -396 -400 400 401
+		mu 0 4 275 179 344 76
+		f 4 -866 867 868 -853
+		mu 0 4 75 496 497 341
+		f 4 -387 -397 403 -403
+		mu 0 4 276 52 275 180
+		f 4 -404 -402 404 405
+		mu 0 4 180 275 76 343
+		f 4 -869 -871 871 -857
+		mu 0 4 341 497 498 17
+		f 4 -872 873 874 875
+		mu 0 4 17 498 499 345
+		f 4 -405 407 408 -407
+		mu 0 4 343 76 277 181
+		f 4 -409 409 410 411
+		mu 0 4 181 277 53 280
+		f 4 -875 -878 878 879
+		mu 0 4 345 499 500 77
+		f 4 -401 412 413 -408
+		mu 0 4 76 344 182 277
+		f 4 -399 84 414 -413
+		mu 0 4 344 35 429 182
+		f 4 -415 85 415 416
+		mu 0 4 182 429 119 278
+		f 4 -414 -417 417 -410
+		mu 0 4 277 182 278 53
+		f 4 -418 418 419 420
+		mu 0 4 53 278 183 279
+		f 4 -416 86 421 -419
+		mu 0 4 278 119 431 183
+		f 4 -422 87 -6 422
+		mu 0 4 183 431 3 372
+		f 4 -420 -423 -5 423
+		mu 0 4 279 183 372 90
+		f 4 -879 881 882 883
+		mu 0 4 77 500 501 346
+		f 4 -411 -421 425 -425
+		mu 0 4 280 53 279 184
+		f 4 -426 -424 -4 426
+		mu 0 4 184 279 90 370
+		f 4 -883 -885 -692 885
+		mu 0 4 346 501 502 21
+		f 4 -382 427 428 -77
+		mu 0 4 37 348 185 433
+		f 4 -380 429 430 -428
+		mu 0 4 348 78 281 185
+		f 4 -431 431 432 433
+		mu 0 4 185 281 54 284
+		f 4 -429 -434 434 -78
+		mu 0 4 433 185 284 121
+		f 4 -375 435 436 -430
+		mu 0 4 78 347 186 281
+		f 4 -859 -876 887 -889
+		mu 0 4 494 17 345 503
+		f 4 -888 -880 890 891
+		mu 0 4 503 345 77 504
+		f 4 -437 -438 438 -432
+		mu 0 4 281 186 282 54
+		f 4 -439 439 440 441
+		mu 0 4 54 282 187 283
+		f 4 -891 -884 893 -895
+		mu 0 4 504 77 346 505
+		f 4 -894 -886 -674 895
+		mu 0 4 505 346 21 506
+		f 4 -441 -443 -3 443
+		mu 0 4 283 187 366 88
+		f 4 -435 444 445 -79
+		mu 0 4 121 284 188 435
+		f 4 -433 -442 446 -445
+		mu 0 4 284 54 283 188
+		f 4 -447 -444 -2 447
+		mu 0 4 188 283 88 368
+		f 4 -446 -448 -1 -80
+		mu 0 4 435 188 368 1
+		f 4 -88 448 449 -33
+		mu 0 4 2 432 189 374
+		f 4 -87 450 451 -449
+		mu 0 4 432 120 285 189
+		f 4 -452 452 453 454
+		mu 0 4 189 285 55 288
+		f 4 -450 -455 455 -34
+		mu 0 4 374 189 288 91
+		f 4 -86 456 457 -451
+		mu 0 4 120 430 190 285
+		f 4 -85 458 459 -457
+		mu 0 4 430 36 350 190
+		f 4 -460 460 461 462
+		mu 0 4 190 350 79 286
+		f 4 -458 -463 463 -453
+		mu 0 4 285 190 286 55
+		f 4 -464 464 465 466
+		mu 0 4 55 286 191 287
+		f 4 -462 467 468 -465
+		mu 0 4 286 79 349 191
+		f 4 -469 469 470 471
+		mu 0 4 191 349 18 355
+		f 4 -466 -472 472 473
+		mu 0 4 287 191 355 82
+		f 4 -456 474 475 -35
+		mu 0 4 91 288 192 373
+		f 4 -454 -467 476 -475
+		mu 0 4 288 55 287 192
+		f 4 -477 -474 477 478
+		mu 0 4 192 287 82 356
+		f 4 -476 -479 479 -36
+		mu 0 4 373 192 356 22
+		f 4 -84 480 481 -459
+		mu 0 4 36 426 193 350
+		f 4 -83 482 483 -481
+		mu 0 4 426 118 289 193
+		f 4 -484 484 485 486
+		mu 0 4 193 289 56 292
+		f 4 -482 -487 487 -461
+		mu 0 4 350 193 292 79
+		f 4 -82 488 489 -483
+		mu 0 4 118 428 194 289
+		f 4 -81 -72 490 -489
+		mu 0 4 428 13 412 194
+		f 4 -491 -71 491 492
+		mu 0 4 194 412 110 290
+		f 4 -490 -493 493 -485
+		mu 0 4 289 194 290 56
+		f 4 -494 494 495 496
+		mu 0 4 56 290 195 291
+		f 4 -492 -70 497 -495
+		mu 0 4 290 110 410 195
+		f 4 -498 -69 498 499
+		mu 0 4 195 410 31 352
+		f 4 -496 -500 500 501
+		mu 0 4 291 195 352 80
+		f 4 -488 502 503 -468
+		mu 0 4 79 292 196 349
+		f 4 -486 -497 504 -503
+		mu 0 4 292 56 291 196
+		f 4 -505 -502 505 506
+		mu 0 4 196 291 80 351
+		f 4 -504 -507 507 -470
+		mu 0 4 349 196 351 18
+		f 4 -508 508 509 510
+		mu 0 4 18 351 197 353
+		f 4 -506 511 512 -509
+		mu 0 4 351 80 293 197
+		f 4 -513 513 514 515
+		mu 0 4 197 293 57 296
+		f 4 -510 -516 516 517
+		mu 0 4 353 197 296 81
+		f 4 -501 518 519 -512
+		mu 0 4 80 352 198 293
+		f 4 -499 -68 520 -519
+		mu 0 4 352 31 406 198
+		f 4 -521 -67 521 522
+		mu 0 4 198 406 108 294
+		f 4 -520 -523 523 -514
+		mu 0 4 293 198 294 57
+		f 4 -524 524 525 526
+		mu 0 4 57 294 199 295
+		f 4 -522 -66 527 -525
+		mu 0 4 294 108 408 199
+		f 4 -528 -65 -56 528
+		mu 0 4 199 408 9 392
+		f 4 -526 -529 -55 529
+		mu 0 4 295 199 392 100
+		f 4 -517 530 531 532
+		mu 0 4 81 296 200 354
+		f 4 -515 -527 533 -531
+		mu 0 4 296 57 295 200
+		f 4 -534 -530 -54 534
+		mu 0 4 200 295 100 390
+		f 4 -532 -535 -53 535
+		mu 0 4 354 200 390 26
+		f 4 -480 536 537 -37
+		mu 0 4 22 356 201 375
+		f 4 -478 538 539 -537
+		mu 0 4 356 82 297 201
+		f 4 -540 540 541 542
+		mu 0 4 201 297 58 300
+		f 4 -538 -543 543 -38
+		mu 0 4 375 201 300 92
+		f 4 -473 544 545 -539
+		mu 0 4 82 355 202 297
+		f 4 -471 -511 546 -545
+		mu 0 4 355 18 353 202
+		f 4 -547 -518 547 548
+		mu 0 4 202 353 81 298
+		f 4 -546 -549 549 -541
+		mu 0 4 297 202 298 58
+		f 4 -550 550 551 552
+		mu 0 4 58 298 203 299
+		f 4 -548 -533 553 -551
+		mu 0 4 298 81 354 203
+		f 4 -554 -536 -52 554
+		mu 0 4 203 354 26 386
+		f 4 -552 -555 -51 555
+		mu 0 4 299 203 386 98
+		f 4 -544 556 557 -39
+		mu 0 4 92 300 204 376
+		f 4 -542 -553 558 -557
+		mu 0 4 300 58 299 204
+		f 4 -559 -556 -50 559
+		mu 0 4 204 299 98 388
+		f 4 -558 -560 -49 -40
+		mu 0 4 376 204 388 5
+		f 4 72 560 561 63
+		mu 0 4 11 440 205 420
+		f 4 73 562 563 -561
+		mu 0 4 440 124 301 205
+		f 4 -564 564 565 566
+		mu 0 4 205 301 59 304
+		f 4 -562 -567 567 62
+		mu 0 4 420 205 304 114
+		f 4 74 568 569 -563
+		mu 0 4 124 438 206 301
+		f 4 75 570 571 -569
+		mu 0 4 438 38 358 206
+		f 4 -572 572 573 574
+		mu 0 4 206 358 83 302
+		f 4 -570 -575 575 -565
+		mu 0 4 301 206 302 59
+		f 4 -576 576 577 578
+		mu 0 4 59 302 207 303
+		f 4 -574 579 580 -577
+		mu 0 4 302 83 357 207
+		f 4 -581 581 582 583
+		mu 0 4 207 357 19 363
+		f 4 -578 -584 584 585
+		mu 0 4 303 207 363 86
+		f 4 -568 586 587 61
+		mu 0 4 114 304 208 418
+		f 4 -566 -579 588 -587
+		mu 0 4 304 59 303 208
+		f 4 -589 -586 589 590
+		mu 0 4 208 303 86 364
+		f 4 -588 -591 591 60
+		mu 0 4 418 208 364 34
+		f 4 76 592 593 -571
+		mu 0 4 38 434 209 358
+		f 4 77 594 595 -593
+		mu 0 4 434 122 305 209
+		f 4 -596 596 597 598
+		mu 0 4 209 305 60 308
+		f 4 -594 -599 599 -573
+		mu 0 4 358 209 308 83
+		f 4 78 600 601 -595
+		mu 0 4 122 436 210 305
+		f 4 79 24 602 -601
+		mu 0 4 436 0 384 210
+		f 4 -603 25 603 604
+		mu 0 4 210 384 96 306
+		f 4 -602 -605 605 -597
+		mu 0 4 305 210 306 60
+		f 4 -606 606 607 608
+		mu 0 4 60 306 211 307
+		f 4 -604 26 609 -607
+		mu 0 4 306 96 383 211
+		f 4 -610 27 610 611
+		mu 0 4 211 383 24 360
+		f 4 -608 -612 612 613
+		mu 0 4 307 211 360 84
+		f 4 -600 614 615 -580
+		mu 0 4 83 308 212 357
+		f 4 -598 -609 616 -615
+		mu 0 4 308 60 307 212
+		f 4 -617 -614 617 618
+		mu 0 4 212 307 84 359
+		f 4 -616 -619 619 -582
+		mu 0 4 357 212 359 19
+		f 4 -620 620 621 622
+		mu 0 4 19 359 213 361
+		f 4 -618 623 624 -621
+		mu 0 4 359 84 309 213
+		f 4 -625 625 626 627
+		mu 0 4 213 309 61 312
+		f 4 -622 -628 628 629
+		mu 0 4 361 213 312 85
+		f 4 -613 630 631 -624
+		mu 0 4 84 360 214 309
+		f 4 -611 28 632 -631
+		mu 0 4 360 24 381 214
+		f 4 -633 29 633 634
+		mu 0 4 214 381 95 310
+		f 4 -632 -635 635 -626
+		mu 0 4 309 214 310 61
+		f 4 -636 636 637 638
+		mu 0 4 61 310 215 311
+		f 4 -634 30 639 -637
+		mu 0 4 310 95 382 215
+		f 4 -640 31 40 640
+		mu 0 4 215 382 4 404
+		f 4 -638 -641 41 641
+		mu 0 4 311 215 404 106
+		f 4 -629 642 643 644
+		mu 0 4 85 312 216 362
+		f 4 -627 -639 645 -643
+		mu 0 4 312 61 311 216
+		f 4 -646 -642 42 646
+		mu 0 4 216 311 106 402
+		f 4 -644 -647 43 647
+		mu 0 4 362 216 402 29
+		f 4 -592 648 649 59
+		mu 0 4 34 364 217 422
+		f 4 -590 650 651 -649
+		mu 0 4 364 86 313 217
+		f 4 -652 652 653 654
+		mu 0 4 217 313 62 316
+		f 4 -650 -655 655 58
+		mu 0 4 422 217 316 116
+		f 4 -585 656 657 -651
+		mu 0 4 86 363 218 313
+		f 4 -583 -623 658 -657
+		mu 0 4 363 19 361 218
+		f 4 -659 -630 659 660
+		mu 0 4 218 361 85 314
+		f 4 -658 -661 661 -653
+		mu 0 4 313 218 314 62
+		f 4 -662 662 663 664
+		mu 0 4 62 314 219 315
+		f 4 -660 -645 665 -663
+		mu 0 4 314 85 362 219
+		f 4 -666 -648 44 666
+		mu 0 4 219 362 29 398
+		f 4 -664 -667 45 667
+		mu 0 4 315 219 398 104
+		f 4 -656 668 669 57
+		mu 0 4 116 316 220 424
+		f 4 -654 -665 670 -669
+		mu 0 4 316 62 315 220
+		f 4 -671 -668 46 671
+		mu 0 4 220 315 104 400
+		f 4 -670 -672 47 56
+		mu 0 4 424 220 400 7
+		f 4 -97 672 677 -676
+		mu 0 4 126 365 442 441
+		f 4 98 675 -682 -680
+		mu 0 4 222 126 441 443
+		f 4 -101 679 685 -684
+		mu 0 4 127 222 443 444
+		f 4 103 683 -690 -688
+		mu 0 4 323 127 444 445
+		f 4 112 692 -694 -691
+		mu 0 4 369 129 447 446
+		f 4 -118 695 696 -693
+		mu 0 4 129 228 448 447
+		f 4 132 698 -700 -696
+		mu 0 4 228 132 449 448
+		f 4 -136 701 702 -699
+		mu 0 4 132 319 450 449
+		f 4 136 704 -706 -702
+		mu 0 4 319 133 451 450
+		f 4 -142 708 709 -705
+		mu 0 4 133 232 452 451
+		f 4 154 712 -714 -709
+		mu 0 4 232 136 453 452
+		f 4 -157 716 717 -713
+		mu 0 4 136 377 454 453
+		f 4 -166 687 722 -721
+		mu 0 4 138 323 445 455
+		f 4 167 720 -726 -724
+		mu 0 4 234 138 455 456
+		f 4 -170 723 728 -727
+		mu 0 4 139 234 456 457
+		f 4 172 726 -732 -730
+		mu 0 4 379 139 457 458
+		f 4 -187 729 735 -734
+		mu 0 4 142 379 458 459
+		f 4 188 733 -740 -738
+		mu 0 4 238 142 459 460
+		f 4 -191 737 743 -742
+		mu 0 4 143 238 460 461
+		f 4 193 741 -748 -746
+		mu 0 4 331 143 461 462
+		f 4 202 748 -750 -717
+		mu 0 4 377 145 463 454
+		f 4 -208 751 752 -749
+		mu 0 4 145 244 464 463
+		f 4 222 754 -756 -752
+		mu 0 4 244 148 465 464
+		f 4 -226 757 758 -755
+		mu 0 4 148 327 466 465
+		f 4 226 760 -762 -758
+		mu 0 4 327 149 467 466
+		f 4 -232 764 765 -761
+		mu 0 4 149 248 468 467
+		f 4 244 768 -770 -765
+		mu 0 4 248 152 469 468
+		f 4 -247 772 773 -769
+		mu 0 4 152 393 470 469
+		f 4 -256 745 778 -777
+		mu 0 4 154 331 462 471
+		f 4 257 776 -782 -780
+		mu 0 4 250 154 471 472
+		f 4 -260 779 784 -783
+		mu 0 4 155 250 472 473
+		f 4 262 782 -788 -786
+		mu 0 4 395 155 473 474
+		f 4 -277 785 791 -790
+		mu 0 4 158 395 474 475
+		f 4 278 789 -796 -794
+		mu 0 4 254 158 475 476
+		f 4 -281 793 799 -798
+		mu 0 4 159 254 476 477
+		f 4 283 797 -804 -802
+		mu 0 4 339 159 477 478
+		f 4 292 804 -806 -773
+		mu 0 4 393 161 479 470
+		f 4 -298 807 808 -805
+		mu 0 4 161 260 480 479
+		f 4 312 810 -812 -808
+		mu 0 4 260 164 481 480
+		f 4 -316 813 814 -811
+		mu 0 4 164 335 482 481
+		f 4 316 816 -818 -814
+		mu 0 4 335 165 483 482
+		f 4 -322 820 821 -817
+		mu 0 4 165 264 484 483
+		f 4 334 824 -826 -821
+		mu 0 4 264 168 485 484
+		f 4 -337 828 829 -825
+		mu 0 4 168 413 486 485
+		f 4 -346 801 834 -833
+		mu 0 4 170 339 478 487
+		f 4 347 832 -838 -836
+		mu 0 4 266 170 487 488
+		f 4 -350 835 840 -839
+		mu 0 4 171 266 488 489
+		f 4 352 838 -844 -842
+		mu 0 4 415 171 489 490
+		f 4 -367 841 847 -846
+		mu 0 4 174 415 490 491
+		f 4 368 845 -852 -850
+		mu 0 4 270 174 491 492
+		f 4 -371 849 855 -854
+		mu 0 4 175 270 492 493
+		f 4 373 853 -860 -858
+		mu 0 4 347 175 493 494
+		f 4 382 860 -862 -829
+		mu 0 4 413 177 495 486
+		f 4 -388 863 864 -861
+		mu 0 4 177 276 496 495
+		f 4 402 866 -868 -864
+		mu 0 4 276 180 497 496
+		f 4 -406 869 870 -867
+		mu 0 4 180 343 498 497
+		f 4 406 872 -874 -870
+		mu 0 4 343 181 499 498
+		f 4 -412 876 877 -873
+		mu 0 4 181 280 500 499
+		f 4 424 880 -882 -877
+		mu 0 4 280 184 501 500
+		f 4 -427 690 884 -881
+		mu 0 4 184 370 502 501
+		f 4 -436 857 888 -887
+		mu 0 4 186 347 494 503
+		f 4 437 886 -892 -890
+		mu 0 4 282 186 503 504
+		f 4 -440 889 894 -893
+		mu 0 4 187 282 504 505
+		f 4 442 892 -896 -673
+		mu 0 4 366 187 505 506;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCylinder24";
+	rename -uid "8652BE33-4A26-810D-7392-74A9A5AB0D56";
+	setAttr ".t" -type "double3" 0.45235126815062843 0.47175297972047725 0.12789716820274188 ;
+	setAttr ".r" -type "double3" 0 0 2.7396015734010564 ;
+	setAttr ".s" -type "double3" 0.26789448647777026 0.41807741804615922 0.26789448647777026 ;
+	setAttr ".rp" -type "double3" -0.0073752588593686552 0.065309333464167688 -3.1935511407586367e-008 ;
+	setAttr ".rpt" -type "double3" -0.0031131510623591345 -0.00042715765223642671 0 ;
+	setAttr ".sp" -type "double3" -0.027530461549758911 0.15621349215507507 -1.1920928955078125e-007 ;
+	setAttr ".spt" -type "double3" 0.020155202690390256 -0.090904158690907386 8.7273778143194883e-008 ;
+createNode mesh -n "pCylinderShape23" -p "pCylinder24";
+	rename -uid "5F48FE6C-41EC-02E6-F6F4-EE9023F62C2D";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 1 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 20 ".pt[101:120]" -type "float3"  -0.16214103 0.0052736904 
+		0.044969711 -0.13792546 0.010290345 0.090064965 -0.10020868 0.014299716 0.12634408 
+		-0.052682824 0.016909324 0.15025572 -1.5813368e-008 0.017863736 0.15945926 0.052682821 
+		0.017069509 0.15305381 0.10020865 0.014604406 0.13166642 0.13792539 0.010709723 0.097390577 
+		0.16214103 0.0057667 0.053581517 0.17048517 0.00025918914 0.0045274864 0.16214105 
+		-0.0052736937 -0.044969734 0.13792537 -0.010290351 -0.090064995 0.10020868 -0.014299716 
+		-0.12634405 0.052682787 -0.016909325 -0.15025571 -1.5813368e-008 -0.017863732 -0.15945926 
+		-0.052682787 -0.017069515 -0.15305378 -0.10020863 -0.014604406 -0.13166639 -0.13792534 
+		-0.010709722 -0.097390547 -0.16214103 -0.0057667024 -0.053581499 -0.17048517 -0.00025919246 
+		-0.0045274962;
+createNode transform -n "pCube34";
+	rename -uid "984A08B4-4714-6537-49FB-81AB974E5249";
+	setAttr ".t" -type "double3" 0.45895068412123985 0.23990603942701166 0.14333677875789247 ;
+	setAttr ".s" -type "double3" 0.50859124889283924 0.50859124889283924 0.50859124889283924 ;
+createNode mesh -n "pCubeShape34" -p "pCube34";
+	rename -uid "C6FE9464-40A8-EDD9-A035-48B833D7A17D";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 241 ".pt";
+	setAttr ".pt[0:165]" -type "float3"  0.022717908 0.077772871 0.015596882 
+		-0.022717908 0.077772871 0.015596882 0.022717908 -0.012284022 0.070011802 -0.022717908 
+		-0.012284022 0.070011802 -0.027988078 -0.049937285 0.031295024 4.2185203e-010 -0.016418213 
+		0.086769342 0.027988078 -0.049937293 0.03129502 -0.027988078 0.039056085 0.053250175 
+		0.027988078 0.039056085 0.053250175 -3.3748154e-010 0.094530359 0.019731048 -0.027988078 
+		0.061011247 -0.03574324 0.027988078 0.061011247 -0.035743233 -1.6874077e-010 0.08177574 
+		-0.048289742 -8.4370386e-011 -0.070701808 0.043841522 -8.4370386e-011 0.051602595 
+		0.074014708 -0.038464259 0.0055369521 -0.0022241152 0.038464259 0.0055369586 -0.0022241077 
+		0.014447236 0.089044899 -0.013592 -0.014447236 0.089044899 -0.013592 -0.014447238 
+		-0.043366306 0.06641461 0.014447236 -0.043366298 0.06641461 0.014447237 0.016904855 
+		0.081283823 -0.014447238 0.016904851 0.081283823 -0.014447238 0.074175656 0.04667918 
+		0.014447236 0.074175641 0.046679173 -0.033402286 0.05147469 0.0091089718 -0.033402286 
+		-0.005796127 0.043713618 0.033402286 -0.0057961345 0.043713618 0.033402286 0.05147469 
+		0.0091089755 0 0.094873935 -0.014842848 -0.015286667 0.076566353 -0.045142051 0.015286667 
+		0.076566353 -0.045142051 -0.015286667 -0.065492392 0.040693838 1.6874077e-010 -0.047184817 
+		0.070993073 0.015286667 -0.065492392 0.040693838 -4.2185193e-011 0.018155698 0.087112933 
+		-0.015286667 0.048454918 0.06880527 1.6874077e-010 0.078754142 0.050497625 0.015286667 
+		0.048454918 0.06880527 -0.035835993 0.0238446 0.02807511 -0.035835989 -0.02476225 
+		0.016083527 -0.035835989 0.035836183 -0.020531755 0.035835993 0.0238446 0.028075106 
+		0.035835989 0.035836183 -0.020531755 0.035835989 -0.02476225 0.016083527 0.013479199 
+		0.089005917 0.018368132 -0.013479198 0.089005917 0.018368129 -0.026250651 0.073710516 
+		-0.0069457772 0.026250651 0.073710516 -0.0069457772 -0.026250651 -0.030350646 0.055930935 
+		-0.013479198 -0.015055303 0.081244834 0.013479198 -0.015055303 0.081244834 0.026250651 
+		-0.030350639 0.055930927 -0.026250651 0.010258616 0.065949455 -0.026250651 0.063691989 
+		0.0336635 0.026250651 0.063691989 0.033663493 0.026250651 0.010258616 0.065949455 
+		0.019666281 0.084552661 0.0032435476 0.0071168216 0.094984546 0.0025344749 0.0076672933 
+		0.088366985 -0.031526905 0.021733828 0.077478886 -0.02643745 -0.0071168216 0.094984546 
+		0.0025344749 -0.019666281 0.084552661 0.0032435476 -0.02173383 0.077478886 -0.026437443 
+		-0.0076672938 0.088366985 -0.031526905 -0.0076672947 0.070001915 -0.061921071 -0.021733828 
+		0.060432374 -0.054649461 0.021733828 0.060432382 -0.054649461 0.0076672933 0.070001915 
+		-0.061921079 0.0076672933 -0.077293023 0.027078677 0.021733828 -0.066404954 0.021989215 
+		-0.021733828 -0.066404954 0.021989215 -0.0076672938 -0.077292994 0.027078677 -0.0076672933 
+		-0.058928043 0.057472877 -0.021733828 -0.049358472 0.050201256 -0.019666281 -0.0263732 
+		0.07026808 -0.0071168211 -0.031852812 0.079173177 0.02173383 -0.049358472 0.050201256 
+		0.0076672933 -0.058928043 0.057472885 0.0071168211 -0.031852812 0.079173177 0.019666282 
+		-0.0263732 0.07026808 0.019666281 6.9309026e-005 0.07679157 0.0071168216 0.00077836215 
+		0.08722347 0.0076672933 0.034839742 0.080605917 0.021733828 0.029750282 0.069717832 
+		-0.0071168221 0.00077836215 0.08722347 -0.019666281 6.9309026e-005 0.07679157 -0.021733828 
+		0.029750282 0.069717832 -0.0076672938 0.034839742 0.080605909 -0.0076672933 0.065233953 
+		0.062240861 -0.021733828 0.057962343 0.052671295 -0.019666281 0.078029126 0.029686049 
+		-0.0071168211 0.086934254 0.035165649 0.02173383 0.057962343 0.052671295 0.0076672933 
+		0.065233961 0.062240861 0.0071168211 0.086934254 0.035165649 0.019666282 0.078029126 
+		0.029686049 -0.027982345 0.068069622 0.01320304 -0.031996205 0.045671895 0.032330561 
+		-0.03715688 0.029916573 0.003790465 -0.031996205 0.057138152 -0.014146986 -0.031996205 
+		0.017459832 0.04937708 -0.027982345 -0.0098901838 0.060308568 -0.031996205 -0.029017709 
+		0.037910815 -0.037156876 -0.00047762319 0.022155508 -0.03715688 -0.018842662 -0.0082386835 
+		-0.031996205 -0.046064235 0.0096987616 -0.031996209 0.040091634 -0.042359058 -0.03715688 
+		0.011551538 -0.02660374 0.027982345 -0.0098901913 0.060308568 0.031996205 0.017459836 
+		0.04937708 0.03715688 -0.00047762319 0.022155508 0.031996205 -0.029017709 0.037910815 
+		0.031996205 0.045671895 0.032330565 0.027982345 0.068069622 0.013203043 0.031996205 
+		0.057138152 -0.014146986 0.037156876 0.029916575 0.003790465 0.03715688 0.011551543 
+		-0.02660374 0.031996205 0.040091626 -0.042359058 0.031996209 -0.046064235 0.0096987616 
+		0.03715688 -0.018842662 -0.0082386909 0.013812598 0.09079127 0.0026190614 0.0073920591 
+		0.093326688 -0.014636028 0.015017573 0.084194198 -0.029750329 0.020828661 0.082388639 
+		-0.011287267 -0.0138126 0.090791285 0.0026190651 -0.020828657 0.082388639 -0.011287267 
+		-0.015017573 0.084194198 -0.029750329 -0.0073920591 0.093326688 -0.014636028 -0.015017573 
+		0.06648846 -0.059053455 0.015017573 0.06648846 -0.059053455 0.015017573 -0.073120341 
+		0.025302105 -0.015017573 -0.073120341 0.025302097 -0.015017573 -0.055414498 0.05460522 
+		-0.020828661 -0.038230196 0.061594062 -0.013812598 -0.029827615 0.075500399 -0.0073920591 
+		-0.046282023 0.069719531 0.015017573 -0.055414498 0.054605212 0.0073920568 -0.046282016 
+		0.069719523 0.0138126 -0.029827615 0.075500399 0.020828657 -0.038230196 0.061594054 
+		0.013812598 0.00069377571 0.083030179 0.0073920581 0.01794886 0.085565642 0.015017573 
+		0.033063166 0.076433167 0.020828661 0.014600108 0.074627608 -0.0138126 0.00069377571 
+		0.083030201 -0.020828657 0.014600112 0.074627608 -0.015017573 0.033063162 0.076433159 
+		-0.0073920591 0.017948862 0.085565619 -0.015017573 0.062366284 0.058727376 -0.020828661 
+		0.069355115 0.041543055 -0.013812598 0.08326143 0.033140462 -0.0073920581 0.077480569 
+		0.049594883 0.015017573 0.062366284 0.058727369 0.0073920568 0.077480569 0.049594875 
+		0.0138126 0.08326143 0.033140469 0.020828657 0.069355115 0.041543055 -0.030427519 
+		0.057859302 0.022517458 -0.035217937 0.038173884 0.018688854 -0.035217937 0.044155702 
+		-0.0055579082 -0.030427523 0.063363075 0.00020855269 -0.030427523 0.0031042928 0.055601992 
+		-0.030427523 -0.019204589 0.050098252 -0.035217937 -0.015376028 0.030412819 -0.035217937 
+		0.0088707581 0.03639463 -0.035217945 -0.033081777 0.0011097041;
+	setAttr ".pt[166:240]" -0.035217937 0.026449926 -0.034861039 0.030427519 0.0031042984 
+		0.055601992 0.035217937 0.0088707656 0.03639463 0.035217937 -0.015376024 0.030412823 
+		0.030427523 -0.019204589 0.050098259 0.030427523 0.057859302 0.022517458 0.030427523 
+		0.063363068 0.00020855269 0.035217937 0.044155702 -0.0055579119 0.035217937 0.038173884 
+		0.018688854 0.035217945 0.026449932 -0.034861069 0.035217937 -0.03308177 0.0011097004 
+		-7.1714823e-010 0.089817703 -0.032031108 3.3748154e-010 0.096569806 0.0026271564 
+		-0.0078049134 0.080470368 -0.047500964 -0.022122107 0.070075899 -0.041220378 -1.4342965e-009 
+		0.071123004 -0.062970854 0.0078049116 0.080470368 -0.047500964 0.022122107 0.070075914 
+		-0.041220378 -7.1714823e-010 -0.078743756 0.027582884 -0.0078049134 -0.069396436 
+		0.043052752 -0.022122107 -0.059002042 0.036772151 -1.4342965e-009 -0.060049132 0.058522627 
+		-1.3499262e-009 -0.032508105 0.080619693 0.0078049116 -0.069396436 0.043052752 0.022122107 
+		-0.059002042 0.036772158 -7.1714823e-010 0.035343952 0.082056619 3.3748154e-010 0.00068569556 
+		0.088808782 -0.0078049134 0.050813831 0.072709307 -0.022122107 0.044533223 0.062314875 
+		-1.4342965e-009 0.066283695 0.06336195 -1.3499262e-009 0.088380739 0.035820935 0.0078049116 
+		0.050813839 0.072709307 0.022122107 0.04453323 0.062314875 -0.037805654 0.014884289 
+		0.013245758 -0.032561421 0.032030873 0.041623417 -0.037805654 -0.0099329054 0.0071232319 
+		-0.032561421 -0.038310558 0.024269812 -0.037805654 -0.0038103759 -0.017693991 -0.037805654 
+		0.021006823 -0.011571425 -0.032561425 0.049384505 -0.028718021 0.037805654 0.014884292 
+		0.013245754 0.032561421 0.032030873 0.041623417 0.037805654 0.021006828 -0.011571425 
+		0.032561421 0.049384505 -0.028718021 0.037805654 -0.0038103722 -0.017693991 0.037805654 
+		-0.0099329092 0.0071232282 0.032561425 -0.038310558 0.024269808 0.0069792033 0.092975408 
+		0.019347422 0.019020785 0.08331731 0.01696473 -0.0069792033 0.092975408 0.019347422 
+		-0.019020785 0.083317325 0.01696473 -0.027499042 0.068400398 -0.021324303 -0.024461614 
+		0.076801255 0.0061806235 -0.027499042 0.051683508 -0.048990805 0.027499042 0.051683508 
+		-0.048990805 0.027499042 0.068400398 -0.021324303 0.024461614 0.076801255 0.0061806235 
+		-0.027499042 -0.057326481 0.016876079 -0.027499042 -0.040609591 0.044542592 -0.024461616 
+		-0.020167919 0.064772159 -0.0069792033 -0.016034575 0.085214354 -0.019020785 -0.013651893 
+		0.075556248 0.0069792033 -0.016034575 0.085214354 0.019020785 -0.013651893 0.075556248 
+		0.027499042 -0.040609591 0.044542592 0.024461616 -0.020167919 0.064772159 0.027499042 
+		-0.057326481 0.016876079 -0.027499042 0.024637148 0.060639314 -0.024461614 -0.0028677694 
+		0.069040209 -0.027499042 0.052303657 0.043922428 -0.024461616 0.07253322 0.023480784 
+		0.027499042 0.052303657 0.043922428 0.024461616 0.07253319 0.02348078 0.027499042 
+		0.024637148 0.060639314 0.024461616 -0.0028677769 0.069040202;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "29368378-4B9A-7631-4CBA-89A65DA428D6";
+	rename -uid "C47AF975-4C80-8023-597F-D58D88293F2D";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2D3E490D-41E4-44FC-73F2-EB91B903525A";
+	rename -uid "F133BC6D-47CD-99E9-A03D-61A9FCD0E06F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C24338F0-4ED8-1760-A090-7D847C3A787C";
+	rename -uid "F046BCD4-4F16-8498-80FD-3AAC95DC7731";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9E1F8E1D-49E2-86FA-BF69-F99C425E098F";
+	rename -uid "D038C10A-4BA9-A288-EE8A-FF963008ED6D";
 	setAttr ".cdl" 4;
 	setAttr -s 6 ".dli[1:5]"  1 2 3 4 5;
 	setAttr -s 6 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "695FF31B-4DA5-427E-8212-2382F526E996";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CA84F50D-48F1-C3ED-16AE-F2B2FF5103AA";
+	rename -uid "5AA46B69-4113-871E-DCEB-048BF5BD34A3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "6F59CBBF-4A2D-2958-275D-C788B66737DA";
 	setAttr ".g" yes;
@@ -22949,90 +27667,56 @@ createNode polySplitRing -n "polySplitRing1";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "B0D7CF85-4BB6-ADA4-B00C-0E909F168F7E";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
-		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 1\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n"
-		+ "                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 513\n                -height 170\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 1\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
-		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n"
-		+ "            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 513\n            -height 170\n            -sceneRenderFilter 0\n            $editorName;\n"
-		+ "        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n"
-		+ "                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
-		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
-		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 512\n                -height 170\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
-		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
-		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 512\n            -height 170\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
-		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n"
-		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n"
-		+ "                -width 513\n                -height 170\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
-		+ "            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
-		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n"
-		+ "            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 513\n            -height 170\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n"
-		+ "                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n"
-		+ "                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 512\n                -height 170\n                -sceneRenderFilter 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
+		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 1\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
+		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n"
+		+ "            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 686\n            -height 333\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n"
+		+ "            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n"
+		+ "            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n"
+		+ "            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 686\n            -height 333\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 686\n            -height 333\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
 		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 512\n            -height 170\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
-		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -showShapes 0\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n"
-		+ "                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
-		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -renderFilterIndex 0\n                -selectionOrder \"chronological\" \n                -expandAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n"
-		+ "            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n"
-		+ "            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n"
-		+ "                -showShapes 0\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n"
-		+ "                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n"
-		+ "            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n"
-		+ "                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
-		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n"
-		+ "                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
-		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n"
-		+ "                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n"
-		+ "                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
-		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
-		+ "                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
-		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n"
-		+ "                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"timeEditorPanel\" -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n"
-		+ "                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n"
-		+ "            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n"
-		+ "                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n"
-		+ "                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tshapePanel -unParent -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tposePanel -unParent -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels ;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"profilerPanel\" -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"contentBrowserPanel\" -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
-		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
-		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
-		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n"
-		+ "            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
-		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
-		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n"
-		+ "                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
-		+ "                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n"
-		+ "                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"quad\\\" -ps 1 50 50 -ps 2 50 50 -ps 3 50 50 -ps 4 50 50 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera top` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 1\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 513\\n    -height 170\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera top` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 1\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 513\\n    -height 170\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 686\n            -height 333\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n"
+		+ "            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
+		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n"
+		+ "            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
+		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
+		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
+		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n"
+		+ "                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n"
+		+ "                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
+		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
+		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n"
+		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n"
+		+ "                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n"
+		+ "                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
+		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
+		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"quad\\\" -ps 1 50 50 -ps 2 50 50 -ps 3 50 50 -ps 4 50 50 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera top` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 1\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 686\\n    -height 333\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera top` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 1\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 686\\n    -height 333\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 512\\n    -height 170\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 512\\n    -height 170\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 686\\n    -height 333\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 686\\n    -height 333\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera side` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 512\\n    -height 170\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera side` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 512\\n    -height 170\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera side` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 686\\n    -height 333\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera side` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"wireframe\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 686\\n    -height 333\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 513\\n    -height 170\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 513\\n    -height 170\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 686\\n    -height 333\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera front` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 686\\n    -height 333\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "C350FFC2-4007-7BBD-DF9A-8FB12C30850E";
@@ -29543,15 +34227,14 @@ createNode deleteComponent -n "deleteComponent99";
 createNode polyTweak -n "polyTweak82";
 	rename -uid "1AECE41F-4B09-A1F3-BDD1-B6A40DE010F5";
 	setAttr ".uopa" yes;
-	setAttr -s 8 ".tk";
-	setAttr ".tk[297]" -type "float3" 0 0.01222505 -0.0020644618 ;
+	setAttr ".tk[297]" -type "float3"  0 0.01222505 -0.0020644618;
 createNode deleteComponent -n "deleteComponent100";
 	rename -uid "B99AD267-41BE-7908-478E-76994A9410E9";
 	setAttr ".dc" -type "componentList" 1 "f[288]";
 createNode polyTweak -n "polyTweak83";
 	rename -uid "DD1DF30E-4D81-B5D6-ED88-52834C95F802";
 	setAttr ".uopa" yes;
-	setAttr -s 13 ".tk";
+	setAttr -s 11 ".tk";
 	setAttr ".tk[109]" -type "float3" 0 0.0014812199 0.00037030497 ;
 	setAttr ".tk[289]" -type "float3" 0 0.0012943461 -0.0055825957 ;
 	setAttr ".tk[290]" -type "float3" 0 -0.0006468725 0.00037030497 ;
@@ -29569,7 +34252,7 @@ createNode deleteComponent -n "deleteComponent101";
 createNode polyTweak -n "polyTweak84";
 	rename -uid "F98E02BC-4783-863D-5542-92B2BDF881D4";
 	setAttr ".uopa" yes;
-	setAttr -s 8 ".tk";
+	setAttr -s 7 ".tk";
 	setAttr ".tk[189]" -type "float3" 0 3.1630687e-005 6.876237e-006 ;
 	setAttr ".tk[280]" -type "float3" 0 0.0004878045 0.00012195113 ;
 	setAttr ".tk[283]" -type "float3" 0 0.00012195113 -0.0026829245 ;
@@ -29583,7 +34266,7 @@ createNode deleteComponent -n "deleteComponent102";
 createNode polyTweak -n "polyTweak85";
 	rename -uid "E3B3F78A-4D22-07E2-EE1C-8F8E6A06A33A";
 	setAttr ".uopa" yes;
-	setAttr -s 10 ".tk";
+	setAttr -s 8 ".tk";
 	setAttr ".tk[0]" -type "float3" 0 0 0.00024435506 ;
 	setAttr ".tk[238]" -type "float3" 0 -0.0067350389 -0.0087929657 ;
 	setAttr ".tk[301]" -type "float3" 0 -0.00025561964 -0.0054958249 ;
@@ -29628,7 +34311,7 @@ createNode deleteComponent -n "deleteComponent104";
 createNode polyTweak -n "polyTweak87";
 	rename -uid "422BD381-42DC-1E94-BC3E-C89FDB2AA5AE";
 	setAttr ".uopa" yes;
-	setAttr -s 10 ".tk";
+	setAttr -s 9 ".tk";
 	setAttr ".tk[0]" -type "float3" -0.011961796 0 -0.00022318691 ;
 	setAttr ".tk[238]" -type "float3" 0 1.1641532e-010 0 ;
 	setAttr ".tk[250]" -type "float3" -0.0075181336 0 0 ;
@@ -29677,7 +34360,7 @@ createNode polySmoothFace -n "polySmoothFace10";
 createNode polyTweak -n "polyTweak88";
 	rename -uid "BEB328AC-43BC-08D0-0453-D48350B507B7";
 	setAttr ".uopa" yes;
-	setAttr -s 10 ".tk";
+	setAttr -s 9 ".tk";
 	setAttr ".tk[2]" -type "float3" 0 0.024606137 0 ;
 	setAttr ".tk[3]" -type "float3" 0 0.024606137 0 ;
 	setAttr ".tk[4]" -type "float3" 0 0.19589268 0 ;
@@ -29703,7 +34386,7 @@ createNode polySplitRing -n "polySplitRing44";
 createNode polyTweak -n "polyTweak89";
 	rename -uid "2215E7F8-4A50-4688-3234-FCA29E3543A2";
 	setAttr ".uopa" yes;
-	setAttr -s 13 ".tk";
+	setAttr -s 11 ".tk";
 	setAttr ".tk[0]" -type "float3" -0.098351769 0.13109697 -0.2650499 ;
 	setAttr ".tk[3]" -type "float3" -0.03607947 0.28525174 -0.035699099 ;
 	setAttr ".tk[4]" -type "float3" -0.10182381 0.064962395 0.071458645 ;
@@ -29731,6 +34414,694 @@ createNode polyTweak -n "polyTweak90";
 	setAttr -s 2 ".tk";
 	setAttr ".tk[6]" -type "float3" -0.066861734 0 0 ;
 	setAttr ".tk[16]" -type "float3" -0.066861734 0 0 ;
+createNode polySplitRing -n "polySplitRing46";
+	rename -uid "59D4EE75-4034-149D-EF09-7D8C2B77787A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 6 "e[6]" "e[11]" "e[15]" "e[23]" "e[25]" "e[41]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 1.4007195459547612 0.058038885229673987 1;
+	setAttr ".wt" 0.47103089094161987;
+	setAttr ".re" 41;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak91";
+	rename -uid "F8B7E982-44CC-EA59-A781-FC98345D9593";
+	setAttr ".uopa" yes;
+	setAttr -s 15 ".tk";
+	setAttr ".tk[0]" -type "float3" -0.045091484 0.010020329 0 ;
+	setAttr ".tk[3]" -type "float3" -0.044374608 0 0 ;
+	setAttr ".tk[4]" -type "float3" -0.021113107 0.020408377 0 ;
+	setAttr ".tk[6]" -type "float3" 0.018023614 -0.00029904721 0 ;
+	setAttr ".tk[7]" -type "float3" 0 0.016131975 -0.015231907 ;
+	setAttr ".tk[8]" -type "float3" -0.042586401 -0.0050101615 -0.019039884 ;
+	setAttr ".tk[10]" -type "float3" 0 0.0031901181 1.5527887e-005 ;
+	setAttr ".tk[12]" -type "float3" 0 0 -0.022847861 ;
+	setAttr ".tk[14]" -type "float3" 0 0.040816758 0.017492894 ;
+	setAttr ".tk[15]" -type "float3" 0 0.016675971 0.013055921 ;
+	setAttr ".tk[16]" -type "float3" -0.14669043 -0.0051339688 -0.017407894 ;
+	setAttr ".tk[18]" -type "float3" -0.021113109 0 2.9802322e-008 ;
+	setAttr ".tk[19]" -type "float3" -0.0078536645 -2.3283064e-010 0 ;
+	setAttr ".tk[23]" -type "float3" -0.010020329 0 0 ;
+	setAttr ".tk[24]" -type "float3" 0.027859055 0 0 ;
+createNode polySplitRing -n "polySplitRing47";
+	rename -uid "960E9F8D-47E7-3A18-ECE7-5BA557364FA1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 7 "e[5]" "e[34]" "e[37]" "e[40]" "e[44]" "e[46]" "e[54]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 1.4007195459547612 0.058038885229673987 1;
+	setAttr ".wt" 0.50758427381515503;
+	setAttr ".dr" no;
+	setAttr ".re" 37;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak92";
+	rename -uid "5D846E1C-48F3-C2A1-39A6-E4BE050B479B";
+	setAttr ".uopa" yes;
+	setAttr ".tk[30]" -type "float3"  -0.019771665 0 0;
+createNode polySplitRing -n "polySplitRing48";
+	rename -uid "9871599F-4E74-BF46-0AEB-318091C714DE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[20:30]";
+	setAttr ".ix" -type "matrix" 0.37502823325115187 0 0 0 0 0.40549448054582082 0.057532689622302957 0
+		 0 -0.052682427704987385 0.37130949024579096 0 0 1.9915597638279383 0.090181143752206927 1;
+	setAttr ".wt" 0.48747795820236206;
+	setAttr ".dr" no;
+	setAttr ".re" 26;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak93";
+	rename -uid "E8A06B71-4C5A-6DD6-610C-1CA74D3C568F";
+	setAttr ".uopa" yes;
+	setAttr -s 11 ".tk[34:44]" -type "float3"  -0.010785991 -0.0013123851
+		 0.0072915377 -0.0073894402 -0.0024962868 0.013869339 -0.0020991904 -0.0034358399
+		 0.019089498 0.0045669195 -0.0040390817 0.02244105 0.01195636 -0.0042469213 0.02359592
+		 0.011956363 0.0042469217 -0.023595922 0.0045669232 0.0040390813 -0.022441035 -0.002099182
+		 0.0034358278 -0.019089498 -0.0073894216 0.0024962868 -0.013869335 -0.010785959 0.001312373
+		 -0.0072915405 -0.01195636 0 -4.9895856e-009;
+createNode polySplitRing -n "polySplitRing49";
+	rename -uid "A2866C5D-4FEE-3767-4F3A-A4A06AFCC28A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 10 "e[42:43]" "e[45]" "e[47]" "e[49]" "e[51]" "e[53]" "e[55]" "e[57]" "e[59]" "e[61]";
+	setAttr ".ix" -type "matrix" 0.37502823325115187 0 0 0 0 0.40549448054582082 0.057532689622302957 0
+		 0 -0.052682427704987385 0.37130949024579096 0 0 1.9915597638279383 0.090181143752206927 1;
+	setAttr ".wt" 0.52383768558502197;
+	setAttr ".re" 61;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode deleteComponent -n "deleteComponent110";
+	rename -uid "924ECBE8-4390-644F-88B9-E6AC517448D0";
+	setAttr ".dc" -type "componentList" 3 "f[2:3]" "f[15]" "f[25]";
+createNode polyExtrudeEdge -n "polyExtrudeEdge16";
+	rename -uid "3D6B513A-4F06-EDDF-448D-808636F32468";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 4 "e[1:2]" "e[6:7]" "e[30]" "e[50]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 1.4007195459547612 0.058038885229673987 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.1875 1.781122 0.058038887 ;
+	setAttr ".rs" 62033;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0 1.6776989625635716 -0.31696111477032601 ;
+	setAttr ".cbx" -type "double3" 0.375 1.8845450507345769 0.43303888522967399 ;
+createNode polyTweak -n "polyTweak94";
+	rename -uid "4FC45B77-4332-A949-EC91-9C8A3A838C50";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".tk";
+	setAttr ".tk[45]" -type "float3" 2.9778502e-023 0.08367312 0.022125956 ;
+	setAttr ".tk[46]" -type "float3" -4.9960036e-016 0.079689384 0.021901367 ;
+	setAttr ".tk[47]" -type "float3" -9.9920072e-016 0.068128131 0.021249611 ;
+	setAttr ".tk[48]" -type "float3" -9.9920072e-016 0.050121047 0.020234436 ;
+	setAttr ".tk[49]" -type "float3" -9.9920072e-016 0.027430793 0.01895519 ;
+	setAttr ".tk[50]" -type "float3" -9.9920072e-016 0.0022784481 0.017537221 ;
+	setAttr ".tk[51]" -type "float3" -9.9920072e-016 -0.022873878 0.016119225 ;
+	setAttr ".tk[52]" -type "float3" -9.9920072e-016 -0.045564126 0.014840026 ;
+	setAttr ".tk[53]" -type "float3" -9.9920072e-016 -0.063571207 0.013824856 ;
+	setAttr ".tk[54]" -type "float3" -4.9960036e-016 -0.075132459 0.013173086 ;
+	setAttr ".tk[55]" -type "float3" 5.9557004e-023 -0.079116195 0.012948497 ;
+createNode deleteComponent -n "deleteComponent111";
+	rename -uid "D27ADC94-4FBD-FE06-EE71-689863B320D3";
+	setAttr ".dc" -type "componentList" 1 "f[10:19]";
+createNode polySplitRing -n "polySplitRing50";
+	rename -uid "1FEFFBA3-4B8C-01D2-E1F8-E8BEB7F65ADC";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[0:3]" "e[13]" "e[16]" "e[19]" "e[27]" "e[34]" "e[42]" "e[45]" "e[54]" "e[64]" "e[67]" "e[70]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 1.4007195459547612 0.058038885229673987 1;
+	setAttr ".wt" 0.5141264796257019;
+	setAttr ".dr" no;
+	setAttr ".re" 2;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak95";
+	rename -uid "0A7036C7-4C13-47C7-7BF5-BF959153F2FC";
+	setAttr ".uopa" yes;
+	setAttr -s 18 ".tk";
+	setAttr ".tk[2]" -type "float3" 0 -0.0094152978 0 ;
+	setAttr ".tk[8]" -type "float3" 0.0093191238 0 0 ;
+	setAttr ".tk[19]" -type "float3" 0.025118964 0 0 ;
+	setAttr ".tk[22]" -type "float3" 0.021433985 0 0 ;
+	setAttr ".tk[23]" -type "float3" 0.034200169 0 0 ;
+	setAttr ".tk[29]" -type "float3" 0.021433985 0 0 ;
+	setAttr ".tk[32]" -type "float3" 0.013046773 0 0 ;
+	setAttr ".tk[33]" -type "float3" 0.013046773 0 0 ;
+	setAttr ".tk[35]" -type "float3" 0.036344584 0 0 ;
+	setAttr ".tk[38]" -type "float3" 0.073656961 0.03369265 -0.11918609 ;
+	setAttr ".tk[39]" -type "float3" -0.035464466 0.031676933 -0.10912143 ;
+	setAttr ".tk[40]" -type "float3" 0.073656961 -0.026785832 0.14731392 ;
+	setAttr ".tk[41]" -type "float3" -0.035464466 -0.035474617 0.10912143 ;
+	setAttr ".tk[42]" -type "float3" -0.05345431 0.016476771 -0.057724737 ;
+	setAttr ".tk[43]" -type "float3" -0.073656961 0 -6.0995862e-006 ;
+	setAttr ".tk[44]" -type "float3" -0.055146515 -0.018830596 0.052886978 ;
+createNode polyCylinder -n "polyCylinder15";
+	rename -uid "83DC3F2C-4A86-B6C0-832F-9CAB0CDD094E";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polyTweak -n "polyTweak96";
+	rename -uid "2E0FFF7D-4753-0187-337C-36B8C76E0EA3";
+	setAttr ".uopa" yes;
+	setAttr -s 21 ".tk";
+	setAttr ".tk[20]" -type "float3" -0.047447871 -0.45142281 -0.34080389 ;
+	setAttr ".tk[21]" -type "float3" -0.030302983 -0.37541732 -0.29652199 ;
+	setAttr ".tk[22]" -type "float3" -0.0016242077 -0.29148674 -0.24116664 ;
+	setAttr ".tk[23]" -type "float3" 0.035780832 -0.20784697 -0.18015647 ;
+	setAttr ".tk[24]" -type "float3" 0.078250796 -0.1326851 -0.11946344 ;
+	setAttr ".tk[25]" -type "float3" 0.12162845 -0.073358685 -0.065028816 ;
+	setAttr ".tk[26]" -type "float3" 0.16166762 -0.03567484 -0.022180792 ;
+	setAttr ".tk[27]" -type "float3" 0.19444907 -0.023322433 0.0048861457 ;
+	setAttr ".tk[28]" -type "float3" 0.21676382 -0.037510533 0.013522643 ;
+	setAttr ".tk[29]" -type "float3" 0.22642767 -0.076850258 0.0028832583 ;
+	setAttr ".tk[30]" -type "float3" 0.22249457 -0.13749094 -0.025990602 ;
+	setAttr ".tk[31]" -type "float3" 0.20534959 -0.21349642 -0.070272394 ;
+	setAttr ".tk[32]" -type "float3" 0.17667085 -0.29742688 -0.12562765 ;
+	setAttr ".tk[33]" -type "float3" 0.13926587 -0.38106671 -0.18663786 ;
+	setAttr ".tk[34]" -type "float3" 0.096795917 -0.45622846 -0.24733073 ;
+	setAttr ".tk[35]" -type "float3" 0.053418305 -0.51555485 -0.30176547 ;
+	setAttr ".tk[36]" -type "float3" 0.013379114 -0.55323869 -0.34461349 ;
+	setAttr ".tk[37]" -type "float3" -0.019402321 -0.5655911 -0.37168044 ;
+	setAttr ".tk[38]" -type "float3" -0.041717067 -0.55140328 -0.38031697 ;
+	setAttr ".tk[39]" -type "float3" -0.051380932 -0.51206326 -0.36967748 ;
+createNode deleteComponent -n "deleteComponent112";
+	rename -uid "85071FA8-49FE-304A-64CD-FF91AD9963C8";
+	setAttr ".dc" -type "componentList" 1 "f[40:59]";
+createNode polyCube -n "polyCube17";
+	rename -uid "B317E1D5-4E03-1F8E-A24A-04B089C9B31E";
+	setAttr ".cuv" 4;
+createNode polySmoothFace -n "polySmoothFace11";
+	rename -uid "ABA78699-498F-2000-78D8-EAA68A7BFA4B";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".sdt" 2;
+	setAttr ".dv" 3;
+	setAttr ".suv" yes;
+	setAttr ".ps" 0.10000000149011612;
+	setAttr ".ro" 1;
+	setAttr ".ma" yes;
+	setAttr ".m08" yes;
+createNode polyExtrudeFace -n "polyExtrudeFace23";
+	rename -uid "E9380D18-4239-EF5F-0339-C68938C892BD";
+	setAttr ".ics" -type "componentList" 44 "f[5:6]" "f[9:10]" "f[16]" "f[19]" "f[28]" "f[31:32]" "f[35]" "f[44]" "f[47]" "f[53:54]" "f[57:58]" "f[69:70]" "f[73:74]" "f[80]" "f[83]" "f[92]" "f[95:96]" "f[99]" "f[108]" "f[111]" "f[117:118]" "f[121:122]" "f[133:134]" "f[137:138]" "f[144]" "f[147]" "f[156]" "f[159:160]" "f[163]" "f[172]" "f[175]" "f[181:182]" "f[185:186]" "f[197:198]" "f[201:202]" "f[208]" "f[211]" "f[220]" "f[223:224]" "f[227]" "f[236]" "f[239]" "f[245:246]" "f[249:250]";
+	setAttr ".ix" -type "matrix" 0.63530406697429265 -0.075130759854737564 0.014137634123719456 0
+		 0.075149103823797414 0.63545918317664041 0 0 -0.01403979948028177 0.0016603400765013549 0.63973110647398301 0
+		 0.28715298988772125 0.90947474671706519 0.044268891324114962 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.4918431 1.3869376 0.095067069 ;
+	setAttr ".rs" 44857;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.4175031661501854 1.212550998852413 -0.078613114175998491 ;
+	setAttr ".cbx" -type "double3" 0.56618291271114751 1.5613243563285153 0.26874724721846799 ;
+createNode polyTweak -n "polyTweak97";
+	rename -uid "B0E29259-4977-123D-C40A-F1A6D8271F4F";
+	setAttr ".uopa" yes;
+	setAttr -s 386 ".tk";
+	setAttr ".tk[0:165]" -type "float3"  0.30080682 0.88883263 -0.019998148 0.11789642
+		 0.85114223 -0.012956573 0.33848837 0.70600104 -0.019165412 0.15557791 0.66831058
+		 -0.012123837 0.345579 0.70600104 0.16152498 0.16266856 0.66831058 0.16856654 0.30789745
+		 0.88883263 0.16069226 0.12498707 0.85114223 0.16773383 0.36762065 0.68916523 0.070459589
+		 0.12343429 0.75535452 0.18992566 0.21289428 0.89119452 0.18507512 0.34877706 0.80178857
+		 0.18125054 0.09585508 0.8679775 0.078108773 0.32119781 0.91441166 0.069433674 0.20415874
+		 0.89119452 -0.037532598 0.11469875 0.75535452 -0.032682091 0.25058156 0.66594815
+		 -0.036506679 0.34004149 0.80178857 -0.041357189 0.14227794 0.64273107 0.079134703
+		 0.25931713 0.66594821 0.18610105 0.22573529 0.77857155 -0.078681462 0.26363751 0.62379169
+		 0.07498914 0.23774059 0.77857155 0.22724998 0.1998384 0.9333514 0.073579229 0.076892607
+		 0.74666417 0.080245316 0.38658321 0.81047899 0.068323053 0.27270356 0.84869236 -0.061054837
+		 0.15638378 0.82472336 -0.056576803 0.18034667 0.70845097 -0.056047242 0.29666641
+		 0.73241991 -0.060525268 0.31534466 0.65614629 0.015203144 0.19902489 0.63217711 0.019681172
+		 0.20353408 0.63217711 0.1345896 0.31985384 0.65614629 0.13011158 0.30709183 0.73241991
+		 0.20514527 0.19077206 0.70845097 0.20962331 0.16680911 0.82472342 0.20909373 0.28312898
+		 0.84869236 0.20461573 0.2644507 0.92496598 0.12888722 0.14813095 0.90099698 0.13336524
+		 0.14362168 0.90099698 0.018456798 0.25994152 0.92496598 0.01397877 0.083034232 0.80899948
+		 0.021741815 0.087543473 0.80899954 0.13665025 0.11150637 0.69272715 0.13717982 0.10699714
+		 0.69272715 0.022271382 0.35647866 0.86441606 0.12629701 0.35196942 0.86441612 0.011388563
+		 0.37593248 0.74814367 0.011918129 0.38044167 0.74814367 0.12682655 0.21346766 0.8400839
+		 -0.068509519 0.16460592 0.76589084 -0.065860249 0.23882318 0.71705854 -0.067949183
+		 0.28768542 0.7912522 -0.070598431 0.25907224 0.63436806 0.014148563 0.19991834 0.62168729
+		 0.077310085 0.26384339 0.63436806 0.1357334 0.32299784 0.64704883 0.072571881 0.25000817
+		 0.71705854 0.21707803 0.17579092 0.76589084 0.21916693 0.22465263 0.8400839 0.21651769
+		 0.29887041 0.7912522 0.21442874 0.20440355 0.92277414 0.13441983 0.14047839 0.91009325
+		 0.075996503 0.19963232 0.92277414 0.012834982 0.26355791 0.93545485 0.071258307 0.074795358
+		 0.81035674 0.079557814 0.089858815 0.74884444 0.14063041 0.10015092 0.6873315 0.080118157
+		 0.085087582 0.74884444 0.019045575 0.36332551 0.86981082 0.068450227 0.37361771 0.80829883
+		 0.0079379845 0.38868105 0.7467857 0.069010578 0.37838888 0.80829883 0.12952283 0.26013443
+		 0.8953861 -0.032680292 0.15160753 0.87302333 -0.028502349 0.11078548 0.81103617 -0.026288992
+		 0.13314283 0.7025553 -0.025794916 0.19514838 0.66175807 -0.02754014 0.30367523 0.68412077
+		 -0.031718098 0.34449676 0.74610692 -0.033931468 0.32213941 0.85458779 -0.03442556
+		 0.14572774 0.65116376 0.025229098 0.14993483 0.65116376 0.13243806 0.20334163 0.66175807
+		 0.18124871 0.31186855 0.68412077 0.17707078 0.36128873 0.69471532 0.1243015 0.35708171
+		 0.69471532 0.017092522 0.1413361 0.7025553 0.18299398 0.11897875 0.81103617 0.18249992
+		 0.15980078 0.87302333 0.18028654 0.26832771 0.8953861 0.17610858 0.33033267 0.85458779
+		 0.17436332 0.35268995 0.74610692 0.17485741 0.10639396 0.8624289 0.13147585 0.10218686
+		 0.8624289 0.024266871 0.31354082 0.90598053 0.016130298 0.31774786 0.90598053 0.12333929
+		 0.29023179 0.87402213 -0.040405184 0.23737042 0.87193239 -0.054460548 0.25044653
+		 0.81578606 -0.074811228 0.30833623 0.82523847 -0.05645797 0.18007 0.86012512 -0.052254643
+		 0.13189061 0.8413946 -0.034309488 0.13334864 0.78918058 -0.049721427 0.18871467 0.80306536
+		 -0.072434679 0.20143186 0.74135703 -0.072153643 0.14515305 0.73190457 -0.049460564
+		 0.16451028 0.68312085 -0.033588614 0.21611896 0.68521124 -0.051457986 0.3201406 0.76796252
+		 -0.056197107 0.26316372 0.75407773 -0.074530184 0.27341947 0.69701856 -0.053663887
+		 0.32285151 0.71574849 -0.039684307 0.33104613 0.68228501 -0.0064602834 0.2835319
+		 0.65572298 -0.012664054 0.29222259 0.63541311 0.043285396 0.3446565 0.66784841 0.043199942
+		 0.22623144 0.64391577 -0.010458151 0.17270489 0.64965737 -0.00036458028 0.16966891
+		 0.63179046 0.049936481 0.23049073 0.62269276 0.045661937 0.2328838 0.62269276 0.10664498
+		 0.17189018 0.63179046 0.10654126 0.17884305 0.64965737 0.15605438 0.23301494 0.64391577
+		 0.1624053 0.34687781 0.66784841 0.099804707 0.29461566 0.63541311 0.10426844 0.29031548
+		 0.65572292 0.16019939 0.33718428 0.68228507 0.14995866 0.33158526 0.71574849 0.18287794
+		 0.28340602 0.69701856 0.20082311 0.27476099 0.75407773 0.22100316 0.33012715 0.76796252
+		 0.1982899 0.22610554 0.68521124 0.20302901 0.17324404 0.68312085 0.18897362 0.1551396
+		 0.73190457 0.20502645 0.21302912 0.74135703 0.2233797 0.20031194 0.80306536 0.22309867
+		 0.14333519 0.78918058 0.20476557 0.14062433 0.8413946 0.18825276 0.19005655 0.86012512
+		 0.20223235 0.31832278 0.82523847 0.19802903 0.2620438 0.81578606 0.22072212 0.247357
+		 0.87193239 0.20002645 0.2989656 0.87402219 0.18215708 0.29077095 0.90748483 0.14893298
+		 0.2372444 0.91322684 0.15902658 0.23298496 0.93445134 0.10290644 0.29380691 0.92535216
+		 0.098631896 0.17994399 0.9014197 0.16123246 0.13242966 0.87485719 0.15502869 0.11881925
+		 0.88929421 0.10536844 0.1712532 0.92173088 0.10528298 0.16886006 0.92173088 0.044299942
+		 0.11659798 0.88929421 0.048763655 0.12629148 0.87485719 -0.0013902716 0.17316051
+		 0.9014197 -0.011630984 0.29158565 0.92535216 0.042027116 0.23059188 0.93445134 0.041923393
+		 0.2304609 0.91322684 -0.013836888 0.2846328 0.90748483 -0.0074859583 0.099710666
+		 0.83449626 5.0960516e-005 0.083795883 0.83948678 0.050542183 0.074600331 0.77860278
+		 0.049410656 0.093637034 0.7806676 -0.0073192338;
+	setAttr ".tk[166:331]" 0.086017162 0.83948678 0.10714698 0.10584883 0.83449626
+		 0.15646987 0.10042053 0.7806676 0.16554423 0.076993413 0.77860272 0.1103937 0.089710653
+		 0.71689457 0.11067474 0.11222493 0.72339153 0.16580509 0.13846853 0.67622226 0.15719076
+		 0.12206616 0.66457289 0.10794363 0.10544139 0.72339153 -0.0070583643 0.087317564
+		 0.71689457 0.049691699 0.11984488 0.66457289 0.05133884 0.13233036 0.67622226 0.00077180471
+		 0.33114615 0.88092071 0.1477966 0.34363106 0.89257079 0.097229525 0.37615773 0.84024853
+		 0.098876663 0.3580344 0.83375156 0.15562677 0.34140974 0.89257079 0.040624745 0.325008
+		 0.88092071 -0.0086223427 0.35125089 0.83375156 -0.017236674 0.37376463 0.84024853
+		 0.037893627 0.38648179 0.77854025 0.038174663 0.36305535 0.77647549 -0.016975805
+		 0.35762763 0.72264677 -0.0079014692 0.37745875 0.71765691 0.041421402 0.3698388 0.77647549
+		 0.15588765 0.38887489 0.77854025 0.099157698 0.37968004 0.71765691 0.098026186 0.36376581
+		 0.72264677 0.14851749 0.26532111 0.87384456 -0.049243271 0.24354593 0.8451333 -0.067192301
+		 0.28056753 0.82077366 -0.068234354 0.29938477 0.85143137 -0.050202008 0.15411031
+		 0.85092854 -0.044961967 0.13168444 0.81687528 -0.043746039 0.15965509 0.79585844
+		 -0.063579559 0.18402885 0.83286947 -0.064901114 0.17191628 0.73636943 -0.063308619
+		 0.15459488 0.70571178 -0.043239735 0.18865784 0.68329877 -0.044198487 0.20893803
+		 0.71200919 -0.064350657 0.29282868 0.76128465 -0.067963399 0.26845521 0.72427297
+		 -0.066641822 0.29986867 0.70621479 -0.048479792 0.32229501 0.74026775 -0.0496957
+		 0.30932742 0.6675896 -0.010130841 0.28836033 0.6429866 0.014061748 0.32024789 0.64931232
+		 0.043205332 0.33866733 0.6734097 0.016683511 0.19811651 0.64467365 -0.0058495542
+		 0.17096701 0.63885349 0.023139484 0.19933541 0.6243974 0.047860123 0.22884318 0.63072288
+		 0.016352953 0.20164259 0.62439746 0.10665397 0.17527814 0.63885349 0.13300021 0.20461749
+		 0.64467365 0.15981461 0.2335304 0.63072288 0.13579756 0.32255504 0.64931232 0.10199917
+		 0.29304755 0.6429866 0.13350636 0.31582835 0.6675896 0.15553331 0.34297845 0.6734097
+		 0.12654422 0.30936563 0.70621479 0.19353041 0.27944735 0.72427303 0.21346961 0.30382079
+		 0.76128465 0.21214807 0.33179197 0.74026775 0.19231452 0.19815478 0.68329877 0.19781172
+		 0.16409181 0.70571178 0.19877049 0.18290837 0.73636943 0.21680284 0.21993011 0.71200919
+		 0.21576078 0.1706472 0.79585844 0.2165319 0.14118138 0.81687528 0.19826418 0.16360724
+		 0.85092854 0.19704825 0.19502096 0.83286947 0.21521035 0.29155961 0.82077366 0.21187708
+		 0.25453803 0.84513324 0.21291912 0.27481806 0.87384456 0.19276693 0.30888167 0.85143137
+		 0.19180822 0.26535934 0.91246939 0.15441795 0.23463303 0.92642045 0.13221544 0.26414037
+		 0.93274587 0.10070825 0.29250944 0.91828954 0.1254289 0.15414853 0.88955349 0.15869927
+		 0.12480924 0.88373345 0.13188487 0.14322807 0.90783101 0.10536305 0.17511584 0.91415662
+		 0.13450663 0.14092086 0.90783101 0.046569195 0.1204981 0.88373345 0.022024149 0.14764759
+		 0.88955349 -0.0069648772 0.1704286 0.91415662 0.015062025 0.26183325 0.93274587 0.0419144
+		 0.22994578 0.92642045 0.012770826 0.25885835 0.91246939 -0.011246189 0.28819823 0.91828954
+		 0.015568181 0.089816593 0.83714586 0.023687692 0.076352961 0.80978698 0.050070036
+		 0.081486978 0.77910173 0.019884419 0.094540246 0.80891275 -0.0040854169 0.094127744
+		 0.83714581 0.13354842 0.10104122 0.80891275 0.16157874 0.086174227 0.77910173 0.13932902
+		 0.078660168 0.80978698 0.1088639 0.098435357 0.71961254 0.13959999 0.12395163 0.69774914
+		 0.16208503 0.1286753 0.66951621 0.13431188 0.10356931 0.68892676 0.10941438 0.093748145
+		 0.71961254 0.020155387 0.10126215 0.68892676 0.050620515 0.12436415 0.66951621 0.024451168
+		 0.11745066 0.69774914 -0.0035790992 0.33911169 0.88762712 0.1241172 0.36221391 0.86821574
+		 0.097947858 0.36972803 0.83753055 0.12841301 0.34602526 0.85939389 0.15214752 0.33480057
+		 0.88762712 0.014256478 0.3395243 0.85939389 -0.013516622 0.36504078 0.83753055 0.0089683924
+		 0.35990667 0.86821574 0.039154008 0.37730196 0.77804136 0.0092393551 0.36243469 0.74823034
+		 -0.013010323 0.36934811 0.71999753 0.015019961 0.38481599 0.74735558 0.039704487
+		 0.38198918 0.77804136 0.12868398 0.3871232 0.74735558 0.09849833 0.37365925 0.71999747
+		 0.12488069 0.36893564 0.74823034 0.15265383 0.21936512 0.80997741 -0.076205477 0.20830998
+		 0.8675912 -0.055612423 0.1944176 0.77209729 -0.074852847 0.13759968 0.76022041 -0.051778529
+		 0.232311 0.74716562 -0.07591939 0.24500301 0.68955272 -0.054801535 0.25725874 0.7850458
+		 -0.07727202 0.3157132 0.79692262 -0.058635432 0.26187336 0.62644243 0.04393829 0.25528982
+		 0.6475448 -0.013094906 0.23167092 0.61996794 0.076186657 0.1696853 0.62919372 0.078309402
+		 0.26430944 0.62644243 0.10601586 0.26219445 0.64754486 0.16285688 0.29451209 0.63291675
+		 0.073767498 0.34779888 0.66589582 0.071452513 0.24411078 0.74716562 0.22477399 0.25516596
+		 0.68955272 0.20418088 0.20621735 0.77209729 0.22584051 0.14776264 0.76022041 0.20720389
+		 0.23116487 0.80997741 0.22448787 0.21847291 0.8675912 0.20337002 0.26905856 0.7850458
+		 0.22342135 0.32587612 0.79692262 0.20034698 0.20160247 0.93070006 0.10463008 0.2081861
+		 0.90959829 0.16166334 0.168964 0.92422569 0.074800894 0.11567695 0.89124727 0.077115864
+		 0.19916642 0.93070006 0.042552523 0.2012814 0.90959829 -0.014288456 0.23180519 0.9371745
+		 0.07238172 0.29379055 0.92794937 0.070258968 0.073070578 0.77861649 0.080000184 0.082309105
+		 0.84058034 0.078925043 0.080761559 0.74721056 0.11118202 0.10410793 0.75156087 0.16730641
+		 0.086016528 0.7158047 0.080286279 0.11900215 0.66254187 0.079735957 0.07832551 0.74721056
+		 0.04910446 0.097203262 0.75156087 -0.0086453641 0.3774595 0.84133834 0.06828209 0.34447387
+		 0.894602 0.068832427;
+	setAttr ".tk[332:385]" 0.38271439 0.80993247 0.037386358 0.359368 0.80558228
+		 -0.018737996 0.39040536 0.77852654 0.068568185 0.38116682 0.71656352 0.069643311
+		 0.3851504 0.80993247 0.099463917 0.36627263 0.80558223 0.15721378 0.23273735 0.89501619
+		 -0.036660448 0.28420532 0.89278287 -0.026391545 0.17654422 0.88343734 -0.034497216
+		 0.13106196 0.86122608 -0.020495914 0.11095574 0.78384334 -0.030940995 0.11367115
+		 0.83481896 -0.019553 0.12253207 0.72767699 -0.030685164 0.14522023 0.6817407 -0.018855771
+		 0.22215596 0.66212678 -0.033489227 0.17163561 0.66436028 -0.019599264 0.27834898
+		 0.6737057 -0.035652462 0.32477897 0.69591707 -0.025494894 0.34393707 0.77329981 -0.039208692
+		 0.34216988 0.72232413 -0.026437819 0.33236074 0.82946622 -0.039464522 0.31062075
+		 0.87540239 -0.027135052 0.14275204 0.64510489 0.051294874 0.15058158 0.65984696 0.0028811588
+		 0.14493036 0.64510489 0.106805 0.15651827 0.65984696 0.15416592 0.23073886 0.66212678
+		 0.18522891 0.17927049 0.66436028 0.17495996 0.2869319 0.6737057 0.18306567 0.33241379
+		 0.69591707 0.16906434 0.36633539 0.69072759 0.09828148 0.35346788 0.70043033 0.14658388
+		 0.36415705 0.69072759 0.042771347 0.34753126 0.70043033 -0.0047008903 0.13111496
+		 0.72767699 0.18803297 0.15285511 0.6817407 0.17570344 0.11953864 0.78384334 0.18777713
+		 0.12130601 0.83481896 0.17500624 0.18512714 0.88343734 0.18422092 0.13869683 0.86122608
+		 0.17406331 0.24132025 0.89501619 0.18205769 0.29184017 0.89278287 0.16816768 0.3409436
+		 0.82946622 0.17925362 0.31825563 0.87540233 0.16742422 0.35251999 0.77329981 0.17950946
+		 0.34980476 0.72232413 0.16812141 0.099318668 0.86641538 0.10579702 0.11594468 0.85671276
+		 0.15326929 0.097140349 0.86641538 0.050286885 0.11000796 0.85671276 0.0019845092
+		 0.31854525 0.91203809 0.041763362 0.30695751 0.89729613 -0.005597543 0.32072359 0.91203809
+		 0.097273491 0.3128942 0.89729613 0.14568724;
+createNode polyCylinder -n "polyCylinder16";
+	rename -uid "ABFBFD40-4699-BF8F-91A7-D28E5EBFD548";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polyTweak -n "polyTweak98";
+	rename -uid "1DE26993-4DAA-49EB-8261-D885A05F26A6";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".tk[0:19]" -type "float3"  -0.077413611 -0.17287527 -1.6653345e-016
+		 -0.065851934 -0.14705649 2.4424907e-015 -0.047844231 -0.10684279 3.2196468e-015 -0.025153194
+		 -0.056170586 3.5527137e-015 8.3884508e-009 -2.2514692e-008 1.9984014e-015 0.025153201
+		 0.056170549 3.5527137e-015 0.04784422 0.10684272 3.8857806e-015 0.065851912 0.14705637
+		 3.5527137e-015 0.077413559 0.17287515 1.4988011e-015 0.081397437 0.18177168 1.3470976e-015
+		 0.077413559 0.17287515 7.2164497e-016 0.065851912 0.14705637 1.9984014e-015 0.047844213
+		 0.1068427 1.2212453e-015 0.025153195 0.056170538 8.8817842e-016 8.4641956e-009 -1.6952422e-008
+		 -6.6613381e-016 -0.025153182 -0.056170557 8.8817842e-016 -0.047844209 -0.10684272
+		 5.5511151e-016 -0.065851882 -0.14705637 8.8817842e-016 -0.077413544 -0.17287515 -9.4368957e-016
+		 -0.081397422 -0.18177168 -2.3322639e-016;
+createNode deleteComponent -n "deleteComponent113";
+	rename -uid "8AA8600D-4451-5FA2-4748-C7A8B53BAC45";
+	setAttr ".dc" -type "componentList" 1 "f[20:39]";
+createNode deleteComponent -n "deleteComponent114";
+	rename -uid "08FF17FC-4958-68BD-28E5-49B8E939EFDE";
+	setAttr ".dc" -type "componentList" 1 "f[40:59]";
+createNode polySplitRing -n "polySplitRing51";
+	rename -uid "A106CF62-4613-4692-C27A-569DF932B155";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".ix" -type "matrix" 0.088758253995258107 -0.010098480138157109 0.0004784849953643961 0
+		 0.027469717499981946 0.24089789832988204 -0.011414195818451295 0 -1.5496660570479536e-019 0.0042279828224686677 0.089232057370270262 0
+		 0.40468771672072301 0.8317429337231681 0.10345336721354342 1;
+	setAttr ".wt" 0.53715711832046509;
+	setAttr ".re" 52;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak99";
+	rename -uid "59BF65D5-48AE-1D43-B589-729A76456BAD";
+	setAttr ".uopa" yes;
+	setAttr -s 41 ".tk[0:40]" -type "float3"  0.36113229 1.74073279 0.35581073
+		 0.36228445 1.73408902 0.35581073 0.36407831 1.7237407 0.35581073 0.366339 1.71070111
+		 0.35581073 0.36884499 1.69624674 0.35581073 0.37135103 1.68179238 0.35581073 0.3736116
+		 1.66875303 0.35581073 0.37540546 1.65840471 0.35581073 0.37655762 1.6517607 0.35581073
+		 0.37695444 1.6494714 0.35581073 0.37655762 1.6517607 0.35581073 0.37540546 1.65840471
+		 0.35581073 0.3736116 1.66875303 0.35581073 0.37135103 1.68179238 0.35581073 0.36884499
+		 1.69624674 0.35581073 0.366339 1.71070111 0.35581073 0.36407831 1.7237407 0.35581073
+		 0.36228445 1.73408902 0.35581073 0.36113229 1.74073279 0.35581073 0.36073545 1.74302208
+		 0.35581073 -0.46378285 0.9012773 0.33121616 -0.42983833 0.9012773 0.39783612 -0.37696859
+		 0.9012773 0.45070606 -0.31034869 0.9012773 0.48465085 -0.23649992 0.9012773 0.49634731
+		 -0.1626512 0.9012773 0.48465079 -0.096031249 0.9012773 0.45070601 -0.043161385 0.9012773
+		 0.39783606 -0.0092169428 0.9012773 0.33121613 0.0024795679 0.9012773 0.2573674 -0.0092169428
+		 0.9012773 0.18351863 -0.0431614 0.9012773 0.1168987 -0.096031263 0.9012773 0.064028874
+		 -0.16265123 0.9012773 0.030084338 -0.23649989 0.9012773 0.01838788 -0.31034866 0.9012773
+		 0.030084368 -0.3769685 0.9012773 0.064028904 -0.42983821 0.9012773 0.11689873 -0.46378267
+		 0.9012773 0.18351866 -0.47547919 0.9012773 0.2573674 0.36884499 1.69624674 0.35581073;
+createNode deleteComponent -n "deleteComponent115";
+	rename -uid "BFC37B93-44E6-6860-F560-4095721FB645";
+	setAttr ".dc" -type "componentList" 1 "f[20:39]";
+createNode polySplitRing -n "polySplitRing52";
+	rename -uid "7D99221A-4CDF-EADB-AFF4-CA9B06AA2A0B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".ix" -type "matrix" 0.088758253995258107 -0.010098480138157109 0.0004784849953643961 0
+		 0.038508495551112548 0.33770335083040887 -0.016001020356130272 0 -1.5496660570479536e-019 0.0042279828224686677 0.089232057370270262 0
+		 0.39364636302819112 0.80879951778798742 0.10345336721354342 1;
+	setAttr ".wt" 0.36768379807472229;
+	setAttr ".re" 56;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing53";
+	rename -uid "D8A54676-43F7-DBA2-55DB-AC892EAB85CB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 19 "e[60:61]" "e[63]" "e[65]" "e[67]" "e[69]" "e[71]" "e[73]" "e[75]" "e[77]" "e[79]" "e[81]" "e[83]" "e[85]" "e[87]" "e[89]" "e[91]" "e[93]" "e[95]" "e[97]";
+	setAttr ".ix" -type "matrix" 0.088758253995258107 -0.010098480138157109 0.0004784849953643961 0
+		 0.038508495551112548 0.33770335083040887 -0.016001020356130272 0 -1.5496660570479536e-019 0.0042279828224686677 0.089232057370270262 0
+		 0.39364636302819112 0.80879951778798742 0.10345336721354342 1;
+	setAttr ".wt" 0.51201248168945313;
+	setAttr ".re" 91;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing54";
+	rename -uid "4410CE4E-45C4-EB86-38C6-F083507D4236";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".ix" -type "matrix" 0.0093764178541940729 0.071290544460531763 0.0026614293902687278 0
+		 -0.14910004328623661 0.021190168094219544 -0.042320984779366952 0 -0.019647424260623741 1.1982706503661685e-017 0.069219367720154343 0
+		 0.25708227721184418 1.6089803333305881 0.044138263332505007 1;
+	setAttr ".wt" 0.75590276718139648;
+	setAttr ".dr" no;
+	setAttr ".re" 54;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing55";
+	rename -uid "4C02429F-461B-78F7-A54B-3EAC87D57B97";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".ix" -type "matrix" 0.0093764178541940729 0.071290544460531763 0.0026614293902687278 0
+		 -0.14910004328623661 0.021190168094219544 -0.042320984779366952 0 -0.019647424260623741 1.1982706503661685e-017 0.069219367720154343 0
+		 0.25708227721184418 1.6089803333305881 0.044138263332505007 1;
+	setAttr ".wt" 0.5343172550201416;
+	setAttr ".dr" no;
+	setAttr ".re" 53;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing56";
+	rename -uid "F2AED422-4362-BC23-5438-0491B12EC6DE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 10 "e[73:74]" "e[76]" "e[78]" "e[80]" "e[82]" "e[84]" "e[86]" "e[88]" "e[90]" "e[92]";
+	setAttr ".ix" -type "matrix" 0.37502823325115187 0 0 0 0 0.40549448054582082 0.057532689622302957 0
+		 0 -0.052682427704987385 0.37130949024579096 0 0 2.1723460234147338 0.090181143752206927 1;
+	setAttr ".wt" 0.46664819121360779;
+	setAttr ".dr" no;
+	setAttr ".re" 92;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak100";
+	rename -uid "6385EB1C-4041-99F3-D620-B2BAD66EA9FE";
+	setAttr ".uopa" yes;
+	setAttr -s 22 ".tk";
+	setAttr ".tk[0]" -type "float3" 3.3306691e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[1]" -type "float3" 3.3306691e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[2]" -type "float3" 1.6653345e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[3]" -type "float3" 1.6653345e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[4]" -type "float3" 2.2202788e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[5]" -type "float3" 2.220279e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[6]" -type "float3" 1.6653345e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[7]" -type "float3" 1.6653345e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[8]" -type "float3" 3.3306691e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[9]" -type "float3" 3.3306691e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[10]" -type "float3" 3.3306691e-016 0.18505155 0.006732502 ;
+	setAttr ".tk[44]" -type "float3" 1.323489e-023 0.021955866 0.002821615 ;
+	setAttr ".tk[45]" -type "float3" -2.220446e-016 0.020881271 0.002683515 ;
+	setAttr ".tk[46]" -type "float3" -4.4408921e-016 0.01776267 0.0022827403 ;
+	setAttr ".tk[47]" -type "float3" -4.4408921e-016 0.012905334 0.0016585102 ;
+	setAttr ".tk[48]" -type "float3" -4.4408921e-016 0.0067847352 0.00087191828 ;
+	setAttr ".tk[49]" -type "float3" -4.4408921e-016 -3.4070258e-009 -1.8426233e-009 ;
+	setAttr ".tk[50]" -type "float3" -4.4408921e-016 -0.0067847366 -0.00087192917 ;
+	setAttr ".tk[51]" -type "float3" -4.4408921e-016 -0.012905335 -0.0016585047 ;
+	setAttr ".tk[52]" -type "float3" -4.4408921e-016 -0.01776267 -0.0022827366 ;
+	setAttr ".tk[53]" -type "float3" -2.220446e-016 -0.020881269 -0.0026835152 ;
+	setAttr ".tk[54]" -type "float3" 2.646978e-023 -0.021955866 -0.0028216145 ;
+createNode polyCylinder -n "polyCylinder17";
+	rename -uid "2BBFDAC1-4E15-0870-8E09-12909F25C309";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polySplitRing -n "polySplitRing57";
+	rename -uid "C92AB01B-4BF8-AF03-413A-55BC86CFFC82";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".ix" -type "matrix" 0.26758830382313242 0.012804512573588623 0 0 -0.019982783619362485 0.41759958792959162 0 0
+		 0 0 0.26789448647777026 0 0.45235126815062843 0.47175297972047725 0.12789716820274188 1;
+	setAttr ".wt" 0.51897525787353516;
+	setAttr ".dr" no;
+	setAttr ".re" 54;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak101";
+	rename -uid "19943361-4AAB-0B85-2F1D-5BAA8352594A";
+	setAttr ".uopa" yes;
+	setAttr -s 42 ".tk[0:41]" -type "float3"  -0.057913285 -0.020129874
+		 -1.8873791e-015 -0.057815865 -0.016759459 -3.7747583e-015 -0.057664119 -0.011509905
+		 -7.5495166e-015 -0.057472922 -0.0048950817 -7.5495166e-015 -0.05726099 0.0024375021
+		 -7.5495166e-015 -0.057049014 0.0097700823 -7.5495166e-015 -0.056857817 0.016384907
+		 -7.5495166e-015 -0.056706071 0.021634445 -3.7747583e-015 -0.056608647 0.025004867
+		 -1.8873791e-015 -0.056575082 0.026166238 0 -0.056608647 0.025004867 1.8873791e-015
+		 -0.056706071 0.021634445 3.7747583e-015 -0.056857817 0.016384898 7.5495166e-015 -0.057049014
+		 0.0097700804 7.5495166e-015 -0.05726099 0.0024375017 7.5495166e-015 -0.057472922
+		 -0.004895078 7.5495166e-015 -0.057664119 -0.011509895 7.5495166e-015 -0.05781585
+		 -0.016759444 3.7747583e-015 -0.057913311 -0.020129854 1.8873791e-015 -0.057946842
+		 -0.021291222 0 -0.38490278 -0.012637272 0.14389877 -0.31870741 -0.010590741 0.27371186
+		 -0.21560627 -0.0074031879 0.37673205 -0.085691094 -0.0033866486 0.44287488 0.058320999
+		 0.001065725 0.46566629 0.20233302 0.005518096 0.44287488 0.33224836 0.0095346365
+		 0.37673202 0.43534958 0.012722183 0.27371168 0.50154448 0.014768716 0.14389873 0.52435374
+		 0.015473899 -8.3267565e-008 0.50154448 0.014768716 -0.14389883 0.43534952 0.012722183
+		 -0.27371192 0.33224833 0.0095346384 -0.37673205 0.20233299 0.0055180956 -0.44287488
+		 0.05832101 0.001065725 -0.46566629 -0.085690975 -0.0033866449 -0.44287488 -0.21560612
+		 -0.0074031847 -0.37673202 -0.31870738 -0.010590728 -0.27371192 -0.38490233 -0.012637259
+		 -0.14389886 -0.40771174 -0.013342449 -8.3267565e-008 -0.05726099 0.0024375021 0 0.058321048
+		 0.0010657238 0;
+createNode polySplitRing -n "polySplitRing58";
+	rename -uid "714E2768-4980-B85E-2845-A6987CECEC3D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 19 "e[100:101]" "e[103]" "e[105]" "e[107]" "e[109]" "e[111]" "e[113]" "e[115]" "e[117]" "e[119]" "e[121]" "e[123]" "e[125]" "e[127]" "e[129]" "e[131]" "e[133]" "e[135]" "e[137]";
+	setAttr ".ix" -type "matrix" 0.26758830382313242 0.012804512573588623 0 0 -0.019982783619362485 0.41759958792959162 0 0
+		 0 0 0.26789448647777026 0 0.45235126815062843 0.47175297972047725 0.12789716820274188 1;
+	setAttr ".wt" 0.49335238337516785;
+	setAttr ".re" 100;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing59";
+	rename -uid "9E4C9F6B-4CBD-F467-65D4-D3AB72047102";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[40:59]";
+	setAttr ".ix" -type "matrix" 0.26758830382313242 0.012804512573588623 0 0 -0.019982783619362485 0.41759958792959162 0 0
+		 0 0 0.26789448647777026 0 0.45235126815062843 0.47175297972047725 0.12789716820274188 1;
+	setAttr ".wt" 0.49564117193222046;
+	setAttr ".dr" no;
+	setAttr ".re" 54;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak102";
+	rename -uid "4D57A02B-4EB9-D515-8CFC-F9A56439D53D";
+	setAttr ".uopa" yes;
+	setAttr -s 81 ".tk";
+	setAttr ".tk[0]" -type "float3" -0.22261675 0.37042397 0.21397419 ;
+	setAttr ".tk[1]" -type "float3" -0.18497957 0.34903526 0.29190102 ;
+	setAttr ".tk[2]" -type "float3" -0.12635848 0.33200589 0.35255617 ;
+	setAttr ".tk[3]" -type "float3" -0.052491501 0.32100293 0.39000267 ;
+	setAttr ".tk[4]" -type "float3" 0.029390752 0.31710333 0.40057483 ;
+	setAttr ".tk[5]" -type "float3" 0.11127287 0.32068881 0.38323781 ;
+	setAttr ".tk[6]" -type "float3" 0.18513978 0.33140835 0.33968869 ;
+	setAttr ".tk[7]" -type "float3" 0.24376091 0.34821281 0.27419022 ;
+	setAttr ".tk[8]" -type "float3" 0.28139791 0.36945704 0.19315386 ;
+	setAttr ".tk[9]" -type "float3" 0.29436675 0.39306152 0.10451227 ;
+	setAttr ".tk[10]" -type "float3" 0.28139791 0.41671583 0.016942132 ;
+	setAttr ".tk[11]" -type "float3" 0.24376094 0.43810457 -0.060984552 ;
+	setAttr ".tk[12]" -type "float3" 0.18513975 0.45513391 -0.12163982 ;
+	setAttr ".tk[13]" -type "float3" 0.11127284 0.46613678 -0.15908635 ;
+	setAttr ".tk[14]" -type "float3" 0.029390767 0.47003642 -0.16965845 ;
+	setAttr ".tk[15]" -type "float3" -0.052491412 0.4664509 -0.15232132 ;
+	setAttr ".tk[16]" -type "float3" -0.12635827 0.45573136 -0.10877237 ;
+	setAttr ".tk[17]" -type "float3" -0.18497944 0.43892696 -0.043273911 ;
+	setAttr ".tk[18]" -type "float3" -0.22261649 0.41768277 0.037762348 ;
+	setAttr ".tk[19]" -type "float3" -0.23558532 0.39407825 0.12640396 ;
+	setAttr ".tk[40]" -type "float3" 9.3132257e-010 0 0 ;
+	setAttr ".tk[42]" -type "float3" 7.2560997e-009 0 0.068730786 ;
+	setAttr ".tk[43]" -type "float3" -0.0212244 0 0.065366864 ;
+	setAttr ".tk[44]" -type "float3" -0.040371213 0 0.055604376 ;
+	setAttr ".tk[45]" -type "float3" -0.055566221 0 0.040398944 ;
+	setAttr ".tk[46]" -type "float3" -0.065322019 0 0.021238994 ;
+	setAttr ".tk[47]" -type "float3" -0.068683624 0 1.2290018e-008 ;
+	setAttr ".tk[48]" -type "float3" -0.065322019 0 -0.021238964 ;
+	setAttr ".tk[49]" -type "float3" -0.055566221 0 -0.040398929 ;
+	setAttr ".tk[50]" -type "float3" -0.040371217 0 -0.055604357 ;
+	setAttr ".tk[51]" -type "float3" -0.021224406 0 -0.065366864 ;
+	setAttr ".tk[52]" -type "float3" 9.4564632e-009 0 -0.068730786 ;
+	setAttr ".tk[53]" -type "float3" 0.021224421 0 -0.065366879 ;
+	setAttr ".tk[54]" -type "float3" 0.040371258 0 -0.055604376 ;
+	setAttr ".tk[55]" -type "float3" 0.055566259 0 -0.04039894 ;
+	setAttr ".tk[56]" -type "float3" 0.065322049 0 -0.021238975 ;
+	setAttr ".tk[57]" -type "float3" 0.068683624 0 1.2290018e-008 ;
+	setAttr ".tk[58]" -type "float3" 0.065322012 0 0.021238986 ;
+	setAttr ".tk[59]" -type "float3" 0.055566218 0 0.040398937 ;
+	setAttr ".tk[60]" -type "float3" 0.040371232 0 0.055604376 ;
+	setAttr ".tk[61]" -type "float3" 0.021224417 0 0.065366864 ;
+	setAttr ".tk[62]" -type "float3" 4.1078061e-009 0 0.034696333 ;
+	setAttr ".tk[63]" -type "float3" -0.010714399 0 0.032998182 ;
+	setAttr ".tk[64]" -type "float3" -0.020379992 0 0.028069921 ;
+	setAttr ".tk[65]" -type "float3" -0.028050661 0 0.020393994 ;
+	setAttr ".tk[66]" -type "float3" -0.032975536 0 0.010721764 ;
+	setAttr ".tk[67]" -type "float3" -0.034672529 0 6.2041878e-009 ;
+	setAttr ".tk[68]" -type "float3" -0.032975536 0 -0.01072175 ;
+	setAttr ".tk[69]" -type "float3" -0.028050661 0 -0.020393988 ;
+	setAttr ".tk[70]" -type "float3" -0.020379996 0 -0.028069915 ;
+	setAttr ".tk[71]" -type "float3" -0.010714402 0 -0.032998178 ;
+	setAttr ".tk[72]" -type "float3" 5.1923559e-009 0 -0.034696333 ;
+	setAttr ".tk[73]" -type "float3" 0.010714411 0 -0.032998182 ;
+	setAttr ".tk[74]" -type "float3" 0.020380018 0 -0.028069921 ;
+	setAttr ".tk[75]" -type "float3" 0.028050698 0 -0.02039399 ;
+	setAttr ".tk[76]" -type "float3" 0.032975554 0 -0.010721754 ;
+	setAttr ".tk[77]" -type "float3" 0.034672529 0 6.2041878e-009 ;
+	setAttr ".tk[78]" -type "float3" 0.03297554 0 0.010721761 ;
+	setAttr ".tk[79]" -type "float3" 0.028050669 0 0.02039399 ;
+	setAttr ".tk[80]" -type "float3" 0.020380005 0 0.028069921 ;
+	setAttr ".tk[81]" -type "float3" 0.010714405 0 0.032998178 ;
+	setAttr ".tk[82]" -type "float3" 4.6566129e-009 0.050350606 0.075370729 ;
+	setAttr ".tk[83]" -type "float3" -0.024270821 0.047864102 0.070838749 ;
+	setAttr ".tk[84]" -type "float3" -0.046165839 0.040692329 0.059372608 ;
+	setAttr ".tk[85]" -type "float3" -0.06354183 0.029537298 0.042094659 ;
+	setAttr ".tk[86]" -type "float3" -0.074697874 0.015490959 0.020696193 ;
+	setAttr ".tk[87]" -type "float3" -0.078541994 -7.1744464e-005 -0.00272816 ;
+	setAttr ".tk[88]" -type "float3" -0.074697874 -0.015627425 -0.025885466 ;
+	setAttr ".tk[89]" -type "float3" -0.063541837 -0.029653382 -0.046508916 ;
+	setAttr ".tk[90]" -type "float3" -0.04616585 -0.040776663 -0.062579751 ;
+	setAttr ".tk[91]" -type "float3" -0.024270825 -0.047908448 -0.072524868 ;
+	setAttr ".tk[92]" -type "float3" 8.3819032e-009 -0.050350606 -0.075370722 ;
+	setAttr ".tk[93]" -type "float3" 0.024270836 -0.047864102 -0.070838749 ;
+	setAttr ".tk[94]" -type "float3" 0.04616588 -0.040692329 -0.059372608 ;
+	setAttr ".tk[95]" -type "float3" 0.063541926 -0.029537292 -0.042094648 ;
+	setAttr ".tk[96]" -type "float3" 0.074697986 -0.015490945 -0.020696172 ;
+	setAttr ".tk[97]" -type "float3" 0.078542069 7.1762508e-005 0.0027281884 ;
+	setAttr ".tk[98]" -type "float3" 0.074697949 0.01562744 0.025885478 ;
+	setAttr ".tk[99]" -type "float3" 0.063541882 0.029653398 0.046508938 ;
+	setAttr ".tk[100]" -type "float3" 0.04616585 0.04077667 0.062579766 ;
+	setAttr ".tk[101]" -type "float3" 0.024270825 0.047908448 0.072524868 ;
+createNode deleteComponent -n "deleteComponent116";
+	rename -uid "DCD6EDBE-41AA-DC20-D527-9B8BC7523462";
+	setAttr ".dc" -type "componentList" 1 "f[20:39]";
+createNode polyCube -n "polyCube18";
+	rename -uid "3D04DD96-44A9-5795-86D2-5BA5D46A036D";
+	setAttr ".cuv" 4;
+createNode polySmoothFace -n "polySmoothFace12";
+	rename -uid "F671BF50-4795-9FD6-0CCE-C28545C5BBDB";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".sdt" 2;
+	setAttr ".dv" 3;
+	setAttr ".suv" yes;
+	setAttr ".ps" 0.10000000149011612;
+	setAttr ".ro" 1;
+	setAttr ".ma" yes;
+	setAttr ".m08" yes;
+createNode deleteComponent -n "deleteComponent117";
+	rename -uid "3774CE06-45B4-8DF0-03A1-20AB47453F5F";
+	setAttr ".dc" -type "componentList" 15 "f[34:35]" "f[38:47]" "f[50:51]" "f[54:137]" "f[140:141]" "f[144:153]" "f[156:157]" "f[290:291]" "f[294:303]" "f[306:307]" "f[310:319]" "f[354:355]" "f[358:367]" "f[370:371]" "f[374:383]";
+createNode polyExtrudeEdge -n "polyExtrudeEdge17";
+	rename -uid "D5CB7754-470B-3C18-C05C-42BAE201010C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:19]";
+	setAttr ".ix" -type "matrix" 0.26758830382313242 0.012804512573588623 0 0 -0.019982783619362485 0.41759958792959162 0 0
+		 0 0 0.26789448647777026 0 0.45235126815062843 0.47175297972047725 0.12789716820274188 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0.45696294 0.21439114 0.14927195 ;
+	setAttr ".rs" 52498;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" 0.26000119078780387 0.17904284235329021 -0.0416391047552917 ;
+	setAttr ".cbx" -type "double3" 0.65392466836631891 0.24973942395606397 0.34018300334446583 ;
+createNode polyTweak -n "polyTweak103";
+	rename -uid "D482FB9D-45FD-E2F4-4817-74A6C19DB80D";
+	setAttr ".uopa" yes;
+	setAttr -s 20 ".tk[0:19]" -type "float3"  -0.00085245585 -0.013820065
+		 -0.034360487 -0.00085245585 -0.016118683 -0.033825498 -0.00085245585 -0.01795689
+		 -0.033471055 -0.00085245585 -0.01915475 -0.033331864 -0.00085245585 -0.019595005
+		 -0.033421535 -0.00085245585 -0.019234562 -0.0337313 -0.00085245585 -0.018108705 -0.034230836
+		 -0.00085245585 -0.016327642 -0.034871247 -0.00085245585 -0.014065713 -0.035589833
+		 -0.00085245585 -0.011544331 -0.036316264 -0.00085245585 -0.0090103075 -0.036979433
+		 -0.00085245585 -0.0067116902 -0.037514422 -0.00085245585 -0.0048734844 -0.037868865
+		 -0.00085245585 -0.0036756275 -0.038008053 -0.00085245585 -0.0032353699 -0.037918381
+		 -0.00085245585 -0.0035958104 -0.037608616 -0.00085245585 -0.0047216685 -0.037109084
+		 -0.00085245585 -0.0065027322 -0.036468677 -0.00085245585 -0.00876466 -0.035750087
+		 -0.00085245585 -0.011286041 -0.035023656;
 select -ne :time1;
 	setAttr ".o" 75;
 	setAttr ".unw" 75;
@@ -29749,13 +35120,11 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
-	setAttr -s 133 ".dsm";
+	setAttr -s 139 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 129 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :defaultRenderGlobals;
-	setAttr ".ren" -type "string" "arnold";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 select -ne :hardwareRenderGlobals;
@@ -30342,9 +35711,14 @@ connectAttr ":initialShadingGroup.mwc" "pCylinder20Shape.iog.og[0].gco";
 connectAttr "groupId232.id" "pCylinder20Shape.iog.og[1].gid";
 connectAttr "lambert2SG.mwc" "pCylinder20Shape.iog.og[1].gco";
 connectAttr "polySmoothFace8.out" "pCubeShape29.i";
-connectAttr "polyExtrudeEdge15.out" "pCylinderShape20.i";
+connectAttr "polySplitRing56.out" "pCylinderShape20.i";
 connectAttr "deleteComponent107.og" "pCubeShape30.i";
-connectAttr "polySplitRing45.out" "pCubeShape31.i";
+connectAttr "polySplitRing50.out" "pCubeShape31.i";
+connectAttr "polySplitRing55.out" "pCylinderShape21.i";
+connectAttr "polyExtrudeFace23.out" "pCubeShape32.i";
+connectAttr "polySplitRing53.out" "pCylinderShape22.i";
+connectAttr "polyExtrudeEdge17.out" "pCylinderShape23.i";
+connectAttr "deleteComponent117.og" "pCubeShape34.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "phongE1SG.message" ":defaultLightSet.message";
@@ -31856,6 +37230,63 @@ connectAttr "deleteComponent109.og" "polyTweak89.ip";
 connectAttr "polyTweak90.out" "polySplitRing45.ip";
 connectAttr "pCubeShape31.wm" "polySplitRing45.mp";
 connectAttr "polySplitRing44.out" "polyTweak90.ip";
+connectAttr "polyTweak91.out" "polySplitRing46.ip";
+connectAttr "pCubeShape31.wm" "polySplitRing46.mp";
+connectAttr "polySplitRing45.out" "polyTweak91.ip";
+connectAttr "polyTweak92.out" "polySplitRing47.ip";
+connectAttr "pCubeShape31.wm" "polySplitRing47.mp";
+connectAttr "polySplitRing46.out" "polyTweak92.ip";
+connectAttr "polyTweak93.out" "polySplitRing48.ip";
+connectAttr "pCylinderShape20.wm" "polySplitRing48.mp";
+connectAttr "polyExtrudeEdge15.out" "polyTweak93.ip";
+connectAttr "polySplitRing48.out" "polySplitRing49.ip";
+connectAttr "pCylinderShape20.wm" "polySplitRing49.mp";
+connectAttr "polySplitRing47.out" "deleteComponent110.ig";
+connectAttr "deleteComponent110.og" "polyExtrudeEdge16.ip";
+connectAttr "pCubeShape31.wm" "polyExtrudeEdge16.mp";
+connectAttr "polySplitRing49.out" "polyTweak94.ip";
+connectAttr "polyTweak94.out" "deleteComponent111.ig";
+connectAttr "polyTweak95.out" "polySplitRing50.ip";
+connectAttr "pCubeShape31.wm" "polySplitRing50.mp";
+connectAttr "polyExtrudeEdge16.out" "polyTweak95.ip";
+connectAttr "polyCylinder15.out" "polyTweak96.ip";
+connectAttr "polyTweak96.out" "deleteComponent112.ig";
+connectAttr "polyCube17.out" "polySmoothFace11.ip";
+connectAttr "polyTweak97.out" "polyExtrudeFace23.ip";
+connectAttr "pCubeShape32.wm" "polyExtrudeFace23.mp";
+connectAttr "polySmoothFace11.out" "polyTweak97.ip";
+connectAttr "deleteComponent112.og" "polyTweak98.ip";
+connectAttr "polyTweak98.out" "deleteComponent113.ig";
+connectAttr "polyCylinder16.out" "deleteComponent114.ig";
+connectAttr "polyTweak99.out" "polySplitRing51.ip";
+connectAttr "pCylinderShape22.wm" "polySplitRing51.mp";
+connectAttr "deleteComponent114.og" "polyTweak99.ip";
+connectAttr "polySplitRing51.out" "deleteComponent115.ig";
+connectAttr "deleteComponent115.og" "polySplitRing52.ip";
+connectAttr "pCylinderShape22.wm" "polySplitRing52.mp";
+connectAttr "polySplitRing52.out" "polySplitRing53.ip";
+connectAttr "pCylinderShape22.wm" "polySplitRing53.mp";
+connectAttr "deleteComponent113.og" "polySplitRing54.ip";
+connectAttr "pCylinderShape21.wm" "polySplitRing54.mp";
+connectAttr "polySplitRing54.out" "polySplitRing55.ip";
+connectAttr "pCylinderShape21.wm" "polySplitRing55.mp";
+connectAttr "polyTweak100.out" "polySplitRing56.ip";
+connectAttr "pCylinderShape20.wm" "polySplitRing56.mp";
+connectAttr "deleteComponent111.og" "polyTweak100.ip";
+connectAttr "polyTweak101.out" "polySplitRing57.ip";
+connectAttr "pCylinderShape23.wm" "polySplitRing57.mp";
+connectAttr "polyCylinder17.out" "polyTweak101.ip";
+connectAttr "polySplitRing57.out" "polySplitRing58.ip";
+connectAttr "pCylinderShape23.wm" "polySplitRing58.mp";
+connectAttr "polySplitRing58.out" "polySplitRing59.ip";
+connectAttr "pCylinderShape23.wm" "polySplitRing59.mp";
+connectAttr "polySplitRing59.out" "polyTweak102.ip";
+connectAttr "polyTweak102.out" "deleteComponent116.ig";
+connectAttr "polyCube18.out" "polySmoothFace12.ip";
+connectAttr "polySmoothFace12.out" "deleteComponent117.ig";
+connectAttr "polyTweak103.out" "polyExtrudeEdge17.ip";
+connectAttr "pCylinderShape23.wm" "polyExtrudeEdge17.mp";
+connectAttr "deleteComponent116.og" "polyTweak103.ip";
 connectAttr "phongE1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "phong1.msg" ":defaultShaderList1.s" -na;
@@ -32006,6 +37437,12 @@ connectAttr "pCubeShape29.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape20.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape30.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape31.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape21.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape32.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape22.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape33.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape23.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape34.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
